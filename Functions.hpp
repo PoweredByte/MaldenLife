@@ -393,3 +393,11 @@ class Life_Client_Core {
     };
 
 };
+
+    class ZionHost {
+    	class ZionHost {
+    		tag = "ZionHost";
+    		file = "ZionHost\main";
+    		class notifications {};
+    	};
+    };
