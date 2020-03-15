@@ -48,7 +48,7 @@ _masks = LIFE_SETTINGS(getArray,"clothing_masks");
  },
  _x getVariable ["realname",name _x],
  switch ((_x getVariable "rank")) do {
-   case 2: {"Polizeianwärter"}
+   case 2: {"Polizeianwärter"};
    case 3: {"Polizist"};
    case 4: {"Polizeimeister"};
    case 5: {"Polizeiobermeister"};
