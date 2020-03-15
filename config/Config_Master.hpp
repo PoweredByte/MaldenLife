@@ -77,7 +77,7 @@ class Life_Settings {
     gang_price = 75000; //Gang creation price. --Remember they are persistent so keep it reasonable to avoid millions of gangs.
     gang_upgradeBase = 10000; //The base cost for purchasing additional slots in a gang
     gang_upgradeMultiplier = 2.5; //CURRENTLY NOT IN USE
-    gang_area[] = {"gang_area_1","gang_area_2","gang_area_3"}; //Variable of gang zone markers  
+    gang_area[] = {"gang_area_1","gang_area_2","gang_area_3"}; //Variable of gang zone markers
 
     /* Housing System Configurations */
     house_limit = 5; //Maximum number of houses a player can own.
@@ -113,10 +113,12 @@ class Life_Settings {
     bank_cop = 7000; //Amount of cash in bank for new cops
     bank_civ = 3000; //Amount of cash in bank for new civillians
     bank_med = 6500; //Amount of cash in bank for new medics
+    bank_adac = 3000; //Bank Opfor
 
     paycheck_cop = 500; //Payment for cops
     paycheck_civ = 350; //Payment for civillians
     paycheck_med = 450; //Payment for medics
+    paycheck_adac = 300; //Paycheck Opfor
 
     paycheck_period = 5; //Scaled in minutes
     bank_transferTax = .05; //Tax that player pays when transferring money from ATM. Tax = Amount * multiplier
@@ -212,11 +214,11 @@ class Life_Settings {
         {"STR_Crime_24","10000","24"},
         {"STR_Crime_25","20000","25"}
     };
-    
+
     /* ! --- Do not change --- ! */
     framework_version = "5.0.0";
     /* ------------------------- */
-    
+
 };
 
 #include "Config_Clothing.hpp"
