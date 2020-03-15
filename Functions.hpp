@@ -73,6 +73,17 @@ class Life_Client_Core {
         class unrestrain {};
     };
 
+    class Emp {
+       file = "ZionHost\emp";
+       class openEmpMenu {};
+       class isEmpOperator {};
+       class scanVehicles {};
+       class warnVehicle {};
+       class empVehicle {};
+       class vehicleWarned {};
+       class vehicleEmpd {};
+    };
+
     class Admin {
         file = "core\admin";
         class adminCompensate {};

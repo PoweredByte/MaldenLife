@@ -43,6 +43,8 @@ life_canpay_bail = true;
 life_storagePlacing = scriptNull;
 life_hideoutBuildings = [];
 life_firstSpawn = true;
+nn_last_vehicles = [];
+nn_empInUse = false;
 
 //Settings
 life_settings_enableNewsBroadcast = profileNamespace getVariable ["life_enableNewsBroadcast", true];
@@ -99,6 +101,6 @@ life_vehicles = [];
 
 /* Setup life_hideoutBuildings */
 {
-    _building = nearestBuilding getMarkerPos _x; 
+    _building = nearestBuilding getMarkerPos _x;
     life_hideoutBuildings pushBack _building
 } forEach (LIFE_SETTINGS(getArray,"gang_area"));

@@ -29,6 +29,16 @@ class CfgFunctions {
 
 class CfgSounds {
     sounds[] = {};
+      class empwarn {
+        name = "empwarn";
+        sound[] = {"ZionHost\emp\sounds\empwarn.ogg", 1.0, 1};
+        titles[] = {};
+   };
+   class empacsound {
+        name = "empacsound";
+        sound[] = {"ZionHost\emp\sounds\empac.ogg", db-5, 1};
+        titles[] = {};
+   };
     class sirenLong {
         name = "sirenLong";
         sound[] = {"\sounds\sirenLong.ogg", 1.0, 1};
