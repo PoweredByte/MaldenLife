@@ -17,8 +17,6 @@ life_action_spikeStripDeploy = player addAction[localize "STR_ISTR_Spike_Place",
 life_spikestrip = _spikeStrip;
 waitUntil {isNull life_spikeStrip};
 
-//Test
-
 if (!isNil "life_action_spikeStripDeploy") then {player removeAction life_action_spikeStripDeploy;};
 if (isNull _spikeStrip) exitWith {life_spikestrip = objNull;};
 
