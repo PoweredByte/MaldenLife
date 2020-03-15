@@ -10,7 +10,7 @@
 */
 class CfgSpawnPoints {
 
-    class Altis {
+    class Malden {
         class Civilian {
             class Kavala {
                 displayName = "Kavala";
@@ -121,7 +121,16 @@ class CfgSpawnPoints {
                 conditions = "";
             };
         };
-    };
+
+        class adac {
+            class Kavala {
+                 displayName = "Adac HQ";
+                 spawnMarker = "adac_spawn_1";
+                 icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
+                 conditions = "";
+          };
+      };
+  };
 
     class Tanoa {
 
@@ -237,13 +246,4 @@ class CfgSpawnPoints {
             };
 
         };
-
-      class adac {
-          class Kavala {
-               displayName = "Adac HQ";
-               spawnMarker = "adac_spawn_1";
-               icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
-               conditions = "";
-        };
-    };
 };
