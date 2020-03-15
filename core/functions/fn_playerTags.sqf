@@ -66,7 +66,7 @@ _masks = LIFE_SETTINGS(getArray,"clothing_masks");
    case 17: {"SEK Mitglied"};
    case 18: {"SEK Stv. Leitung"};
    case 19: {"SEK Leitung"};
-   default {"PolizeiPraktikant"};
+   default {"Polizei Praktikant"};
 
  }
  ]
