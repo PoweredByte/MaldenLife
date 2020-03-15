@@ -13,7 +13,7 @@ if (FETCH_CONST(life_adminlevel) < 1) then {
     ctrlShow[2021,false];
 };
 
-_side = switch (playerSide) do {case west:{"cop"}; case civilian:{"civ"}; case independent:{"med"};case east:{"adac"};};
+_side = switch (playerSide) do {case west:{"cop"}; case civilian:{"civ"}; case independent:{"med"}; case east:{"adac"};};
 
 _inv = CONTROL(2001,2005);
 _lic = CONTROL(2001,2014);
@@ -27,7 +27,8 @@ lbClear _near_i;
 
 //Near players
 _near_units = [];
-{ if (player distance _x < 10) then {_near_units pushBack _x};} forEach playableUnits;
+{ life_known_Players pushBackUnique _x; } forEach (units(group player));
+{ if((player distance _x < 10) && {_x in life_known_Players}) then {_near_units pushBack _x};} foreach playableUnits;
 {
     if (!isNull _x && alive _x && player distance _x < 10 && !(_x isEqualTo player)) then {
         _near lbAdd format ["%1 - %2",_x getVariable ["realname",name _x], side _x];

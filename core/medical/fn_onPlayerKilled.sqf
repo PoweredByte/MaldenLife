@@ -2,6 +2,7 @@
 /*
     File: fn_onPlayerKilled.sqf
     Author: Bryan "Tonic" Boardwine
+
     Description:
     When the player dies collect various information about that player
     and pull up the death dialog / camera functionality.
@@ -57,19 +58,18 @@ _unit spawn {
         _maxTime = time + LIFE_SETTINGS(getNumber,"respawn_timer");
     };
     _RespawnBtn ctrlEnable false;
-    waitUntil {
-        _Timer ctrlSetText format [localize "STR_Medic_Respawn",[(_maxTime - time),"MM:SS"] call BIS_fnc_secondsToString];
-        round(_maxTime - time) <= 0 || isNull _this
-    };
+    waitUntil {_Timer ctrlSetText format [localize "STR_Medic_Respawn",[(_maxTime - time),"MM:SS"] call BIS_fnc_secondsToString];
+    round(_maxTime - time) <= 0 || isNull _this};
     _RespawnBtn ctrlEnable true;
     _Timer ctrlSetText localize "STR_Medic_Respawn_2";
 };
 
 _unit spawn {
+    private ["_requestBtn","_requestTime"];
     disableSerialization;
-    private _requestBtn = ((findDisplay 7300) displayCtrl 7303);
+    _requestBtn = ((findDisplay 7300) displayCtrl 7303);
     _requestBtn ctrlEnable false;
-    private _requestTime = time + 5;
+    _requestTime = time + 5;
     waitUntil {round(_requestTime - time) <= 0 || isNull _this};
     _requestBtn ctrlEnable true;
 };
@@ -78,13 +78,9 @@ _unit spawn {
 
 //Create a thread to follow with some what precision view of the corpse.
 [_unit] spawn {
-    private _unit = _this select 0;
-    waitUntil {
-        life_deathCamera camSetTarget _unit;
-        life_deathCamera camSetRelPos [0,3.5,4.5];
-        life_deathCamera camCommit 0;
-        speed _unit isEqualTo 0
-    };
+    private ["_unit"];
+    _unit = _this select 0;
+    waitUntil {if (speed _unit isEqualTo 0) exitWith {true}; life_deathCamera camSetTarget _unit; life_deathCamera camSetRelPos [0,3.5,4.5]; life_deathCamera camCommit 0;};
 };
 
 //Make the killer wanted

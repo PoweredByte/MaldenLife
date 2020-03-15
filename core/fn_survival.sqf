@@ -17,35 +17,36 @@ _fnc_food =  {
         switch (life_hunger) do {
             case 30: {hint localize "STR_NOTF_EatMSG_1";};
             case 20: {hint localize "STR_NOTF_EatMSG_2";};
-            case 10: {
-                hint localize "STR_NOTF_EatMSG_3";
+            case 10: {hint localize "STR_NOTF_EatMSG_3";};
                 if (LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 1) then {player setFatigue 1;};
             };
         };
     };
-};
 
 _fnc_water = {
-    if (life_thirst < 2) then {player setDamage 1; hint localize "STR_NOTF_DrinkMSG_Death";}
+    if (life_thirst < 2) then {player setDamage 1; ["Du bist verdurstet.","Spieler-Eigenschaften","purple",false] call MSG_fnc_handle;}
     else
     {
         life_thirst = life_thirst - 10;
-        [] call life_fnc_hudUpdate;
-        if (life_thirst < 2) then {player setDamage 1; hint localize "STR_NOTF_DrinkMSG_Death";};
+//        [] call life_fnc_hudUpdate;
+        if (life_thirst < 5) then  {
+            ["Ich sterbe vor Durst!","Spieler-Eigenschaften","purple",false] call MSG_fnc_handle;
+            sleep 5;
+
+            //Tot ab diesem Punkt
+            player setDamage 5; hint localize "STR_NOTF_DrinkMSG_Death";
+        };
         switch (life_thirst) do  {
-            case 30: {hint localize "STR_NOTF_DrinkMSG_1";};
-            case 20: {
-                hint localize "STR_NOTF_DrinkMSG_2";
-                if (LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 1) then {player setFatigue 1;};
-            };
-            case 10: {
-                hint localize "STR_NOTF_DrinkMSG_3";
+            case 35: {["Ich fühle mich Durstig","Spieler-Eigenschaften","green",false] call MSG_fnc_handle;};
+            case 26: {["Ich könnte ein Getränk vertragen","Spieler-Eigenschaften","orange",false] call MSG_fnc_handle;};
+            case 14: {["Mein Hals ist schon ganz trocken, ich sollte was Trinken!","Spieler-Eigenschaften","red",false] call MSG_fnc_handle;};
+            case 8: {["Ich fühle mich ganz unwohl, mein Durst bringt mich noch um!","Spieler-Eigenschaften","purple",false] call MSG_fnc_handle;};
                 if (LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 1) then {player setFatigue 1;};
             };
         };
     };
-};
 
+	
 //Setup the time-based variables.
 _foodTime = time;
 _waterTime = time;

@@ -28,5 +28,7 @@
 #include "compensate.hpp"
 #include "FuelStat.hpp"
 #include "newsStation.hpp"
+#include "placeables.hpp"
 #include "emp_menu.hpp"
-#include "aapps_callmanagement.hpp"
+#include "phone.hpp"
+#include "kennzeichen.hpp"

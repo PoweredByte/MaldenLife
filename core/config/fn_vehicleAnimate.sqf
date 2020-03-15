@@ -51,12 +51,60 @@ if (!_preset) then
             _vehicle animate ["HidePolice", 0];
             _vehicle setVariable ["lights",false,true];
         };
-
-        case "cop_offroad":
+        case "cop_lights":
         {
             _vehicle animate ["HidePolice", 0];
             _vehicle animate ["HideBumper1", 0];
             _vehicle setVariable ["lights",false,true];
+        };
+        case "cop_suv":
+        {
+			//BLAULICHT ATTACHED
+			_pos = player getRelPos [0, 0];
+			_lamp = createVehicle ["PortableHelipadLight_01_blue_F", AGLtoASL _pos]; 
+			_lamp attachTo [_vehicle, [-0.6, -0.2, 0.325] ];
+        };
+        case "cop_hummingbird":
+        {
+			//BLAULICHT ATTACHED
+			_pos = player getRelPos [0, 0];
+			_lamp = createVehicle ["PortableHelipadLight_01_blue_F", AGLtoASL _pos]; 
+			_lamp attachTo [_vehicle, [-0, -0.6, 0.6] ];
+        };
+        case "cop_qilin":
+        {
+			//BLAULICHT ATTACHED
+			_pos = player getRelPos [0, 0];
+			_lamp = createVehicle ["PortableHelipadLight_01_blue_F", AGLtoASL _pos]; 
+			_lamp attachTo [_vehicle, [-0.83, 1.9, -0.35] ];
+        };
+        case "cop_mb4wd":
+        {
+			//BLAULICHT ATTACHED
+			_pos = player getRelPos [0, 0];
+			_lamp = createVehicle ["PortableHelipadLight_01_blue_F", AGLtoASL _pos]; 
+			_lamp attachTo [_vehicle, [-0.55, -0.64, 0.42] ];
+        };
+        case "cop_offroad":
+        {
+			//BLAULICHT ATTACHED
+			_pos = player getRelPos [0, 0];
+			_lamp = createVehicle ["PortableHelipadLight_01_blue_F", AGLtoASL _pos]; 
+			_lamp attachTo [_vehicle, [-0.55, 0.4, 0.4] ];
+        };
+        case "cop_limousine":
+        {
+			//BLAULICHT ATTACHED
+			_pos = player getRelPos [0, 0];
+			_lamp = createVehicle ["PortableHelipadLight_01_blue_F", AGLtoASL _pos]; 
+			_lamp attachTo [_vehicle, [-0.05, -0.02, 0.175] ];
+        };
+        case "cop_hunter":
+        {
+			//BLAULICHT ATTACHED
+			_pos = player getRelPos [0, 0];
+			_lamp = createVehicle ["PortableHelipadLight_01_blue_F", AGLtoASL _pos]; 
+			_lamp attachTo [_vehicle, [0, -1.2, 0.55] ];
         };
     };
 };

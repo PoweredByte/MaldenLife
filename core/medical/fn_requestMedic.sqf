@@ -19,6 +19,8 @@ if (_medicsOnline) then {
 };
 
 //Create a thread to monitor duration since last request (prevent spammage).
-((findDisplay 7300) displayCtrl 7303) ctrlEnable false;
-life_med_calls pushBack [(name player),(getpos life_corpse),"Ich benötige einen Revive - Automatische SOS Nachricht über das Telefon",servertime,"",player];
-publicVariable "life_med_calls";
+[] spawn  {
+    ((findDisplay 7300) displayCtrl 7303) ctrlEnable false;
+    sleep (2 * 60);
+    ((findDisplay 7300) displayCtrl 7303) ctrlEnable true;
+};

@@ -101,15 +101,16 @@ switch (playerSide) do {
             player setDamage ((_this select 9) select 2);
         };
     };
-
-    case east: {
-      CONST(life_adacLevel,(_this select 7));
-      CONST(life_coplevel,0);
-      if (LIFE_SETTINGS(getNumber,"save_playerStats") isEqualTo 1) then {
-          life_hunger = ((_this select 9) select 0);
-          life_thirst = ((_this select 9) select 1);
-          }; 
-     };
+    
+    case east: { 
+        CONST(life_adacLevel,(_this select 7));
+        CONST(life_coplevel,0);
+        if (LIFE_SETTINGS(getNumber,"save_playerStats") isEqualTo 1) then {
+            life_hunger = ((_this select 9) select 0);
+            life_thirst = ((_this select 9) select 1);
+            player setDamage ((_this select 9) select 2);
+        }; 
+    };
 };
 
 life_gear = _this select 8;

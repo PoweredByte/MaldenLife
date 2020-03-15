@@ -14,18 +14,52 @@
 class CfgRemoteExec {
     class Functions {
         mode = 1;
-        jip = 0;
+        jip = 1;
 
+		#include "maverick\maverick_remoteExec_master.cpp"
+
+	
         /* Client only functions */
+		class AR_Client_Rappel_From_Heli { allowedTargets=0; }; 
+		class AR_Hint { allowedTargets=1; }; 
+		class AR_Hide_Object_Global { allowedTargets=2; }; 
+		class AR_Enable_Rappelling_Animation { allowedTargets=2; }; 
+		class AR_Rappel_From_Heli { allowedTargets=2; }; 
+		class AUR_Hint { allowedTargets=1; }; 
+		class AUR_Hide_Object_Global { allowedTargets=2; }; 
+		class AUR_Enable_Rappelling_Animation_Global { allowedTargets=2; }; 
+		class AUR_Play_Rappelling_Sounds_Global { allowedTargets=2; }; 
+        F(life_fnc_vehicleEmpd,CLIENT)
+        F(life_fnc_vehicleWarned,CLIENT)
+        F(life_fnc_seizeObjects,CLIENT)
+		F(life_fnc_emergencylights,ANYONE)
         F(life_fnc_AAN,CLIENT)
+        F(sa_drop_tow_ropes,CLIENT)
+        F(sa_put_away_tow_ropes,CLIENT)
+        F(sa_hide_object_global,CLIENT)
         F(life_fnc_addVehicle2Chain,CLIENT)
         F(life_fnc_adminID,CLIENT)
+        F(msg_fnc_handle,ANYONE)
         F(life_fnc_adminInfo,CLIENT)
+		F(life_fnc_molotov,ANYONE)
+		F(sa_take_tow_ropes,ANYONE)
+		F(life_fnc_broadcastParse,ANYONE)
+		F(life_fnc_broadcastwest,ANYONE)
+		F(life_fnc_playsound,ANYONE)
+		F(life_fnc_sosmarker,ANYONE)
         F(life_fnc_bountyReceive,CLIENT)
         JIP(life_fnc_copLights,CLIENT)
         F(life_fnc_copSearch,CLIENT)
-        JIP(life_fnc_copSiren,CLIENT)
+        JIP(life_fnc_copSiren1,ANYONE)
+        JIP(life_fnc_copSiren2,ANYONE)
+        JIP(life_fnc_copSiren3,ANYONE)
+        JIP(life_fnc_copSiren4,ANYONE)
+        JIP(life_fnc_copSiren5,ANYONE)
+        F(sa_pickup_tow_ropes,CLIENT)
+		F(life_fnc_dienstausweiszeigen,CLIENT)
+		F(life_fnc_cprrevived,CLIENT)
         F(life_fnc_freezePlayer,CLIENT)
+		F(life_fnc_allowDamage,CLIENT)
         F(life_fnc_gangCreated,CLIENT)
         F(life_fnc_gangDisbanded,CLIENT)
         F(life_fnc_gangInvite,CLIENT)
@@ -56,14 +90,14 @@ class CfgRemoteExec {
         F(life_fnc_seizeClient,CLIENT)
         F(life_fnc_soundDevice,CLIENT)
         F(life_fnc_spikeStripEffect,CLIENT)
+        F(stig_sz_msg_add,CLIENT)
+        F(stig_sz_msg_del,CLIENT)
         F(life_fnc_tazeSound,CLIENT)
         F(life_fnc_ticketPaid,CLIENT)
         F(life_fnc_ticketPrompt,CLIENT)
         F(life_fnc_vehicleAnimate,CLIENT)
         F(life_fnc_wantedList,CLIENT)
         F(life_fnc_wireTransfer,CLIENT)
-        F(life_fnc_gangBankResponse,CLIENT)
-        F(life_fnc_chopShopSold,CLIENT)
         F(SOCK_fnc_dataQuery,CLIENT)
         F(SOCK_fnc_insertPlayerInfo,CLIENT)
         F(SOCK_fnc_requestReceived,CLIENT)
@@ -74,10 +108,18 @@ class CfgRemoteExec {
         F(TON_fnc_clientGetKey,CLIENT)
         F(TON_fnc_clientMessage,CLIENT)
         F(TON_fnc_player_query,CLIENT)
-        F(life_fnc_vehicleWarned,CLIENT)
-        F(life_fnc_vehicleEmpd,CLIENT)
+        F(h8_fnc_attach,ANYONE)
+		//PHONE
+		F(life_fnc_phoneAddCall,CLIENT)
+		F(life_fnc_phoneChannel,CLIENT)
+		F(life_fnc_phoneAddCallExtra,CLIENT)
+		
+		
+		
+//        F(bis_fnc_debugconsoleexec,ANYONE)		// UNBEDINGT WIEDER LÖSCHEN
 
         /* Server only functions */
+        F(BIS_fnc_execVM,SERVER)
         F(DB_fnc_insertRequest,SERVER)
         F(DB_fnc_queryRequest,SERVER)
         F(DB_fnc_updatePartial,SERVER)
@@ -116,6 +158,14 @@ class CfgRemoteExec {
         F(TON_fnc_vehicleUpdate,SERVER)
         F(TON_fnc_handleBlastingCharge,SERVER)
         F(TON_fnc_houseGarage,SERVER)
+		F(asn_fnc_markinsert_serv,SERVER)
+		F(asn_fnc_markupdate_serv,SERVER)
+		F(asn_fnc_markplatereq_serv,SERVER)
+		//Phone
+		F(TON_fnc_phoneManagerExtra,SERVER)
+		F(TON_fnc_phoneManager,SERVER)
+		F(TON_fnc_phoneOvertime,SERVER)
+
 
         /* HeadlessClient only functions */
         F(HC_fnc_addContainer,HC)
@@ -166,10 +216,45 @@ class CfgRemoteExec {
         F(life_fnc_say3D,ANYONE)
         F(life_fnc_setFuel,ANYONE)
         F(life_fnc_simDisable,ANYONE)
-        F(SPY_fnc_notifyAdmins,ANYONE)
+		//ZionHost
+		F(MSG_fnc_feld_kaufen,ANYONE)
+		F(MSG_fnc_getKennzeichen,ANYONE)
+		F(ZHost_fnc_getKennzeichenServer,ANYONE)
+		//
+		class life_fnc_SpielerBekanntHandle {
+			allowedTargets = 0;
+		};
+		class life_fnc_ENS_Hint {
+			allowedTargets = 1;
+		};
+		class life_fnc_PersoZeigenAnfordern {
+			allowedTargets = 1;
+		};
+		class DB_fnc_PersoAbfrage {
+			allowedTargets = 2;
+		};
+		class DB_fnc_PersoUpdate {
+			allowedTargets = 2;
+		};
+		class DB_fnc_PersoLoeschen {
+			allowedTargets = 2;
+		};
+		class DB_fnc_PersoNeu {
+			allowedTargets = 2;
+		};
+		class life_fnc_PersoAbfrageRueckgabe {
+			allowedTargets = 1;
+		};
+		class life_fnc_persozeigen {
+			allowedTargets = 1;
+		};	
+ 
     };
 
     class Commands {
+		class systemChat {
+			allowedTargets = 1;
+		};
         mode = 1;
         jip = 0;
 
@@ -179,4 +264,5 @@ class CfgRemoteExec {
         F(addWeapon,ANYONE)
         F(setFuel,ANYONE)
     };
+	
 };

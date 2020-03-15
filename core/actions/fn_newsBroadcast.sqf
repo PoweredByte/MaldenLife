@@ -1,3 +1,4 @@
+/*
 #include "..\..\script_macros.hpp"
 /*
     File: fn_newsBroadcast.sqf
@@ -5,7 +6,7 @@
 
     Description:
     Creates the dialog and handles the data in the Channel 7 News Dialog.
-*/
+
 #define Confirm 100104
 
 private ["_msgCost","_display","_confirmBtn","_msgCooldown","_broadcastDelay"];
@@ -37,3 +38,4 @@ if (isNil "life_broadcastTimer" || {(time - life_broadcastTimer) > _msgCooldown}
 };
 
 CONTROL(100100,100103) ctrlSetStructuredText parseText format [ localize "STR_News_StructuredText",[_msgCost] call life_fnc_numberText,_broadcastDelay];
+*/

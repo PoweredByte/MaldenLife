@@ -57,6 +57,10 @@ if (count crew _vehicle isEqualTo 0) then {
     } else {
         [_vehicle,true,player] remoteExec ["TON_fnc_vehicleStore",RSERV];
     };
+    
+{
+  deleteVehicle _x;
+} forEach attachedObjects _vehicle;
 
     waitUntil {!life_impound_inuse};
     if (playerSide isEqualTo west) then {

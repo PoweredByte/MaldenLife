@@ -18,7 +18,9 @@ _plist = _display displayCtrl 2702;
 lbClear _plist;
 _near_units = [];
 
-{ if (player distance _x < 20) then {_near_units pushBack _x};} forEach playableUnits;
+//Gruppenmitglieder sind immer bekannt ;-)
+{ life_known_Players pushBackUnique _x; } forEach (units(group player));
+{ if((player distance _x < 20) && {_x in life_known_Players}) then {_near_units pushBack _x};} foreach playableUnits;
 
 for "_i" from 0 to (count life_vehicles)-1 do {
     _veh = life_vehicles select _i;

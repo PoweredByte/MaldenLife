@@ -16,6 +16,7 @@ _sideFlag = M_CONFIG(getText,"Licenses",_type,"side");
 _varName = LICENSE_VARNAME(_type,_sideFlag);
 
 if (CASH < _price) exitWith {hint format [localize "STR_NOTF_NE_1",[_price] call life_fnc_numberText,localize _displayName];};
+//[[localize "STR_NOTF_NE_1",[_price] call life_fnc_numberText,localize _displayName],"ZionHost-System","farbe",false] call MSG_fnc_handle;
 CASH = CASH - _price;
 
 [0] call SOCK_fnc_updatePartial;

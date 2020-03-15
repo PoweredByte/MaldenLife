@@ -3,7 +3,6 @@
 /*
     File: fn_escInterupt.sqf
     Author: Bryan "Tonic" Boardwine
-
     Description:
     Monitors when the ESC menu is pulled up and blocks off
     certain controls when conditions meet.
@@ -36,8 +35,13 @@ private _canUseControls = {
 for "_i" from 0 to 1 step 0 do {
     waitUntil {!isNull (findDisplay 49)};
     private _abortButton = CONTROL(49,104);
-    _abortButton buttonSetAction "call SOCK_fnc_updateRequest; [player] remoteExec [""TON_fnc_cleanupRequest"",2];";
-    private _respawnButton = CONTROL(49,1010);
+    _abortButton buttonSetAction "call SOCK_fnc_updateRequest; call SOCK_fnc_syncData; [player] remoteExec [""TON_fnc_cleanupRequest"",2];";
+    _abortButton ctrlSetEventHandler [
+        "ButtonClick",
+        "0 call life_fnc_placeablesRemoveAll;"
+    ];
+
+   private _respawnButton = CONTROL(49,1010);
     private _fieldManual = CONTROL(49,122);
     private _saveButton = CONTROL(49,103);
     _saveButton ctrlSetText "";

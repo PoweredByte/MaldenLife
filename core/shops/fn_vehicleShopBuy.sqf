@@ -17,7 +17,7 @@ private _className = lbData[2302,(lbCurSel 2302)];
 private _vIndex = lbValue[2302,(lbCurSel 2302)];
 private _vehicleList = M_CONFIG(getArray,"CarShops",(life_veh_shop select 0),"vehicles");
 private _shopSide = M_CONFIG(getText,"CarShops",(life_veh_shop select 0),"side");
-
+private _pname = name player;
 
 private _initalPrice = M_CONFIG(getNumber,"LifeCfgVehicles",_className,"price");
 
@@ -33,7 +33,7 @@ switch (playerSide) do {
         _buyMultiplier = LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_COP");
         _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_COP");
     };
-    case independent: {
+    case independent: { 
         _buyMultiplier = LIFE_SETTINGS(getNumber,"vehicle_purchase_multiplier_MEDIC");
         _rentMultiplier = LIFE_SETTINGS(getNumber,"vehicle_rental_multiplier_MEDIC");
     };
@@ -52,13 +52,14 @@ if (_mode) then {
 };
 
 private _conditions = M_CONFIG(getText,"LifeCfgVehicles",_className,"conditions");
+if !([_conditions] call life_fnc_levelCheck) exitWith { [(localize "STR_Shop_Veh_NoLicense"),"ZionHost-System","red",false] call MSG_fnc_handle; };
 
-if !([_conditions] call life_fnc_levelCheck) exitWith {hint localize "STR_Shop_Veh_NoLicense";};
+//OLD 	if !([_conditions] call life_fnc_levelCheck) exitWith {hint localize "STR_Shop_Veh_NoLicense";};	//OLD
 
 private _colorIndex = lbValue[2304,(lbCurSel 2304)];
 
 if (_purchasePrice < 0) exitWith {closeDialog 0;}; //Bad price entry
-if (CASH < _purchasePrice) exitWith {hint format [localize "STR_Shop_Veh_NotEnough",[_purchasePrice - CASH] call life_fnc_numberText];closeDialog 0;};
+if (CASH < _purchasePrice) exitWith {hint format [(localize "STR_Shop_Veh_NotEnough"),[_purchasePrice - CASH] call life_fnc_numberText];closeDialog 0;};
 
 private _spawnPoints = life_veh_shop select 1;
 private _spawnPoint = "";
@@ -78,15 +79,10 @@ if ((life_veh_shop select 0) == "med_air_hs") then {
     };
 };
 
-
-if (_spawnPoint isEqualTo "") exitWith {hint localize "STR_Shop_Veh_Block"; closeDialog 0;};
+if (_spawnPoint isEqualTo "") exitWith {["Ein Fahrzeug blockiert gerade den Spawnpunkt.","ZionHost-System","red",false] call MSG_fnc_handle; closeDialog 0;};
 CASH = CASH - _purchasePrice;
 [0] call SOCK_fnc_updatePartial;
-if (_mode) then {
-    hint format [localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_purchasePrice] call life_fnc_numberText];
-} else {
-    hint format [localize "STR_Shop_Veh_Rented",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_purchasePrice] call life_fnc_numberText];
-};
+hint format [localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_purchasePrice] call life_fnc_numberText];
 
 //Spawn the vehicle and prep it.
 
@@ -121,15 +117,40 @@ _vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
 //Side Specific actions.
 switch (playerSide) do {
     case west: {
-        [_vehicle,"cop_offroad",true] spawn life_fnc_vehicleAnimate;
+	/* JEDES FAHRZEUG */	[_vehicle,"cop_lights",true] spawn life_fnc_vehicleAnimate;
+		
+        if ((life_veh_shop select 2) isEqualTo "cop" && {_className == "C_SUV_01_F"}) then {
+		[_vehicle,"cop_suv",true] spawn life_fnc_vehicleAnimate;
+		};
+        if ((life_veh_shop select 2) isEqualTo "cop" && {_className == "B_Heli_Light_01_F"}) then {
+		[_vehicle,"cop_hummingbird",true] spawn life_fnc_vehicleAnimate;
+		};
+        if ((life_veh_shop select 2) isEqualTo "cop" && {_className == "O_T_LSV_02_armed_F"}) then {
+		[_vehicle,"cop_qilin",true] spawn life_fnc_vehicleAnimate;
+		};
+        if ((life_veh_shop select 2) isEqualTo "cop" && {_className == "C_Offroad_02_unarmed_F"}) then {
+		[_vehicle,"cop_mb4wd",true] spawn life_fnc_vehicleAnimate;
+		};
+        if ((life_veh_shop select 2) isEqualTo "cop" && {_className == "C_Offroad_01_F"}) then {
+		[_vehicle,"cop_offroad",true] spawn life_fnc_vehicleAnimate;
+		};
+        if ((life_veh_shop select 2) isEqualTo "cop" && {_className == "C_Hatchback_01_sport_F"}) then {
+		[_vehicle,"cop_limousine",true] spawn life_fnc_vehicleAnimate;
+		};
+        if ((life_veh_shop select 2) isEqualTo "cop" && {_className == "B_MRAP_01_F"}) then {
+		[_vehicle,"cop_hunter",true] spawn life_fnc_vehicleAnimate;
+		};
     };
     case civilian: {
         if ((life_veh_shop select 2) isEqualTo "civ" && {_className == "B_Heli_Light_01_F"}) then {
-            [_vehicle,"civ_littlebird",true] spawn life_fnc_vehicleAnimate;
+		[_vehicle,"civ_littlebird",true] spawn life_fnc_vehicleAnimate;
         };
     };
     case independent: {
         [_vehicle,"med_offroad",true] spawn life_fnc_vehicleAnimate;
+    };
+    case east: {
+        [_vehicle,"adac_offroad",true] spawn life_fnc_vehicleAnimate;
     };
 };
 
@@ -143,9 +164,9 @@ life_vehicles pushBack _vehicle;
 if (_mode) then {
     if !(_className in LIFE_SETTINGS(getArray,"vehicleShop_rentalOnly")) then {
         if (life_HC_isActive) then {
-            [(getPlayerUID player),playerSide,_vehicle,_colorIndex] remoteExecCall ["HC_fnc_vehicleCreate",HC_Life];
+            [(getPlayerUID player),playerSide,_vehicle,_colorIndex,_pname] remoteExecCall ["HC_fnc_vehicleCreate",HC_Life];
         } else {
-            [(getPlayerUID player),playerSide,_vehicle,_colorIndex] remoteExecCall ["TON_fnc_vehicleCreate",RSERV];
+            [(getPlayerUID player),playerSide,_vehicle,_colorIndex,_pname] remoteExecCall ["TON_fnc_vehicleCreate",RSERV];
         };
     };
 };
@@ -159,5 +180,8 @@ if (LIFE_SETTINGS(getNumber,"player_advancedLog") isEqualTo 1) then {
     publicVariableServer "advanced_log";
 };
 
+
+player moveInDriver _vehicle;
 closeDialog 0; //Exit the menu.
 true;
+

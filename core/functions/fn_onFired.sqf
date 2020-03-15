@@ -20,3 +20,14 @@ if (_ammoType isEqualTo "GrenadeHand_stone") then {
         [_position] remoteExec ["life_fnc_flashbang",RCLIENT];
     };
 };
+if(_ammoType isEqualTo "mini_Grenade") then { 
+_projectile spawn { 
+private "_position"; 
+while {!isNull _this} do {
+_position = getPosATL _this; 
+sleep 0.1; 
+}; 
+        [_position] remoteExec ["life_fnc_molotov",RCLIENT];
+deleteVehicle _this; 
+};
+};

@@ -6,12 +6,32 @@
     Description:
     Loads saved civilian gear, this is limited for a reason and that's balance.
 */
-private _itemArray = life_gear;
+private ["_itemArray","_handle"];
+_itemArray = life_gear;
 waitUntil {!(isNull (findDisplay 46))};
 
-[] call life_fnc_stripDownPlayer;
+_handle = [] spawn life_fnc_stripDownPlayer;
+waitUntil {scriptDone _handle};
 
-if (_itemArray isEqualTo []) exitWith {[] call life_fnc_startLoadout;};
+if (count _itemArray isEqualTo 0) exitWith {
+    switch (playerSide) do {
+        case west: {
+            [] call life_fnc_copLoadout;
+        };
+
+        case civilian: {
+            [] call life_fnc_civLoadout;
+        };
+
+        case independent: {
+            [] call life_fnc_medicLoadout;
+        };
+
+        case east: {
+            [] call life_fnc_adacLoadout;
+        };
+    };
+};
 
 _itemArray params [
     "_uniform",
@@ -33,12 +53,12 @@ _itemArray params [
     ["_yItems",[]]
 ];
 
-private "_handle";
 if (!(_goggles isEqualTo "")) then {_handle = [_goggles,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};};
 if (!(_headgear isEqualTo "")) then {_handle = [_headgear,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};};
 if (!(_uniform isEqualTo "")) then {_handle = [_uniform,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};};
 if (!(_vest isEqualTo "")) then {_handle = [_vest,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};};
 if (!(_backpack isEqualTo "")) then {_handle = [_backpack,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};};
+
 
 {_handle = [_x,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};} forEach _items;
 
@@ -50,6 +70,7 @@ if (!(_backpack isEqualTo "")) then {_handle = [_backpack,true,false,false,false
 {(backpackContainer player) addItemCargoGlobal [_x,1];} forEach (_bMags);
 
 life_maxWeight = if (backpack player isEqualTo "") then {LIFE_SETTINGS(getNumber,"total_maxWeight")} else {LIFE_SETTINGS(getNumber,"total_maxWeight") + round(FETCH_CONFIG2(getNumber,"CfgVehicles",(backpack player),"maximumload") / 4)};
+
 {
     [true,(_x select 0),(_x select 1)] call life_fnc_handleInv;
 } forEach (_yItems);

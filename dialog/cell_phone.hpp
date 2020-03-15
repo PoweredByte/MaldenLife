@@ -139,5 +139,16 @@ class Life_cell_phone {
             w = (6.25 / 40);
             h = (1 / 25);
         };
+
+        class PoliceMsgAllButton : life_RscButtonMenu {
+            idc = 3023;
+            text = "Rundfunk";
+            colorBackground[] = {"(profileNamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profileNamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profileNamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+            onButtonClick = "[] call TON_fnc_cell_polizeimsgall";
+            x = 0.32;
+            y = 0.45;
+            w = 0.2;
+            h = (1 / 25);
+        };
     };
 };

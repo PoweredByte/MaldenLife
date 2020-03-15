@@ -150,7 +150,7 @@ class CfgSpawnPoints {
             icon = "\a3\ui_f\data\map\MapControl\hospital_ca.paa";
             conditions = "";
             };
-        };
+        };   
 
 
     };

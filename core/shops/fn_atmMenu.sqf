@@ -6,7 +6,7 @@
     Description:
     Opens and manages the bank menu.
 */
-private ["_units","_type"];
+private ["_units","_type","_gangOwner"];
 
 if (!life_use_atm) exitWith {
     hint format [localize "STR_Shop_ATMRobbed",(LIFE_SETTINGS(getNumber,"noatm_timer"))];
@@ -38,7 +38,19 @@ CONTROL(2700,2701) ctrlSetStructuredText parseText format ["<img size='1.7' imag
 
 lbSetCurSel [2703,0];
 
+(CONTROL(2700,2705)) ctrlEnable false;
+(CONTROL(2700,2705)) ctrlShow false;
+
+//			NEEDS REWORK
+_gangOwner = "nothing";
+isNil _gangOwner;
+_gangOwner = (group player) getVariable "gang_owner";
+if (_gangOwner isEqualTo (getPlayerUID player)) then {
+    (CONTROL(2700,2705)) ctrlEnable true;
+    (CONTROL(2700,2705)) ctrlShow true;
+	};
+//			NEEDS REWORK
+
 if (isNil {(group player getVariable "gang_bank")}) then {
-    (CONTROL(2700,2705)) ctrlEnable false;
     (CONTROL(2700,2706)) ctrlEnable false;
 };

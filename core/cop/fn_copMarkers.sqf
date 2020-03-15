@@ -1,44 +1,43 @@
-private _markers = [];
-private _units = [];
+/*
+    File: fn_copMarkers.sqf
+    Author: Bryan "Tonic" Boardwine
 
-{
-            if ("ItemGPS" in (assignedItems _x)) then {
-                _displayText = name _x;
-            _units pushBack ["ColorBLUFOR",_x,"Mil_dot",_displayText];
-        };
-} forEach units group player;
+    Description:
+    Marks cops on the map for other cops. Only initializes when the actual map is open.
+*/
+private ["_markers","_cops"];
+_markers = [];
+_cops = [];
 
-{
-    if ((_x select 1) != player) then
+sleep 0.5;
+if (visibleMap) then {
+    {if (side _x isEqualTo west) then {_cops pushBack _x;}} forEach playableUnits; //Fetch list of cops / blufor
+
+    //Create markers
     {
-        if ((vehicle (_x select 1)) != (_x select 1)) then {
-            if (driver (vehicle (_x select 1)) ==  (_x select 1)) then {
-                _marker = createMarkerLocal [format["%1_marker",(_x select 1)],visiblePosition (_x select 1)];
-                _marker setMarkerTextLocal format["%1 (+ %2)", (_x select 3), count (crew (vehicle (_x select 1)))];
+        if !(_x isEqualTo player) then {
+            _marker = createMarkerLocal [format ["%1_marker",_x],visiblePosition _x];
+            _marker setMarkerColorLocal "ColorBLUFOR";
+            _marker setMarkerTypeLocal "Mil_dot";
+            _marker setMarkerTextLocal format ["%1", _x getVariable ["realname",name _x]];
+
+            _markers pushBack [_marker,_x];
+        };
+    } forEach _cops;
+
+    while {visibleMap} do {
+        {
+            private ["_unit"];
+            _unit = _x select 1;
+            if (!isNil "_unit" && !isNull _unit) then {
+                (_x select 0) setMarkerPosLocal (visiblePosition _unit);
             };
-        } else {
-            _marker = createMarkerLocal [format["%1_marker",(_x select 1)],visiblePosition (_x select 1)];
-               _marker setMarkerColorLocal (_x select 0);
-               _marker setMarkerTypeLocal (_x select 2);
-               _marker setMarkerTextLocal format["%1", (_x select 3)];
-               _markers pushBack [_marker,(_x select 1),_x select 3,_x select 2];
-           };
+        } forEach _markers;
+        if (!visibleMap) exitWith {};
+        sleep 0.02;
     };
-} forEach _units;
 
-while {(_this select 0)} do
-{
-    if (!visibleMap) exitWith {{deleteMarkerLocal (_x select 0);} forEach _markers;};
-    {
-        private["_marker","_unit"];
-        _marker = _x select 0;
-        _unit = _x select 1;
-        if !(_x select 3 isEqualTo "loc_Hospital") then {
-            if (!isNil "_unit" && !isNull _unit) then
-            {
-                _marker setMarkerPosLocal (visiblePosition _unit);
-            };
-        };
-    } forEach _markers;
-    sleep 0.02;
+    {deleteMarkerLocal (_x select 0);} forEach _markers;
+    _markers = [];
+    _cops = [];
 };

@@ -70,6 +70,61 @@ Example 2:
 */
 
     class Minerals {
+		
+		
+//CUSTOM MINING //ANFANG
+        class blei_unverarbeitet {
+            amount = 3;
+            zones[] = { "blei_mine" };
+            item = "pickaxe";
+            mined[] = {"blei_unverarbeitet"};
+            zoneSize = 30;
+        };
+        class feuerstein_unverarbeitet {
+            amount = 2;
+            zones[] = { "feuerstein_mine" };
+            item = "pickaxe";
+            mined[] = {"feuerstein_unverarbeitet"};
+            zoneSize = 30;
+        };
+        class kaktus_unverarbeitet {
+            amount = 3;
+            zones[] = { "kaktus_mine" };
+            item = "pickaxe";
+            mined[] = {"kaktus_unverarbeitet"};
+            zoneSize = 30;
+        };
+        class katzengold_unverarbeitet {
+            amount = 1;
+            zones[] = { "katzengold_mine" };
+            item = "pickaxe";
+            mined[] = {"katzengold_unverarbeitet"};
+            zoneSize = 30;
+        };
+        class lavagestein_unverarbeitet {
+            amount = 2;
+            zones[] = { "lavagestein_mine" };
+            item = "pickaxe";
+            mined[] = {"lavagestein_unverarbeitet"};
+            zoneSize = 30;
+        };
+        class titanium_unverarbeitet {
+            amount = 1;
+            zones[] = { "titanium_mine" };
+            item = "pickaxe";
+            mined[] = {"titanium_unverarbeitet"};
+            zoneSize = 30;
+        };
+        class uran_unverarbeitet {
+            amount = 1;
+            zones[] = { "uran_mine" };
+            item = "pickaxe";
+            mined[] = {"uran_unverarbeitet"};
+            zoneSize = 30;
+        };
+//CUSTOM MINING //ENDE	
+
+
         class copper_unrefined {
             amount = 2;
             zones[] = { "copper_mine" };

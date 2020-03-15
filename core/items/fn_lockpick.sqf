@@ -81,6 +81,7 @@ if (!_isVehicle) then {
     _curTarget setVariable ["transporting",false,true];
 } else {
     _dice = random(100);
+    if (playerSide in [west,independent,east]) then {_dice = 1;};
     if (_dice < 30) then {
         titleText[localize "STR_ISTR_Lock_Success","PLAIN"];
         life_vehicles pushBack _curTarget;

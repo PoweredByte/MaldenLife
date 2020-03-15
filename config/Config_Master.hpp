@@ -4,6 +4,36 @@
 /*
     Master settings for various features and functionality
 */
+
+class Toxic_Repair_Config {
+
+    Cop_Repairing = true; //Allow cops to repair objects
+    Medic_Repairing = true; //Allow medics to repair objects
+    Civ_Repairing = true; //Allow civs to repair objects
+    Adac_Repairing = true; //Allow civs to repair objects	
+
+    class Civilian {
+        Repair_Reward = 1000000; //How much they get per object they repair
+        Cooldown = true; //If you want to have a cooldown on the repairing
+        Cooldown_Time = 20; //Time is seconds for the cooldown between repairing
+    };
+    class Cop {
+        Repair_Reward = 1000000; //How much they get per object they repair
+        Cooldown = false; //If you want to have a cooldown on the repairing
+        Cooldown_Time = 15; //Time is seconds for the cooldown between repairing
+    };
+    class Medic {
+        Repair_Reward = 1000000; //How much they get per object they repair
+        Cooldown = false; //If you want to have a cooldown on the repairing
+        Cooldown_Time = 15; //Time is seconds for the cooldown between repairing
+    };
+    class Adac {
+        Repair_Reward = 5000000; //How much they get per object they repair
+        Cooldown = false; //If you want to have a cooldown on the repairing
+        Cooldown_Time = 15; //Time is seconds for the cooldown between repairing
+    };
+};
+
 class Life_Settings {
 /* Logging and Security Settings*/
     /* Security Settings */
@@ -11,18 +41,18 @@ class Life_Settings {
 
     /* Data Logging Settings */
     battlEye_friendlyLogging = false; //False [default] - Read the logs from the server.rpt. True - Read the logs from the publicVariable.log. NOTE: Due to how diag_log works it will log to both files either way and the setting is merely for beautification purposes.
-    player_advancedLog = true; //False [default] - No advanced logging. True - Logs house purchase and sale, vehicle purchase, sale, and chop shopping, police arrests, and gang creations. Search for: advanced_log
-    player_moneyLog = true; //False [default] - No money logging. True - Logs player bank deposits, withdraws, and transfers, gang bank deposits and withdraws, money picked up off of the ground, and player robbery. Search for: money_log
-    player_deathLog = true; //False [default] - No death logging. True - Logs victim and killer, and vehicle or weapon if used, when a player dies. Search for: death_log
+    player_advancedLog = false; //False [default] - No advanced logging. True - Logs house purchase and sale, vehicle purchase, sale, and chop shopping, police arrests, and gang creations. Search for: advanced_log
+    player_moneyLog = false; //False [default] - No money logging. True - Logs player bank deposits, withdraws, and transfers, gang bank deposits and withdraws, money picked up off of the ground, and player robbery. Search for: money_log
+    player_deathLog = false; //False [default] - No death logging. True - Logs victim and killer, and vehicle or weapon if used, when a player dies. Search for: death_log
 
 /* Database Related Settings */
     /* Player Data Saving */
     save_virtualItems = true; //Save Virtual items (all sides)?
-    saved_virtualItems[] = { "pickaxe","fuelEmpty","fuelFull", "spikeStrip", "lockpick", "defuseKit","storageSmall","storageBig","redgull","coffee","waterBottle","apple","peach","tbacon","donuts","rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtle_soup","hen","rooster","sheep","goat","defibrillator","toolkit" }; //Array of virtual items that can be saved on your player.
+    saved_virtualItems[] = { "pickaxe","fuelEmpty","fuelFull", "spikeStrip", "lockpick", "defuseKit","storageSmall","storageBig","redgull","coffee","waterBottle","apple","peach","tbacon","donuts","rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtle_soup","hen","rooster","sheep","goat","defibrillator","toolkit","cprKit","handcuffs","keys" }; //Array of virtual items that can be saved on your player.
     save_playerStats = true; //Save food, water and damage (all sides)?
-    save_civilian_weapons = false; //Allow civilians to save weapons on them?
-    save_civilian_position = false; //Save civilian location?
-    save_civilian_position_restart = false; //Save civilian location only between restarts. After a server restart you'll have to spawn again.
+    save_civilian_weapons = true; //Allow civilians to save weapons on them?
+    save_civilian_position = true; //Save civilian location?
+    save_civilian_position_restart = true; //Save civilian location only between restarts. After a server restart you'll have to spawn again.
     /* !!!TO SAVE POSITION BETWEEN RESTARTS save_civilian_position MUST BE TRUE!!! */
     save_civilian_positionStrict = false; //Strip the player if possible combat-log?  WARNING: Server crashes and lack of reliable syncing can trigger this.
 
@@ -30,7 +60,7 @@ class Life_Settings {
     save_vehicle_virtualItems = true; //Save virtual items inside the vehicle (all sides)(-- See defined items on next line --)
     save_vehicle_items[] = { "pickaxe","fuelEmpty","fuelFull", "spikeStrip", "lockpick", "defuseKit","storageSmall","storageBig","redgull","coffee","waterBottle","apple","peach","tbacon","donuts","rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtle_soup","hen","rooster","sheep","goat","defibrillator","toolkit" };
     save_vehicle_inventory = true; //Save Arma inventory of vehicle to the database
-    save_vehicle_fuel = false; //Save vehicle fuel level to the database (Impounded/Garaged).
+    save_vehicle_fuel = true; //Save vehicle fuel level to the database (Impounded/Garaged).
     save_vehicle_damage = false; //Save vehicle damage to the database.
     save_vehicle_illegal = true; //This will allow cops to be advised when a vehicle, with illegal items in it, is impounded. This will also save illegal items as proof of crime, and needs "save_vehicle_virtualItems" set as true. Illegal items don't need to be set in save_vehicle_items[] for being saved, if it's enabled.
 
@@ -46,9 +76,9 @@ class Life_Settings {
 
     /* Basic System Configurations */
     donor_level = false; //Enable the donor level set in database (var = life_donorlevel; levels = 0,1,2,3,4,5). ATTENTION! Before enabling, read: https://www.bistudio.com/community/game-content-usage-rules & https://www.bistudio.com/monetization
-    enable_fatigue = true; //Set to false to disable the ARMA 3 fatigue system.
+    enable_fatigue = false; //Set to false to disable the ARMA 3 fatigue system.
     total_maxWeight = 24; //Static variable for the maximum weight allowed without having a backpack
-    respawn_timer = 30; //How many seconds a player should wait, before being able to respawn. Minimum 5 seconds.
+    respawn_timer = 60; //How many seconds a player should wait, before being able to respawn. Minimum 5 seconds.
 
     /* Channel 7 News Station Configurations */
     news_broadcast_cost = 150000; //Cost for a player to send a news station broadcast.
@@ -65,7 +95,7 @@ class Life_Settings {
     /* Escape Menu Configuration */
     escapeMenu_timer = 10; //Time required to pass before you can click the abort button in the escape menu.
     escapeMenu_displayExtras = true; //Display the players UID & serverName specified below in the escape menu.
-    escapeMenu_displayText = "Thanks for playing!"; //Text displayed in the escape menu. Make it short.. around 20 characters.
+    escapeMenu_displayText = "ZionHost"; //Text displayed in the escape menu. Make it short.. around 20 characters.
 
     /* Fuel System Configurations */
     pump_service = false; //Allow users to use pump service on the map. Default = false
@@ -77,20 +107,23 @@ class Life_Settings {
     gang_price = 75000; //Gang creation price. --Remember they are persistent so keep it reasonable to avoid millions of gangs.
     gang_upgradeBase = 10000; //The base cost for purchasing additional slots in a gang
     gang_upgradeMultiplier = 2.5; //CURRENTLY NOT IN USE
-    gang_area[] = {"gang_area_1","gang_area_2","gang_area_3"}; //Variable of gang zone markers
 
     /* Housing System Configurations */
     house_limit = 5; //Maximum number of houses a player can own.
     houseGarage_buyPrice = 1000000;
     houseGarage_sellPrice = 350000;
 
+	/*					FARMING					*/
+	
+	farm_limit = 1;
+	
     /* Hunting & Fishing System Configurations */
     animaltypes_fish[] = { "Salema_F", "Ornate_random_F", "Mackerel_F", "Tuna_F", "Mullet_F", "CatShark_F", "Turtle_F" }; //Classnames of fish you can catch
     animaltypes_hunting[] = { "Sheep_random_F", "Goat_random_F", "Hen_random_F", "Cock_random_F", "Rabbit_F" }; //Classnames of aniamls you can hunt/gut
 
     /* Item-related Restrictions */
-    restrict_medic_weapons = true; //Set to false to allow medics to use any weapon --true will remove ANY weapon they attempt to use (primary,secondary,launcher)
-    restrict_clothingPickup = true; //Set to false to allow civilians to pickup/take any uniform (ground/crates/vehicles)
+    restrict_medic_weapons = false; //Set to false to allow medics to use any weapon --true will remove ANY weapon they attempt to use (primary,secondary,launcher)
+    restrict_clothingPickup = false; //Set to false to allow civilians to pickup/take any uniform (ground/crates/vehicles)
     restrict_weaponPickup = false; //Set to false to allow civilians to pickup/take any weapon (ground/crates/vehicles)
     restricted_uniforms[] = { "U_Rangemaster", "U_B_CombatUniform_mcam_tshirt", "U_B_CombatUniform_mcam_worn", "U_B_survival_uniform" };
     restricted_weapons[] = { "hgun_P07_snds_F", "arifle_MX_F", "arifle_MXC_F" };
@@ -98,29 +131,28 @@ class Life_Settings {
     /* Jail System Configurations */
     jail_seize_vItems[] = { "spikeStrip","lockpick","goldbar","blastingcharge","boltcutter","defusekit","heroin_unprocessed","heroin_processed","cannabis","marijuana","cocaine_unprocessed","cocaine_processed","turtle_raw" }; //Define VIRTUAL items you want to be removed from players upon jailing here. Use "jail_seize_inventory" for Arma inventory items.
     jail_seize_inventory = false; //Set to true to run the cop seize script on inmates. False will remove only weapons and magazines otherwise. (Basically used in case cops forget to seize items). [See Lines 127-131 below]
-    sendtoJail_locations[] = { "police_hq_1", "police_hq_2", "cop_spawn_3", "cop_spawn_5", "Correctional_Facility" }; //Enter the variableName from the mission.sqm here to allow cops to send a person to jail at these locations.
+    sendtoJail_locations[] = { "jail_loc_1", "jail_loc_2", "jail_loc_3", "cop_spawn_5", "Correctional_Facility" }; //Enter the variableName from the mission.sqm here to allow cops to send a person to jail at these locations.
     jail_forceWalk = true;
-    jail_timeMultiplier = 15; //Put in minutes how long you want your victim in jail.
 
     /* Medical System Configurations */
     revive_cops = true; //true to enable cops the ability to revive everyone or false for only medics/ems.
-    revive_civ = false; //true to enable civs the ability to revive everyone or false for only medics/ems or medic/ems/cops.
-    revive_east = false; //true to enable opfor the ability to revive everyone or false for only medics/ems or medic/ems/cops.
+    revive_civ = true; //true to enable civs the ability to revive everyone or false for only medics/ems or medic/ems/cops.
+    revive_east = true; //true to enable opfor the ability to revive everyone or false for only medics/ems or medic/ems/cops.
     revive_fee = 1500; //Revive fee that players have to pay and medics only EMS(independent) are rewarded with this amount.
     hospital_heal_fee = 100; //Fee to heal at a hospital NPC
-
+	
     /* Paycheck & Bank System Configurations */
     bank_cop = 1000000000; //Amount of cash in bank for new cops
     bank_civ = 1000000000; //Amount of cash in bank for new civillians
     bank_med = 1000000000; //Amount of cash in bank for new medics
-    bank_adac = 1000000000; //Bank Opfor
+    bank_adac = 1000000000; //Amount of cash in bank for new medics
 
-    paycheck_cop = 1000000; //Payment for cops
-    paycheck_civ = 0; //Payment for civillians
-    paycheck_med = 1000000; //Payment for medics
-    paycheck_adac = 1000000; //Paycheck Opfor
+    paycheck_cop = 15000000; //Payment for cops
+    paycheck_civ = 10000000; //Payment for civillians
+    paycheck_med = 15000000; //Payment for medics
+    paycheck_adac = 15000000; //Payment for ADAC
 
-    paycheck_period = 30; //Scaled in minutes
+    paycheck_period = 60; //Scaled in minutes
     bank_transferTax = .05; //Tax that player pays when transferring money from ATM. Tax = Amount * multiplier
 
     /* Player Job System Configurations */
@@ -136,27 +168,27 @@ class Life_Settings {
 
     /* Vehicle System Configurations */
     chopShop_vehicles[] = { "Car", "Air" }; //Vehicles that can be chopped. (Can add: "Ship" and possibly more -> look at the BI wiki...)
-    vehicle_infiniteRepair[] = {false, false, true, false}; //Set to true for unlimited repairs with 1 toolkit. False will remove toolkit upon use. civilian, west, independent, east
+    vehicle_infiniteRepair[] = {false, false, true, true}; //Set to true for unlimited repairs with 1 toolkit. False will remove toolkit upon use. civilian, west, independent, east
     vehicleShop_rentalOnly[] = { "B_MRAP_01_hmg_F", "B_G_Offroad_01_armed_F", "B_Boat_Armed_01_minigun_F" }; //Vehicles that can only be rented and not purchased. (Last only for the session)
     vehicleShop_3D = true; //Add preview 3D inside Shop vehicle.       Default : False
 
-    /* Vehicle Purchase Prices */
+	/* Vehicle Purchase Prices */
     vehicle_purchase_multiplier_CIVILIAN = 1; //Civilian Vehicle Buy Price = Config_Vehicle price * multiplier
-    vehicle_purchase_multiplier_COP = .5; //Cop Vehicle Buy Price = Config_Vehicle price * multiplier
-    vehicle_purchase_multiplier_MEDIC = .15; //Medic Vehicle Buy Price = Config_Vehicle price * multiplier
-    vehicle_purchase_multiplier_OPFOR = .5; // -- NOT IN USE -- Simply left in for east support.
+    vehicle_purchase_multiplier_COP = .0; //Cop Vehicle Buy Price = Config_Vehicle price * multiplier
+    vehicle_purchase_multiplier_MEDIC = .0; //Medic Vehicle Buy Price = Config_Vehicle price * multiplier
+    vehicle_purchase_multiplier_OPFOR = -1; // -- NOT IN USE -- Simply left in for east support.
 
     /* Vehicle Rental Prices */
-    vehicle_rental_multiplier_CIVILIAN = .80; //Civilian Vehicle Rental Price = Config_Vehicle price * multiplier
-    vehicle_rental_multiplier_COP = .3; //Cop Vehicle Rental Price = Config_Vehicle price * multiplier
-    vehicle_rental_multiplier_MEDIC = .3; //Medic Vehicle Rental Price = Config_Vehicle price * multiplier
-    vehicle_rental_multiplier_OPFOR = .3; // -- NOT IN USE -- Simply left in for east support.
+    vehicle_rental_multiplier_CIVILIAN = .10; //Civilian Vehicle Rental Price = Config_Vehicle price * multiplier
+    vehicle_rental_multiplier_COP = 0; //Cop Vehicle Rental Price = Config_Vehicle price * multiplier
+    vehicle_rental_multiplier_MEDIC = 0; //Medic Vehicle Rental Price = Config_Vehicle price * multiplier
+    vehicle_rental_multiplier_OPFOR = -1; // -- NOT IN USE -- Simply left in for east support.
 
     /* Vehicle Sell Prices */
-    vehicle_sell_multiplier_CIVILIAN = .5; //Civilian Vehicle Garage Sell Price = Vehicle Buy Price * multiplier
-    vehicle_sell_multiplier_COP = .5; //Cop Vehicle Garage Sell Price = Vehicle Buy Price * multiplier
-    vehicle_sell_multiplier_MEDIC = .5; //Medic Vehicle Garage Sell Price = Vehicle Buy Price * multiplier
-    vehicle_sell_multiplier_OPFOR = .5; // -- NOT IN USE -- Simply left in for east support.
+    vehicle_sell_multiplier_CIVILIAN = .4; //Civilian Vehicle Garage Sell Price = Vehicle Buy Price * multiplier
+    vehicle_sell_multiplier_COP = 0; //Cop Vehicle Garage Sell Price = Vehicle Buy Price * multiplier
+    vehicle_sell_multiplier_MEDIC = 0; //Medic Vehicle Garage Sell Price = Vehicle Buy Price * multiplier
+    vehicle_sell_multiplier_OPFOR = -1; // -- NOT IN USE -- Simply left in for east support.
 
     /* "Other" Vehicle Prices */
     vehicle_chopShop_multiplier = .25; //Chop Shop price for vehicles. TO AVOID EXPLOITS NEVER SET HIGHER THAN A PURCHASE/RENTAL multipler!   Payout = Config_vehicle Price * multiplier
@@ -214,11 +246,11 @@ class Life_Settings {
         {"STR_Crime_24","10000","24"},
         {"STR_Crime_25","20000","25"}
     };
-
+    
     /* ! --- Do not change --- ! */
     framework_version = "5.0.0";
     /* ------------------------- */
-
+    
 };
 
 #include "Config_Clothing.hpp"
@@ -231,4 +263,5 @@ class Life_Settings {
 #include "Config_Process.hpp"
 #include "Config_Housing.hpp"
 #include "Config_Garages.hpp"
-#include "Config_Loadouts.hpp"
+#include "Config_Blaulicht.hpp"
+#include "Config_Phone.hpp"

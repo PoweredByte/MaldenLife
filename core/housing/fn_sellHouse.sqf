@@ -41,6 +41,11 @@ if (_action) then {
     deleteMarkerLocal format ["house_%1",_house getVariable "uid"];
     _house setVariable ["uid",nil,true];
 
+    //BUGFIX - CHECK
+    uiSleep (30 + random(180));
+    ["Verkauf abgeschlossen, dein Geld wird dir in kürze Überwiesen","ZionHost-System","green",false] call MSG_fnc_handle;
+    //
+    
     BANK = BANK + (round((_houseCfg select 0)/2));
     [1] call SOCK_fnc_updatePartial;
     _index = life_vehicles find _house;

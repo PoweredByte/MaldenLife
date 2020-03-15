@@ -25,8 +25,8 @@ _ins = lineIntersectsSurfaces [_pos , _pos vectorAdd [0,0,-50] ,_spikeStrip,objN
 if ((count _ins) isEqualTo 0) then {
 	_spikeStrip setPos [(getPos _spikeStrip select 0),(getPos _spikeStrip select 1),0];
 } else {
-	_spikeStrip setPosASL (_ins select 0 select 0);
-	_spikeStrip setVectorUp (_ins select 0 select 1); // This can cause some problems so if you wish to remove it you can.
+	_spikeStrip setPosASL (_ins select 0 select 0); 
+	_spikeStrip setVectorUp (_ins select 0 select 1); // This can cause some problems so if you wish to remove it you can. 
 };
 _spikeStrip setDamage 1;
 

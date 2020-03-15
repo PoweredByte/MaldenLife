@@ -8,6 +8,15 @@ class Socket_Reciever {
         class syncData {};
         class updatePartial {};
         class updateRequest {};
+		class tazeRagdoll {};
+    };
+};
+
+class Toxic_Functions {
+    tag = "Toxic";
+    class Toxic_Main {
+        file = "core\Toxic";
+        class repairSystem {};
     };
 };
 
@@ -21,6 +30,27 @@ class SpyGlass {
     };
 };
 
+class ZionHost {
+    tag = "MSG";
+    class Master {
+        file = "ZionHost\msg";
+		class ctrl {};
+		class handle {};
+    };
+
+    class Farming {
+        file = "ZionHost\farming";
+		class farming {};
+		class farming_zones {};
+		class feld_kaufen {};
+    };
+
+    class Polizei {
+        file = "ZionHost\polizei";
+		class getKennzeichen {};
+    };
+};
+
 class Life_Client_Core {
     tag = "life";
 
@@ -29,11 +59,17 @@ class Life_Client_Core {
         class initCiv {};
         class initCop {};
         class initMedic {};
-        class initAdac {};  //ADAC
+        class initAdac {};
         class setupActions {};
         class setupEVH {};
         class survival {};
 //        class welcomeNotification {};
+    };
+
+    class Adac { 
+        file = "core\adac"; 
+       class adacLoadout {}; 
+       class adacMarkers {}; 
     };
 
     class Actions {
@@ -46,12 +82,12 @@ class Life_Client_Core {
         class dropFishingNet {};
         class escortAction {};
         class gather {};
-        class getDPMission {};
+//        class getDPMission {};
         class gutAnimal {};
         class healHospital {};
         class impoundAction {};
         class mine {};
-        class newsBroadcast {};
+//        class newsBroadcast {};
         class packupSpikes {};
         class pickupItem {};
         class pickupMoney {};
@@ -72,18 +108,31 @@ class Life_Client_Core {
         class surrender {};
         class ticketAction {};
         class unrestrain {};
+		class suicideBomb {};
+		class lockCellAction {};
     };
+	
+	class Phone {
+		file = "core\phone";
+		class phoneInit {};
+		class phoneAdd {};
+		class phoneRemove {};
+		class phoneRefreshList {};
+		class phoneCreateNumber {};
+		class phoneCall {};
+		class phonePlaySound {};
+		class phoneFindPlayer {};
+		class phoneMobileEffect {};
+		class phoneSetPlayer {};
+		class phoneAddCall {};
+		class phoneAddCallExtra {};
+		class phone {};
+		class phoneExtra {};
+		class phoneBlock {};
+		class phoneChannel {};
+		class phonePlayerSearch {};
+	};
 
-    class Emp {
-       file = "ZionHost\emp";
-       class openEmpMenu {};
-       class isEmpOperator {};
-       class scanVehicles {};
-       class warnVehicle {};
-       class empVehicle {};
-       class vehicleWarned {};
-       class vehicleEmpd {};
-    };
 
     class Admin {
         file = "core\admin";
@@ -104,6 +153,7 @@ class Life_Client_Core {
 
     class Civilian {
         file = "core\civilian";
+        class civLoadout {};
         class civMarkers {};
         class demoChargeTimer {};
         class freezePlayer {};
@@ -124,17 +174,32 @@ class Life_Client_Core {
         class vehicleAnimate {};
         class vehicleWeightCfg {};
     };
-
+	
+	class Placeables {
+		file = "core\functions\placeables";
+		class placeablesInit {};
+		class medicPlaceablesInit {};
+		class placeablesMenu {};
+		class placeablesRemoveAll {};
+		class placeablePlace {};
+		class placeableCancel {};
+		class placeablesPlaceComplete {};
+	};
+	
     class Cop {
         file = "core\cop";
         class bountyReceive {};
-        class copcallmanagement {};
         class containerInvSearch {};
         class copInteractionMenu {};
         class copLights {};
+        class copLoadout {};
         class copMarkers {};
         class copSearch {};
-        class copSiren {};
+        class copSiren1 {};
+        class copSiren2 {};
+        class copSiren3 {};
+        class copSiren4 {};
+        class copSiren5 {};
         class doorAnimate {};
         class fedCamDisplay {};
         class licenseCheck {};
@@ -153,6 +218,10 @@ class Life_Client_Core {
         class ticketPrompt {};
         class vehInvSearch {};
         class wantedGrab {};
+		class sosmarker {};
+		class copbackup {};
+        class seizeObjects {};
+		class broadcastParse {};
     };
 
     class Dialog_Controls {
@@ -161,7 +230,8 @@ class Life_Client_Core {
         class bankTransfer {};
         class bankWithdraw {};
         class displayHandler {};
-        class gangBankResponse {};
+        class gangDeposit {};
+        class gangWithdraw {};
         class garageLBChange {};
         class impoundMenu {};
         class progressBar {};
@@ -176,7 +246,6 @@ class Life_Client_Core {
         class spawnPointCfg {};
         class spawnPointSelected {};
         class unimpound {};
-        class useGangBank {};
         class vehicleGarage {};
         class wireTransfer {};
     };
@@ -224,12 +293,15 @@ class Life_Client_Core {
         class receiveMoney {};
         class revealObjects {};
         class saveGear {};
+        class searchPosEmpty {};
         class simDisable {};
-        class startLoadout {};
         class stripDownPlayer {};
         class teleport {};
         class whereAmI {};
-        class moveIn {};
+		class emergencyLights {};
+		class robstore {};
+		class speaking {}; 
+		class opener {}; 
     };
 
     class Gangs {
@@ -282,14 +354,15 @@ class Life_Client_Core {
         class placestorage {};
         class spikeStrip {};
         class storageBox {};
-        class weed {};
+		class cprkit {};
+//		class molotov {};			ERST FIXEN!
     };
 
     class Medical_System {
         file = "core\medical";
         class deathScreen {};
-        class medcallmanagement {};
         class medicLights {};
+        class medicLoadout {};
         class medicMarkers {};
         class medicRequest {};
         class medicSiren {};
@@ -300,6 +373,7 @@ class Life_Client_Core {
         class respawned {};
         class revived {};
         class revivePlayer {};
+		class cprrevived {};
     };
 
     class Network {
@@ -338,22 +412,21 @@ class Life_Client_Core {
 
     class Shops {
         file = "core\shops";
-        class 3dPreviewDisplay {};
-        class 3dPreviewExit {};
-        class 3dPreviewInit {};
         class atmMenu {};
         class buyClothes {};
         class changeClothes {};
         class chopShopMenu {};
         class chopShopSelection {};
         class chopShopSell {};
-        class chopShopSold {};
         class clothingFilter {};
         class clothingMenu {};
         class fuelLBchange {};
         class fuelStatOpen {};
         class levelCheck {};
+        class vehicleShop3DPreview {};
         class vehicleShopBuy {};
+        class vehicleShopEnd3DPreview {};
+        class vehicleShopInit3DPreview {};
         class vehicleShopLBChange {};
         class vehicleShopMenu {};
         class virt_buy {};
@@ -367,7 +440,19 @@ class Life_Client_Core {
         class weaponShopMenu {};
         class weaponShopSelection {};
     };
-
+	
+	class Special
+	{
+		file = "core\special";
+		class openEmpMenu {};
+		class isEmpOperator {};
+		class scanVehicles {};
+		class warnVehicle {};
+		class empVehicle {};
+		class vehicleWarned {};
+		class vehicleEmpd {};
+	};
+	
     class Vehicle {
         file = "core\vehicle";
         class addVehicle2Chain {};
@@ -385,20 +470,45 @@ class Life_Client_Core {
         class vehStoreItem {};
         class vehTakeItem {};
         class vInteractionMenu {};
+		class vehTakeAllItem {};
+		class vehStoreAllItem {};
     };
 
-    class Adac {
-      file = "core\adac";
-      class adacLoadout {};
-      class adacMarkers {};
-    };
+	class Carter_System {
+		file = "felixvonstudsinske\System";
+		class ArrayIndexErhalten {};
+		class ENS {};
+		class ENS_Hint {};
+	}; 
+
+	class Personalausweis {
+		file = "felixvonstudsinske\Personalausweis";
+		class DienstausweisLizenzen {};
+		class PersoErstellen {};
+		class PersoErstellenOK {};
+		class PersoZeigenAnfordern {};
+		class PersoErstellenFortfahren {};
+		class PersoPruefenSchaltjahr {};
+		class PersoWohnortAuswahl {};
+		class PersoStrasseAuswahl {};
+		class PersoErstellenBildwahl {};
+		class PersoGeschlechtswahl {};
+		class PersoAbfrageRueckgabe {};
+		class PersoAusgewaehlt {};
+		class PersoAusweisnummer {};
+		class PersoSucheTag {};
+		class PersoKonvertiereSpielername {};
+		class PersoZeigen {};
+		class Dienstausweisnummer {};
+		class DienstausweisRangrueckgabe {};
+		class PersoLBWahl {};
+		class PersoNameAendern {};
+		class PersoLoeschen {};
+		class PersoErstelleMobilfunknummer {};
+		class PersoGeneriereAdminausweis {};
+		class DienstausweisZeigen {};
+		class SpielerBekanntHandle {};
+		class ServerteamZeigen {};
+	};
 
 };
-
-    class ZionHost {
-    	class ZionHost {
-    		tag = "ZionHost";
-    		file = "ZionHost\main";
-    		class notifications {};
-    	};
-    };

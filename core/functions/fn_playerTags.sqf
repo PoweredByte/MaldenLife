@@ -17,7 +17,9 @@ if (isNull _ui) then {
  500 cutRsc["Life_HUD_nameTags","PLAIN"];
  _ui = uiNamespace getVariable ["Life_HUD_nameTags",displayNull];
 };
-_units = nearestObjects[(visiblePosition player),["Man","Land_Pallet_MilBoxes_F","Land_Sink_F"],50];
+{ life_known_Players pushBackUnique _x; } forEach (units(group player));
+_units = nearestObjects[(visiblePosition player),["Land_Pallet_MilBoxes_F","Land_Sink_F"],50];
+{ if((player distance _x < 50) && {_x in life_known_Players}) then {_units pushBack _x};} foreach playableUnits;
 _units = _units - [player];
 _masks = LIFE_SETTINGS(getArray,"clothing_masks");
 {
@@ -35,63 +37,59 @@ _masks = LIFE_SETTINGS(getArray,"clothing_masks");
  if (count _sPos > 1 && {_distance < 15}) then {
  _text = switch (true) do {
  case (_x in (units group player) && playerSide == civilian): {format ["<t color='#00FF00'>%1</t>",(_x getVariable ["realname",name _x])];};
- case (!isNil {(_x getVariable "rank")} && side _x == west): {format["<img image='%1' size='1'></img> <t size='1.2' color='#318CE7'>%3<br/></t>%2",
- switch ((_x getVariable "rank")) do {
- case 2: {"\a3\ui_f\data\gui\cfg\Ranks\corporal_gs.paa"};
- case 3: {"\a3\ui_f\data\gui\cfg\Ranks\sergeant_gs.paa"};
- case 4: {"\a3\ui_f\data\gui\cfg\Ranks\lieutenant_gs.paa"};
- case 5: {"\a3\ui_f\data\gui\cfg\Ranks\captain_gs.paa"};
- case 6: {"\a3\ui_f\data\gui\cfg\Ranks\major_gs.paa"};
- case 7: {"\a3\ui_f\data\gui\cfg\Ranks\colonel_gs.paa"};
- case 8: {"\a3\ui_f\data\gui\cfg\Ranks\general_gs.paa"};
- default {"\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa"};
- },
- _x getVariable ["realname",name _x],
- switch ((_x getVariable "rank")) do {
-   case 2: {"Polizeianwärter"};
-   case 3: {"Polizist"};
-   case 4: {"Polizeimeister"};
-   case 5: {"Polizeiobermeister"};
-   case 6: {"Polizeihauptmeister"};
-   case 7: {"Polizeikommisar"};
-   case 8: {"Polizeioberkommisar"};
-   case 9: {"Polizeihauptkommisar"};
-   case 10: {"Polizeirat"};
-   case 11: {"Polizei Oberrat"};
-   case 12: {"Polizei Direktor"};
-   case 13: {"Leitender Polizeidirektor"};
-   case 14: {"Polizei Vizepräsident"};
-   case 15: {"Polizei Präsident"};
-   case 16: {"SEK Anwärter"};
-   case 17: {"SEK Mitglied"};
-   case 18: {"SEK Stv. Leitung"};
-   case 19: {"SEK Leitung"};
-   default {"Polizei Praktikant"};
+ // case (!isNil {(_x getVariable "rank")} && side _x == west): {format["<img image='%1' size='1'></img> <t size='1.2' color='#318CE7'>%3<br/></t>%2",
+ case (!isNil {(_x getVariable "rank")} && side _x == west): {format["<t size='1.2' color='#318CE7'>%1</t><t size='1.2' color='#318CE7'>%3<br/></t>%2",switch ((_x getVariable "rank")) do {
+ case 1: {"Praktikant"};
+ case 2: {"Anwärter"};
+ case 3: {"Polizist"};
+ case 4: {"Streifenpolizist"};
+ case 5: {"Polizeimeister"};
+ case 6: {"Polizeihauptmeister"};
+ case 7: {"Polizeikommissar"};
+ case 8: {"Polizeioberkommissar"};
+ case 9: {"Polizeihauptkommissar"};
+ case 10: {"Polizeirat"};
+ case 11: {"Polizeioberrat"};
+ case 12: {"Polizeidirektor"};
+ case 13: {"Polizeivizedirektor"};
+ case 14: {"L. Polizeidirektor"};
+ case 15: {"Polizeivizepräsident"};
+ case 16: {"Polizeipräsident"};
+ case 18: {""};
+ case 19: {""};
+ case 20: {""};
+ case 21: {""};
+ case 22: {"SEK-ANWÄRTER"};
+ case 23: {"SEK-EINHEIT"};
+ case 24: {"SEK-LEITUNG"};
+ default {"Praktikant"};
+ },_x getVariable ["realname",name _x]]};
 
- }
- ]
- };
  case (side _x == independent): {format["<t color='#FF0000'><img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1'></img> <t size='1.2' color='#FF0000'>%2<br/></t>%1",
  _x getVariable ["realname",name _x],
  switch ((_x getVariable "medrank")) do {
-   case 2: {"Notfallsanitäter"};
-   case 3: {"Rettungsanitäter"};
-   case 4: {"Notarzt"};
-   case 5: {"Oberarzt"};
-   case 6: {"Chefarzt"};
-   case 7: {"Leitender Chefarzt"};
-   default {"Praktikant"};
-
+ case 1: {"Ersthelfer"};
+ case 2: {"Sanitäter"};
+ case 3: {"Rettungshelfer"};
+ case 4: {"Rettungssanitäter"};
+ case 5: {"Notfallsanitäter"};
+ case 6: {"Notarzt"};
+ case 7: {"Oberarzt"};
+ default {"Ersthelfer"};
  }
  ]
  };
  case (side _x == east): {format["<t color='#FFF700'><img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1'></img> <t size='1.2' color='#FFF700'>%2<br/></t>%1",
  _x getVariable ["realname",name _x],
  switch ((_x getVariable "adacrank")) do {
-   case 2: {"Mechaniker"};
-   case 3: {"ADAC Stv. Leitung"};
-   case 4: {"ADAC Leitung"};
-   default {"Praktikant"};
+ case 1: {"ADAC"};
+ case 2: {"ADAC"};
+ case 3: {"ADAC"};
+ case 4: {"ADAC"};
+ case 5: {"ADAC"};
+ case 6: {"ADAC"};
+ case 7: {"ADAC"};
+ default {"ADAC"};
  }
  ]
  };
@@ -102,7 +100,10 @@ _masks = LIFE_SETTINGS(getArray,"clothing_masks");
  _x getVariable ["realname",name _x];
  };
  };
+
  };
+// if(_x GVAR ["speaking",false]) then {_text = "<t color='#12cc12'>[Speaking] " + _text};
+if (_x getVariable ["speaking",false]) then {_text = "<t color='#12cc12'>[Spricht] " + _text;};
  _idc ctrlSetStructuredText parseText _text;
  _idc ctrlSetPosition [_sPos select 0, _sPos select 1, 0.4, 0.65];
  _idc ctrlSetScale scale;

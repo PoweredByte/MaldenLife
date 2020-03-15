@@ -275,14 +275,34 @@ class playerSettings {
             w = (6.25 / 40);
             h = (1 / 25);
         };
-        class aapps_call : Life_RscButtonMenu {
-          	idc = 4111;
-          	text = "$STR_DC_dispatchcenter";
-          	onButtonClick = "0 call life_call_start";
-          	x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-          	y = 0.885;
-          	w = (6.25 / 40);
-          	h = (1 / 25);
+
+		class ButtonPhone: Life_RscButtonMenu {
+            idc = -1;
+            text = "Anrufen";
+            onButtonClick = "call life_fnc_phoneInit;";
+            x = 0.1 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
+            y = 0.805;
+            w = (6.25 / 40);
+            h = (1 / 25);
+        };
+
+        class ButtonRepair: Life_RscButtonMenu {
+            idc = 500;
+            text = "Reparieren";
+            onButtonClick = "[] call toxic_fnc_repairSystem; closeDialog 0;";
+            x = 0.42 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
+            y = 0.805;
+            w = (6.25 / 40);
+            h = (1 / 25);
+        };
+        class ButtonPlant: Life_RscButtonMenu {
+            idc = 501;
+            text = "Anpflanzen";
+            onButtonClick = "[] call MSG_fnc_farming_zones; closeDialog 0;";
+            x = 0.42 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
+            y = 0.805;
+            w = (6.25 / 40);
+            h = (1 / 25);
         };
     };
 };

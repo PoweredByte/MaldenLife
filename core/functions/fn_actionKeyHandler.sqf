@@ -8,12 +8,13 @@
     interacting with other players (Cops = Cop Menu for unrestrain,escort,stop escort, arrest (if near cop hq), etc).
 */
 private ["_curObject","_isWater","_CrateModelNames","_crate","_fish","_animal","_whatIsIt","_handle"];
+if (player getVariable ["restrained",false]) exitWith {["Du bist Festgenommen!","ZionHost-System","red",false] call MSG_fnc_handle;};
 _curObject = cursorObject;
 if (life_action_inUse) exitWith {}; //Action is in use, exit to prevent spamming.
 if (life_interrupted) exitWith {life_interrupted = false;};
 _isWater = surfaceIsWater (visiblePositionASL player);
 
-if (playerSide isEqualTo west && {player getVariable ["isEscorting",false]}) exitWith {
+if (playerSide in [west,civilian] && {player getVariable ["isEscorting",false]}) exitWith {
     [] call life_fnc_copInteractionMenu;
 };
 
@@ -61,10 +62,10 @@ if ((_curObject isKindOf "B_supplyCrate_F" || _curObject isKindOf "Box_IND_Grena
     };
 };
 
-private _vaultHouse = [[["Altis", "Land_Research_house_V1_F"], ["Tanoa", "Land_Medevac_house_V1_F"]]] call TON_fnc_terrainSort;
-private _altisArray = [16019.5,16952.9,0];
+private _vaultHouse = [[["Malden", "Land_Cargo_House_V1_F"], ["Tanoa", "Land_Medevac_house_V1_F"]]] call TON_fnc_terrainSort;
+private _altisArray = [9720.165,5916.738,2.082];
 private _tanoaArray = [11074.2,11501.5,0.00137329];
-private _pos = [[["Altis", _altisArray], ["Tanoa", _tanoaArray]]] call TON_fnc_terrainSort;
+private _pos = [[["Malden", _altisArray], ["Tanoa", _tanoaArray]]] call TON_fnc_terrainSort;
 
 if (_curObject isKindOf "House_F" && {player distance _curObject < 12} || ((nearestObject [_pos,"Land_Dome_Big_F"]) isEqualTo _curObject || (nearestObject [_pos,_vaultHouse]) isEqualTo _curObject)) exitWith {
     [_curObject] call life_fnc_houseMenu;
@@ -84,7 +85,7 @@ life_action_inUse = true;
 if (_curObject isKindOf "CAManBase" && {!alive _curObject}) exitWith {
     //Hotfix code by ins0
     if ((playerSide isEqualTo west && {(LIFE_SETTINGS(getNumber,"revive_cops") isEqualTo 1)}) || {(playerSide isEqualTo civilian && {(LIFE_SETTINGS(getNumber,"revive_civ") isEqualTo 1)})} || {(playerSide isEqualTo east && {(LIFE_SETTINGS(getNumber,"revive_east") isEqualTo 1)})} || {playerSide isEqualTo independent}) then {
-        if (life_inv_defibrillator > 0) then {
+        if (life_inv_cprKit > 0) then {
             [_curObject] call life_fnc_revivePlayer;
         };
     };
@@ -92,7 +93,7 @@ if (_curObject isKindOf "CAManBase" && {!alive _curObject}) exitWith {
 
 //If target is a player then check if we can use the cop menu.
 if (isPlayer _curObject && _curObject isKindOf "CAManBase") then {
-    if ((_curObject getVariable ["restrained",false]) && !dialog && playerSide isEqualTo west) then {
+    if (!dialog && playerSide in [west,civilian]) then {
         [_curObject] call life_fnc_copInteractionMenu;
     };
 } else {

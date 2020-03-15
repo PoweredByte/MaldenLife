@@ -11,7 +11,7 @@ class Licenses {
     class driver {
         variable = "driver";
         displayName = "STR_License_Driver";
-        price = 500;
+        price = 2000000;
         illegal = false;
         side = "civ";
     };
@@ -19,7 +19,7 @@ class Licenses {
     class boat {
         variable = "boat";
         displayName = "STR_License_Boat";
-        price = 1000;
+        price = 30000000;
         illegal = false;
         side = "civ";
     };
@@ -27,7 +27,7 @@ class Licenses {
     class pilot {
         variable = "pilot";
         displayName = "STR_License_Pilot";
-        price = 25000;
+        price = 25000000;
         illegal = false;
         side = "civ";
     };
@@ -35,7 +35,7 @@ class Licenses {
     class trucking {
         variable = "trucking";
         displayName = "STR_License_Truck";
-        price = 20000;
+        price = 60000000;
         illegal = false;
         side = "civ";
     };
@@ -43,7 +43,7 @@ class Licenses {
     class gun {
         variable = "gun";
         displayName = "STR_License_Firearm";
-        price = 10000;
+        price = 35000000;
         illegal = false;
         side = "civ";
     };
@@ -59,7 +59,7 @@ class Licenses {
     class home {
         variable = "home";
         displayName = "STR_License_Home";
-        price = 75000;
+        price = 125000000;
         illegal = false;
         side = "civ";
     };
@@ -157,11 +157,19 @@ class Licenses {
     class rebel {
         variable = "rebel";
         displayName = "STR_License_Rebel";
-        price = 75000;
+        price = 650000000;
         illegal = true;
         side = "civ";
     };
-
+	
+    class schwarzmarkt {
+        variable = "schwarzmarkt";
+        displayName = "STR_License_Schwarzmarkt";
+        price = 5000000000;
+        illegal = true;
+        side = "civ";
+    };
+	
     //Cop Licenses
     class cAir {
         variable = "cAir";
@@ -186,5 +194,14 @@ class Licenses {
         price = 15000;
         illegal = false;
         side = "med";
+    };
+
+    //ADac Licenses
+    class Air {
+        variable = "Air";
+        displayName = "STR_License_ADAC";
+        price = 15000;
+        illegal = false;
+        side = "adac";
     };
 };

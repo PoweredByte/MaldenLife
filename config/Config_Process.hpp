@@ -17,6 +17,61 @@
 */
 
 class ProcessAction {
+	
+	
+//CUSTOM VERARBEITUNG //ANFANG
+	class blei {
+        MaterialsReq[] = {{"blei_unverarbeitet",1}};
+        MaterialsGive[] = {{"blei_verarbeitet",1}};
+        Text = "Blei Verarbeiten";
+        //ScrollText = "Process Oil";
+        NoLicenseCost = 1200;
+    };
+	class feuerstein {
+        MaterialsReq[] = {{"feuerstein_unverarbeitet",1}};
+        MaterialsGive[] = {{"feuerstein_verarbeitet",1}};
+        Text = "Feuerstein Verarbeiten";
+        //ScrollText = "Process Oil";
+        NoLicenseCost = 1200;
+    };
+	class kaktus {
+        MaterialsReq[] = {{"kaktus_unverarbeitet",1}};
+        MaterialsGive[] = {{"kaktus_verarbeitet",1}};
+        Text = "Kaktus Verarbeiten";
+        //ScrollText = "Process Oil";
+        NoLicenseCost = 1200;
+    };
+	class katzengold {
+        MaterialsReq[] = {{"katzengold_unverarbeitet",1}};
+        MaterialsGive[] = {{"katzengold_verarbeitet",1}};
+        Text = "Katzengold Verarbeiten";
+        //ScrollText = "Process Oil";
+        NoLicenseCost = 1200;
+    };
+	class lavagestein {
+        MaterialsReq[] = {{"lavagestein_unverarbeitet",1}};
+        MaterialsGive[] = {{"lavagestein_verarbeitet",1}};
+        Text = "Lavagestein Verarbeiten";
+        //ScrollText = "Process Oil";
+        NoLicenseCost = 1200;
+    };
+	class titanium {
+        MaterialsReq[] = {{"titanium_unverarbeitet",1}};
+        MaterialsGive[] = {{"titanium_verarbeitet",1}};
+        Text = "Titanium Verarbeiten";
+        //ScrollText = "Process Oil";
+        NoLicenseCost = 1200;
+    };
+	class uran {
+        MaterialsReq[] = {{"uran_unverarbeitet",1}};
+        MaterialsGive[] = {{"uran_verarbeitet",1}};
+        Text = "Kaktus Verarbeiten";
+        //ScrollText = "Process Oil";
+        NoLicenseCost = 1200;
+    };
+//CUSTOM VERARBEITUNG //ENDE
+
+	
     class oil {
         MaterialsReq[] = {{"oil_unprocessed",1}};
         MaterialsGive[] = {{"oil_processed",1}};
