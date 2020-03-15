@@ -128,6 +128,7 @@ class Life_Client_Core {
     class Cop {
         file = "core\cop";
         class bountyReceive {};
+        class copcallmanagement {};
         class containerInvSearch {};
         class copInteractionMenu {};
         class copLights {};
@@ -286,6 +287,7 @@ class Life_Client_Core {
     class Medical_System {
         file = "core\medical";
         class deathScreen {};
+        class medcallmanagement {};
         class medicLights {};
         class medicMarkers {};
         class medicRequest {};
@@ -389,5 +391,5 @@ class Life_Client_Core {
       class adacLoadout {};
       class adacMarkers {};
     };
-    
+
 };
