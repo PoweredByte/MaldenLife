@@ -12,7 +12,7 @@ if ((FETCH_CONST(life_medicLevel)) < 1 && (FETCH_CONST(life_adminlevel) isEqualT
     ["Notwhitelisted",false,true] call BIS_fnc_endMission;
     sleep 35;
 };
-
+player setVariable["medrank",(FETCH_CONST(life_medicLevel)),true];
 [] call life_fnc_spawnMenu;
 waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
 waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
