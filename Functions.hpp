@@ -29,10 +29,11 @@ class Life_Client_Core {
         class initCiv {};
         class initCop {};
         class initMedic {};
+        class initAdac {};  //ADAC
         class setupActions {};
         class setupEVH {};
         class survival {};
-        class welcomeNotification {};
+//        class welcomeNotification {};
     };
 
     class Actions {
@@ -371,4 +372,11 @@ class Life_Client_Core {
         class vehTakeItem {};
         class vInteractionMenu {};
     };
+
+    class Adac {
+      file = "core\adac";
+      class adacLoadout {};
+      class adacMarkers {};
+    };
+    
 };

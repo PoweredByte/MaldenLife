@@ -1,10 +1,4 @@
 #include "..\script_macros.hpp"
-/*
-    File: init.sqf
-    Author: Bryan "Tonic" Boardwine
-    Description:
-    Master client initialization file
-*/
 diag_log "----------------------------------------------------------------------------------------------------";
 diag_log "--------------------------------- Starting Altis Life Client Init ----------------------------------";
 diag_log format["------------------------------------------ Version %1 -------------------------------------------",(LIFE_SETTINGS(getText,"framework_version"))];
@@ -58,6 +52,10 @@ switch (playerSide) do {
     case independent: {
         life_paycheck = LIFE_SETTINGS(getNumber,"paycheck_med");
         [] call life_fnc_initMedic;
+    };
+    case east: {
+        life_paycheck = LIFE_SETTINGS(getNumber,"paycheck_adac");
+        [] call life_fnc_initAdac;
     };
 };
 CONSTVAR(life_paycheck);
