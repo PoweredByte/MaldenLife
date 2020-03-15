@@ -114,7 +114,7 @@ class schwarzmarkt {
 			{ "100Rnd_65x39_caseless_mag_Tracer", "", 125 },
 			{ "RPG7_F", "", 250000000 },
 			{ "RPG32_F", "", 250000000 },
-			{ "30Rnd_45ACP_Mag_SMG_01_tracer_green", "", 125 } 	
+			{ "30Rnd_45ACP_Mag_SMG_01_tracer_green", "", 125 }
         };
         accs[] = {
             { "optic_ACO_grn", "", 3500, 1750, "" },
@@ -167,7 +167,7 @@ class schwarzmarkt {
             { "acc_flashlight", "", 1000, 500, "" }
         };
     };
-	
+
 class rebel {
         name = "Rebellenmarkt";
         side = "civ";
@@ -221,7 +221,7 @@ class rebel {
 			{ "30Rnd_762x39_Mag_Tracer_F", "", 125 },
 			{ "10Rnd_338_Mag", "", 125 },
 			{ "30Rnd_45ACP_Mag_SMG_01", "", 125 },
-			{ "30Rnd_45ACP_Mag_SMG_01_tracer_green", "", 125 } 
+			{ "30Rnd_45ACP_Mag_SMG_01_tracer_green", "", 125 }
         };
         accs[] = {
 			{ "optic_ACO_grn", "", 3500 },
@@ -405,7 +405,7 @@ class rebel {
             { "muzzle_snds_H", "", 2750, 1375, "" }
         };
     };
-	
+
    class SEK {
         name = "SEK";
         side = "cop";
@@ -457,7 +457,7 @@ class rebel {
             { "100Rnd_65x39_caseless_mag", "", 45 },
             { "150Rnd_556x45_Drum_Mag_Tracer_F", "", 45 },
             { "11Rnd_45ACP_Mag", "", 45 },
-			{ "30Rnd_9x21_Mag_SMG_02_Tracer_Green", "", 45 }
+			      { "30Rnd_9x21_Mag_SMG_02_Tracer_Green", "", 45 }
         };
         accs[] = {
             { "muzzle_snds_L", "", 650 },
@@ -465,29 +465,29 @@ class rebel {
             { "muzzle_snds_b", "", 650 },
             { "muzzle_snds_338_black", "", 650 },
             { "muzzle_snds_65_TI_blk_F", "", 650 },
-			{ "ACC_pointer_IR", "", 3500 },
-			{ "bipod_01_F_blk", "", 3500 },
-			{ "muzzle_sdns_h", "", 3500 },
-			{ "muzzle_sdns_m", "", 3500 },
-			{ "optic_SOS", "", 3500 },
-			{ "muzzle_snds_H", "", 3500 },
-			{ "muzzle_snds_M", "", 3500 },
-			{ "optic_Aco", "", 3500 },
-			{ "optic_MRCO", "", 3500 },
-			{ "optic_AMS", "", 3500 },
-			{ "optic_Nightstalker", "", 3500 },
-			{ "muzzle_snds_93mmg", "", 3500 },
-			{ "optic_tws", "", 3500 },
-			{ "optic_tws_mg", "", 3500 },
-			{ "optic_KHS_blk", "", 3500 },
-			{ "optic_LRPS", "", 3500 },
-			{ "optic_DMS", "", 3500 },
-			{ "optic_Hamr", "", 3500 },
-			{ "optic_MRD", "", 3500 },
-			{ "ACC_flashlight", "", 3500 } 
+      			{ "ACC_pointer_IR", "", 3500 },
+      			{ "bipod_01_F_blk", "", 3500 },
+      			{ "muzzle_sdns_h", "", 3500 },
+      			{ "muzzle_sdns_m", "", 3500 },
+      			{ "optic_SOS", "", 3500 },
+      			{ "muzzle_snds_H", "", 3500 },
+      			{ "muzzle_snds_M", "", 3500 },
+      			{ "optic_Aco", "", 3500 },
+      			{ "optic_MRCO", "", 3500 },
+      			{ "optic_AMS", "", 3500 },
+      			{ "optic_Nightstalker", "", 3500 },
+      			{ "muzzle_snds_93mmg", "", 3500 },
+      			{ "optic_tws", "", 3500 },
+      			{ "optic_tws_mg", "", 3500 },
+      			{ "optic_KHS_blk", "", 3500 },
+      			{ "optic_LRPS", "", 3500 },
+      			{ "optic_DMS", "", 3500 },
+      			{ "optic_Hamr", "", 3500 },
+      			{ "optic_MRD", "", 3500 },
+      			{ "ACC_flashlight", "", 3500 }
         };
     };
-	
+
     //Medic Shops
     class med_basic {
         name = "store";
@@ -497,7 +497,7 @@ class rebel {
             { "ItemGPS", "", 100, 50, "" },
             { "Binocular", "", 150, 75, "" },
             { "FirstAidKit", "", 150, 75, "" },
-            { "Medikit", "", 150, 75, "" },			
+            { "Medikit", "", 150, 75, "" },
             { "NVGoggles", "", 1200, 600, "" }
         };
         mags[] = {};
