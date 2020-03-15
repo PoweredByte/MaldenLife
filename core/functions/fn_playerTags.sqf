@@ -48,13 +48,26 @@ _masks = LIFE_SETTINGS(getArray,"clothing_masks");
  },
  _x getVariable ["realname",name _x],
  switch ((_x getVariable "rank")) do {
- case 2: {"POLIZEI RANG2"};
- case 3: {"POLIZEI RANG3"};
- case 4: {"POLIZEI RANG4"};
- case 5: {"POLIZEI RANG5"};
- case 6: {"POLIZEI RANG6"};
- case 7: {"POLIZEI RANG7"};
- default {"POLIZEI RANG1"};
+   case 2: {"Polizeianwärter"}
+   case 3: {"Polizist"};
+   case 4: {"Polizeimeister"};
+   case 5: {"Polizeiobermeister"};
+   case 6: {"Polizeihauptmeister"};
+   case 7: {"Polizeikommisar"};
+   case 8: {"Polizeioberkommisar"};
+   case 9: {"Polizeihauptkommisar"};
+   case 10: {"Polizeirat"};
+   case 11: {"Polizei Oberrat"};
+   case 12: {"Polizei Direktor"};
+   case 13: {"Leitender Polizeidirektor"};
+   case 14: {"Polizei Vizepräsident"};
+   case 15: {"Polizei Präsident"};
+   case 16: {"SEK Anwärter"};
+   case 17: {"SEK Mitglied"};
+   case 18: {"SEK Stv. Leitung"};
+   case 19: {"SEK Leitung"};
+   default {"PolizeiPraktikant"};
+
  }
  ]
  };
