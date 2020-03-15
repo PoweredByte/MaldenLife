@@ -20,7 +20,14 @@ waitUntil {isNull life_spikeStrip};
 if (!isNil "life_action_spikeStripDeploy") then {player removeAction life_action_spikeStripDeploy;};
 if (isNull _spikeStrip) exitWith {life_spikestrip = objNull;};
 
-_spikeStrip setPos [(getPos _spikeStrip select 0),(getPos _spikeStrip select 1),0];
+_pos = getPosWorld _spikeStrip;
+_ins = lineIntersectsSurfaces [_pos , _pos vectorAdd [0,0,-50] ,_spikeStrip,objNull,true,1,"GEOM","NONE"];
+if ((count _ins) isEqualTo 0) then {
+	_spikeStrip setPos [(getPos _spikeStrip select 0),(getPos _spikeStrip select 1),0];
+} else {
+	_spikeStrip setPosASL (_ins select 0 select 0);
+	_spikeStrip setVectorUp (_ins select 0 select 1); // This can cause some problems so if you wish to remove it you can. 
+};
 _spikeStrip setDamage 1;
 
 life_action_spikeStripPickup = player addAction[localize "STR_ISTR_Spike_Pack",life_fnc_packupSpikes,"",0,false,false,"",
