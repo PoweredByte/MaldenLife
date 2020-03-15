@@ -16,6 +16,7 @@ params [
 ];
 
 private _speed = speed cursorObject;
+private _empfahrzeuge = getArray (configFile >> "ZionHost" >> "empFahrzeuge");
 private _handled = false;
 private _interactionKey = if (actionKeys "User10" isEqualTo []) then {219} else {(actionKeys "User10") select 0};
 private _interruptionKeys = [17, 30, 31, 32]; //A,S,W,D
@@ -113,7 +114,7 @@ switch (_code) do {
     //EMP Konsole - K
      case 37:
      {
-     if (!_shift && !_alt && !_ctrlKey && (playerSide == west) && (vehicle player != player && (typeOf vehicle player) in ["B_Heli_Light_01_F"])) then
+     if (!_shift && !_alt && !_ctrlKey && (playerSide == west) && (vehicle player != player && (typeOf vehicle player) in _empfahrzeuge)) then
      {
      [] call life_fnc_openEmpMenu; [_this] call life_fnc_isEmpOperator;
      };
