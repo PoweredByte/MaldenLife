@@ -1,6 +1,6 @@
 #include "..\script_macros.hpp"
 diag_log "----------------------------------------------------------------------------------------------------";
-diag_log "--------------------------------- Starting Zion Host Client Init -----------------------------------";
+diag_log "--------------------------------- Starting Malden Life Client Init -----------------------------------";
 diag_log format["------------------------------------------ Version %1 -------------------------------------------",(LIFE_SETTINGS(getText,"framework_version"))];
 diag_log "----------------------------------------------------------------------------------------------------";
 
@@ -119,5 +119,5 @@ if (life_HC_isActive) then {
 };
 
 diag_log "----------------------------------------------------------------------------------------------------";
-diag_log format ["               End of Zion Host Client Init :: Total Execution Time %1 seconds ",(diag_tickTime - _timeStamp)];
+diag_log format ["               End of Malden Life Client Init :: Total Execution Time %1 seconds ",(diag_tickTime - _timeStamp)];
 diag_log "----------------------------------------------------------------------------------------------------";
