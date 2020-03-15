@@ -65,15 +65,28 @@ switch (playerSide) do {
 				player setObjectTextureGlobal [0, "textures\polizei\16.jpg"];
 			};
 		if ((uniform player) isEqualTo "U_B_CombatUniform_mcam_vest" && FETCH_CONST(life_coplevel) isEqualTo 22) then {
-				player setObjectTextureGlobal [0, "textures\sek\22.jpg"];
+				player setObjectTextureGlobal [0, "textures\sek\SEK.paa"];
 			};
 		if ((uniform player) isEqualTo "U_B_CombatUniform_mcam_vest" && FETCH_CONST(life_coplevel) isEqualTo 23) then {
-				player setObjectTextureGlobal [0, "textures\sek\23.jpg"];
+				player setObjectTextureGlobal [0, "textures\sek\SEK.paa"];
 			};
 		if ((uniform player) isEqualTo "U_B_CombatUniform_mcam_vest" && FETCH_CONST(life_coplevel) isEqualTo 24) then {
-				player setObjectTextureGlobal [0, "textures\sek\24.jpg"];
-			};			
+				player setObjectTextureGlobal [0, "textures\sek\SEK.paa"];
+			};
+    //SEK GHILLIE
+    if (uniform player isEqualTo "U_O_T_FullGhillie_tna_F") then {
+            player setObjectTextureGlobal [0, "textures\sek\SEKGhillie.jpg"];
+        };
+      //RANGEMASTER
+    if (uniform player isEqualTo "U_Rangemaster") then {
+                player setObjectTextureGlobal [0, "textures\polizei\Rangemaster.jpg"];
+        };
+      //TAKTISCHE UNIFORM
+    if (uniform player isEqualTo "U_I_CombatUniform") then {
+                player setObjectTextureGlobal [0, "textures\polizei\bfe.jpg"];
+        };
 
+U_I_CombatUniform
 		if (backpack player isEqualTo "B_ViperLightHarness_blk_F") then {
 			(backpackContainer player) setObjectTextureGlobal[0,"textures\sek\ViperRucksack.jpg"];
 		};
@@ -96,7 +109,7 @@ switch (playerSide) do {
 			(backpackContainer player) setObjectTextureGlobal[0,"textures\medic\medBACKPACK.jpg"];
 		};
     };
-	
+
 	case east: {
 		if(uniform player isEqualTo "U_B_HeliPilotCoveralls") then {
 			player setObjectTextureGlobal [0, "textures\adac\adac_uniform.jpg"];
