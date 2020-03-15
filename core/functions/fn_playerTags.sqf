@@ -74,26 +74,24 @@ _masks = LIFE_SETTINGS(getArray,"clothing_masks");
  case (side _x == independent): {format["<t color='#FF0000'><img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1'></img> <t size='1.2' color='#FF0000'>%2<br/></t>%1",
  _x getVariable ["realname",name _x],
  switch ((_x getVariable "medrank")) do {
- case 2: {"MEDIC RANG2"};
- case 3: {"MEDIC RANG3"};
- case 4: {"MEDIC RANG4"};
- case 5: {"MEDIC RANG5"};
- case 6: {"MEDIC RANG6"};
- case 7: {"MEDIC RANG7"};
- default {"MEDIC RANG1"};
+   case 2: {"Notfallsanitäter"};
+   case 3: {"Rettungsanitäter"};
+   case 4: {"Notarzt"};
+   case 5: {"Oberarzt"};
+   case 6: {"Chefarzt"};
+   case 7: {"Leitender Chefarzt"};
+   default {"Praktikant"};
+
  }
  ]
  };
  case (side _x == east): {format["<t color='#FFF700'><img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1'></img> <t size='1.2' color='#FFF700'>%2<br/></t>%1",
  _x getVariable ["realname",name _x],
  switch ((_x getVariable "adacrank")) do {
- case 2: {"ADAC RANG2"};
- case 3: {"ADAC RANG3"};
- case 4: {"ADAC RANG4"};
- case 5: {"ADAC RANG5"};
- case 6: {"ADAC RANG6"};
- case 7: {"ADAC RANG7"};
- default {"ADAC RANG1"};
+   case 2: {"Mechaniker"};
+   case 3: {"ADAC Stv. Leitung"};
+   case 4: {"ADAC Leitung"};
+   default {"Praktikant"};
  }
  ]
  };
