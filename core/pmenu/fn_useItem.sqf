@@ -32,12 +32,12 @@ switch (true) do {
         [cursorObject] spawn life_fnc_boltcutter;
         closeDialog 0;
     };
-	
+
 	case (_item isEqualTo "sos"): {
 		[] spawn life_fnc_copbackup;
 		closeDialog 0;
 	};
- 
+
     case (_item isEqualTo "blastingcharge"): {
         player reveal fed_bank;
         (group player) reveal fed_bank;
@@ -90,12 +90,18 @@ switch (true) do {
         [] spawn life_fnc_lockpick;
         closeDialog 0;
     };
-	
+    case (_item isEqualTo "marijuana"): {
+  if(([false,_item,1] call life_fnc_handleInv)) then
+    {
+      [] spawn life_fnc_weed;
+    };
+  };
+
     case (_item isEqualTo "cprKit"): {
         [cursorObject] call life_fnc_revivePlayer;
         closeDialog 0;
     };
-	
+
     case (_item in ["apple","rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtle_soup","hen","rooster","sheep","goat","donuts","tbacon","peach"]): {
         if (!(M_CONFIG(getNumber,"VirtualItems",_item,"edible") isEqualTo -1)) then {
             if ([false,_item,1] call life_fnc_handleInv) then {
