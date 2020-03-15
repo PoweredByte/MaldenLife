@@ -17,6 +17,8 @@ life_action_spikeStripDeploy = player addAction[localize "STR_ISTR_Spike_Place",
 life_spikestrip = _spikeStrip;
 waitUntil {isNull life_spikeStrip};
 
+//Test
+
 if (!isNil "life_action_spikeStripDeploy") then {player removeAction life_action_spikeStripDeploy;};
 if (isNull _spikeStrip) exitWith {life_spikestrip = objNull;};
 
@@ -26,7 +28,7 @@ if ((count _ins) isEqualTo 0) then {
 	_spikeStrip setPos [(getPos _spikeStrip select 0),(getPos _spikeStrip select 1),0];
 } else {
 	_spikeStrip setPosASL (_ins select 0 select 0);
-	_spikeStrip setVectorUp (_ins select 0 select 1); // This can cause some problems so if you wish to remove it you can. 
+	_spikeStrip setVectorUp (_ins select 0 select 1); // This can cause some problems so if you wish to remove it you can.
 };
 _spikeStrip setDamage 1;
 
