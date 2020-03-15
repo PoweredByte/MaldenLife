@@ -85,8 +85,7 @@ switch (playerSide) do {
     if (uniform player isEqualTo "U_I_CombatUniform") then {
                 player setObjectTextureGlobal [0, "textures\polizei\bfe.jpg"];
         };
-
-U_I_CombatUniform
+        
 		if (backpack player isEqualTo "B_ViperLightHarness_blk_F") then {
 			(backpackContainer player) setObjectTextureGlobal[0,"textures\sek\ViperRucksack.jpg"];
 		};
