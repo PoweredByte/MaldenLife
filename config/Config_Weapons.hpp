@@ -192,6 +192,11 @@ class rebel {
 			{ "srifle_DMR_03_multicam_F", "", 20000, 7500 },
 			{ "srifle_DMR_03_khaki_F", "", 20000, 7500 },
 			{ "srifle_DMR_03_tan_F", "", 20000, 7500 },
+
+      { "arifle_MSBS65_F", "", 20000, 7500 },
+      { "arifle_MSBS65_sand_F", "", 20000, 7500 },
+      { "arifle_MSBS65_Mark_F", "", 20000, 7500 },
+      { "arifle_MSBS65_Mark_sand_F", "", 20000, 7500 },
             { "Binocular", "", 150, -1 },
             { "ItemGPS", "", 100, 45 },
             { "ItemMap", "", 50, 35 },
@@ -373,14 +378,14 @@ class rebel {
             //Polizeirat
             { "arifle_ARX_blk_F", "", 1, 0, "call life_coplevel >= 10" },
             //Polizeiboerrat
-            { "LMG_Mk200_black_F", "", 1, 0, "call life_coplevel >= 11" },
+            { "LMG_Mk200_black_F", "", 1, 0, "call life_coplevel >= 11" }, //Vlt.Raus MK200
             //L.Polizeidirektor
             { "srifle_DMR_05_blk_F", "", 1, 0, "call life_coplevel >= 13" },
             { "6Rnd_12Gauge_Pellets", "", 1, 0, "call life_coplevel >= 10" },
             { "muzzle_snds_58_blk_F", "", 1, 0, "call life_coplevel >= 10" },
             { "6Rnd_12Gauge_Slug", "", 1, 0, "call life_coplevel >= 10" },
             //PoizeiVizepräsident / Polizeipräsident
-            { "srifle_LRR_F", "", 1, 0, "call life_coplevel >= 14" }
+            { "srifle_LRR_F", "", 1, 0, "call life_coplevel >= 14" } //Vlt.Raus
 
 
         };

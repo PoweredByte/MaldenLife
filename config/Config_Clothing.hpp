@@ -174,7 +174,7 @@ class Clothing {
             { "U_B_GEN_Commander_F", "Polizei-Pullover", 25, { "", "", -1 } },
             { "U_I_CombatUniform", "Taktische Uniform", 350, "call life_coplevel >= 2" },
             { "U_O_R_Gorka_01_black_F", "Sneaky Peaky Uniform", 350, "call life_coplevel >= 15" },
-            { "U_B_CombatUniform_mcam_vest", "SEK-KLEIDUNG", 350, "" },
+            { "U_B_CombatUniform_mcam_vest", "Uniform", 350, "" },
 	          { "U_B_Wetsuit", "", 2000, { "", "", -1 } },
             { "U_O_T_FullGhillie_tna_F", "SEK-Ghillie", 350, "call life_coplevel >= 22" }
         };
@@ -284,7 +284,17 @@ class Clothing {
         conditions = "";
         side = "civ";
         uniforms[] = {
-            { "NONE", $STR_C_Remove_uniforms, 0, "" }
+            { "NONE", $STR_C_Remove_uniforms, 0, "" },
+            { "U_I_C_Soldier_Bandit_4_F", "", 1900, "" },
+            { "U_I_C_Soldier_Bandit_5_F", "", 1900, "" },
+            { "U_I_C_Soldier_Bandit_1_F", "", 1900, "" },
+            { "U_I_C_Soldier_Bandit_3_F", "", 1900, "" },
+            { "U_I_C_Soldier_Bandit_2_F", "", 1900, "" },
+            { "U_C_E_LooterJacket_01_F", "", 1900, "" },
+            { "U_I_L_Uniform_01_tshirt_olive_F", "", 1900, "" },
+            { "U_I_L_Uniform_01_tshirt_black_F", "", 1900, "" },
+            { "U_I_L_Uniform_01_tshirt_skull_F", "", 1900, "" },
+            { "U_I_L_Uniform_01_tshirt_black_F", "", 1900, "" }
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" }
@@ -294,10 +304,26 @@ class Clothing {
         };
         vests[] = {
             { "NONE", $STR_C_Remove_vests, 0, "" },
+            { "V_TacWest_brn", "", 1900, "" },
+            { "V_TacWest_khk", "", 1900, "" },
+            { "V_TacWest_oli", "", 1900, "" },
+            { "V_TacWest_camo", "", 1900, "" },
+
             { "V_Rangemaster_belt", "", 1900, "" }
         };
         backpacks[] = {
-            { "NONE", $STR_C_Remove_backpacks, 0, "" }
+            { "NONE", $STR_C_Remove_backpacks, 0, "" },
+            { "B_AssaultPack_cbr", "", 1900, "" },
+            { "B_AssaultPack_sgg", "", 1900, "" },
+            { "B_AssaultPack_rgr", "", 1900, "" },
+            { "B_AssaultPack_ocamo", "", 1900, "" },
+            { "B_AssaultPack_khk", "", 1900, "" },
+            { "B_AssaultPack_mcamo", "", 1900, "" },
+            { "B_AssaultPack_dgtl", "", 1900, "" },
+            { "B_AssaultPack_tna_F", "", 1900, "" },
+            { "B_Caryall_eaf_F", "", 1900, "" },
+            { "B_Caryall_green_F", "", 1900, "" },
+            { "B_Caryall_wdl_F", "", 1900, "" }
         };
     };
 
@@ -342,6 +368,18 @@ class Clothing {
             { "U_O_PilotCoveralls", "", 15610, "" },
             { "U_O_SpecopsUniform_ocamo", "", 17500, "" },
             { "U_O_GhillieSuit", "", 50000, "" },
+
+            { "U_B_CTRG_2", "", 50000, "" },
+            { "U_B_CTRG_Soldier_urb_2_F", "", 50000, "" },
+            { "U_I_L_Uniform_01_camo_F", "", 50000, "" },
+            { "U_I_L_Uniform_01_desserter_F", "", 50000, "" },
+            { "U_B_CombatUniform_mcam_worn", "", 50000, "" },
+            { "U_I_E_Uniform_01_shortsleeve_F", "", 50000, "" },
+            { "U_I_E_ressistanceLeader_F", "", 50000, "" },
+            { "U_O_PilotCoveralls", "", 50000, "" },
+            { "U_O_SpecopsUniform_ocamo", "", 50000, "" },
+            { "U_B_CombatUniform_mcam_vest", "", 50000, "" },
+
             { "U_B_T_Soldier_F", "", 50000, "" }, //Apex DLC
             { "U_I_C_Soldier_Bandit_1_F", "", 50000, "" }, //Apex DLC
             { "U_I_C_Soldier_Bandit_2_F", "", 51000, "" }, //Apex DLC
@@ -363,6 +401,24 @@ class Clothing {
             { "H_PilotHelmetFighter_B", "", 850, "" },
             { "H_Helmet0_ocamo", "", 850, "" },
             { "H_HelmetB_TI_tna_F", "", 850, "" },
+            { "H_Booniehat_mgm", "", 150, "" },
+            { "H_Booniehat_khk_hs", "", 160, "" },
+            { "H_Booniehat_khk", "", 165, "" },
+            { "H_Booniehat_mcamo", "", 150, "" },
+            { "H_Booniehat_oli", "", 160, "" },
+            { "H_Booniehat_tan", "", 165, "" },
+            { "H_Booniehat_tna_F", "", 150, "" },
+            { "H_Booniehat_taiga", "", 160, "" },
+            { "H_Booniehat_wdl", "", 165, "" },
+            { "H_Booniehat_dgtl", "", 150, "" },
+            { "H_Booniehat_eaf", "", 160, "" },
+            { "H_HelmetB_Camo", "", 165, "" },
+            { "H_HelmetB_grass", "", 150, "" },
+            { "H_HelmetB_sand", "", 160, "" },
+            { "H_HelmetB_snakeskin", "", 165, "" },
+            { "H_HelmetB_Ina_F", "", 150, "" },
+            { "H_HelmetB_plain_wdl", "", 160, "" },
+            { "H_HelmetB_dessert", "", 165, "" },
             { "H_HelmetSpecB_paint2", "", 850, "" },
             { "H_HelmetO_ocamo", "", 2500, "" }
         };
@@ -398,6 +454,9 @@ class Clothing {
             { "V_RebreatherIA", "", 7500, "" },
             { "V_EOD_olive_F", "", 7500, "" },
             { "V_TacVest_khk", "", 12500, "" },
+            { "V_PlateCarrierL_CTRG", "", 12500, "" },
+            { "V_PlateCarrier2_rgr", "", 12500, "" },
+            { "V_PlateCarrier_Kerry", "", 12500, "" },
             { "V_HarnessOGL_gry", "SELBSTMORDWESTE", 750000000, "" },
             { "V_TacChestrig_grn_F", "", 17500, "" } //Apex DLC
         };
@@ -410,6 +469,10 @@ class Clothing {
             { "B_AssaultPack_sgg", "", 2000, "" },
             { "B_AssaultPack_blk", "", 2000, "" },
             { "B_AssaultPack_cbr", "", 2000, "" },
+            { "B_ViperLightHarness_ghex_F", "", 2000, "" },
+            { "B_ViperLightHarness_khk_F", "", 2000, "" },
+            { "B_ViperLightHarness_oli_F", "", 2000, "" },
+            { "B_ViperLightHarness_hex_F", "", 2000, "" },
             { "B_AssaultPack_mcamo", "", 2000, "" },
             { "B_TacticalPack_oli", "", 2500, "" },
             { "B_Kitbag_mcamo", "", 3500, "" },
@@ -451,6 +514,13 @@ class Clothing {
             { "U_I_C_Soldier_Bandit_4_F", "", 50020, "" }, //Apex DLC
             { "U_I_C_Soldier_Bandit_5_F", "", 50020, "" }, //Apex DLC
             { "U_BG_Guerrilla_6_1", "", 50020, "" },
+            { "U_B_CombatUniform_vest_mcam_wdl_F", "", 50000, "" }, //Apex DLC
+            { "U_B_CTRG_3", "", 50000, "" }, //Apex DLC
+            { "U_B_CTRG_1", "", 51000, "" }, //Apex DLC
+            { "U_B_CTRG_Soldier_urb_1_F", "", 50032, "" }, //Apex DLC
+            { "U_B_CTRG_Soldier_urb_3_F", "", 50020, "" }, //Apex DLC
+            { "U_B_T_Soldier_SL_F", "", 50020, "" },
+            { "U_O_T_Soldier_F", "", 50020, "" },
             { "U_B_T_Soldier_AR_F", "", 50020, "" },
             { "U_O_T_FullGhillie_tna_F", "", 50020, "" },
             { "U_I_Wetsuit", "", 50020, "" },
@@ -466,6 +536,10 @@ class Clothing {
             { "H_Helmet0_ocamo", "", 850, "" },
             { "H_HelmetB_TI_tna_F", "", 850, "" },
             { "H_HelmetSpecB_paint2", "", 850, "" },
+            { "H_HelmetHBK_chops_F", "", 850, "" },
+            { "H_HelmetHBK_ear_F", "", 850, "" },
+            { "H_HelmetHBK_F", "", 850, "" },
+            { "H_HelmetB_TI_tna_F", "", 850, "" },
             { "H_HelmetO_ocamo", "", 2500, "" }
         };
         goggles[] = {
@@ -500,6 +574,10 @@ class Clothing {
             { "V_RebreatherIA", "", 7500, "" },
             { "V_EOD_olive_F", "", 7500, "" },
             { "V_TacVest_khk", "", 12500, "" },
+            { "V_PlateCarrierH_CTRG", "", 12500, "" },
+            { "V_PlateCarrier2_wdl", "", 12500, "" },
+            { "V_PlateCarrier2_rgr_noflag_F", "", 12500, "" },
+            { "V_PlateCarrier2_tna_F", "", 12500, "" },
             { "V_HarnessOGL_gry", "SELBSTMORDWESTE", 750000000, "" },
             { "V_TacChestrig_grn_F", "", 17500, "" } //Apex DLC
         };
@@ -524,6 +602,10 @@ class Clothing {
             { "B_Bergen_mcamo", "", 6500, "" },
             { "B_Bergen_rgr", "", 6500, "" },
             { "B_Bergen_blk", "", 6500, "" },
+            { "B_ViperHarness_ghex_F", "", 6500, "" },
+            { "B_ViperHarness_khk_F", "", 6500, "" },
+            { "B_ViperHarness_oli_F", "", 6500, "" },
+            { "B_ViperHarness_hex_F", "", 6500, "" },
             { "B_Carryall_ocamo", "", 7500, "" },
             { "B_Carryall_oucamo", "", 7500, "" },
             { "B_Carryall_mcamo", "", 7500, "" },
