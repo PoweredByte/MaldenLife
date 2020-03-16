@@ -377,7 +377,7 @@ class rebel {
             //L.Polizeidirektor
             { "srifle_DMR_05_blk_F", "", 1, 0, "call life_coplevel >= 13" },
             { "6Rnd_12Gauge_Pellets", "", 1, 0, "call life_coplevel >= 10" },
-            { "muzzle_snds_58_blk_F", "", 1, 0, "call life_coplevel >= 10" },           
+            { "muzzle_snds_58_blk_F", "", 1, 0, "call life_coplevel >= 10" },
             { "6Rnd_12Gauge_Slug", "", 1, 0, "call life_coplevel >= 10" },
             //PoizeiVizepräsident / Polizeipräsident
             { "srifle_LRR_F", "", 1, 0, "call life_coplevel >= 14" }
@@ -470,9 +470,9 @@ class rebel {
              { "HandGrenade_Stone", "Blendgranate", 1700, -1, "" },
              { "Binocular", "", 150, -1, "" },
              { "ItemGPS", "", 100, 45, "" },
-             { "FirstAidKit", "", 150, 65 "" },
+             { "FirstAidKit", "", 150, 65, "" },
              { "Rangefinder", "", 150, 65, "" },
-             { "B_UavTerminal", "", 150, 65б "" },
+             { "B_UavTerminal", "", 150, 65б, "" },
              { "hgun_Pistol_heavy_01_MRD_F", "", 2000, 650, "" },
              { "Laserdesignator_02", "", 150, 65б, "" },
              { "SmokeShellgreen", "Tränengas", 150, 65б, "" },
