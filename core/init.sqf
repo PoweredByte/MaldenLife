@@ -63,11 +63,11 @@ call life_fnc_phone;
 //PERSO
 [player,playerside,getPlayerUID player] remoteExec ["DB_fnc_PersoAbfrage",2];
  waitUntil {uiSleep 1; 0 cutText["Warte auf Personalien...","BLACK FADED"]; 0 cutFadeOut 9999999; !((player getVariable ["Persodaten",[]]) isEqualTo [])};
-//PERSO 
+//PERSO
 //diag_log "::Life Client:: Group Base Execution";
 
-
-
+east setFriend [west, 1];
+west setFriend [east, 1];
 
 [] spawn life_fnc_escInterupt;
 
@@ -173,7 +173,7 @@ life_hideoutBuildings = [];
 } count ["gang_area_1","gang_area_2","gang_area_3"];
 
 
- 
+
 [] execVM "ZionHost\speedclicker.sqf";
 
 diag_log "----------------------------------------------------------------------------------------------------";
