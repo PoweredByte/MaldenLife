@@ -869,7 +869,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
         conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
         price = 0;
         textures[] = {
-          { "Polizei", "civ", {
+          { "Polizei", "cop", {
               "textures\polizei\Truck1.jpg","textures\polizei\Truck2.jpg","textures\polizei\Truck3.jpg","textures\polizei\Truck4.jpg"
           }, "" },
           { "Kat Schutz", "med", {
@@ -1012,12 +1012,12 @@ will modify the virtual space and the price of the vehicle, but other informatio
             { "GKW", "cop", {
               "textures\polizei\Cop_Van_01.jpg",
               "textures\polizei\Cop_Van_02.paa",
-              "textures\polizei\Cop_Van_03_GKW.paa",
+              "textures\polizei\Cop_Van_03_GKW.paa"
             }, "" },
-            { "MTW", "Cop", {
+            { "MTW", "cop", {
                 "textures\polizei\Cop_Van_01.jpg",
                 "textures\polizei\Cop_Van_02.paa",
-                "textures\polizei\Cop_Van_03_MTW.paa",
+                "textures\polizei\Cop_Van_03_MTW.paa"
             }, "" }
         };
     };
