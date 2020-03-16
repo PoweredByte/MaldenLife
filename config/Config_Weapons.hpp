@@ -73,7 +73,6 @@ class schwarzmarkt {
             { "ItemWatch", "", 50, -1 },
             { "FirstAidKit", "", 150, 65 },
             { "NVGoggles", "", 150, 980 },
-			{ "srifle_LRR_F", "", 70000000, 7500 },
 			{ "srifle_LRR_camo_F", "", 70000000, 7500 },
 			{ "srifle_LRR_tna_F", "", 70000000, 7500 },
 			{ "arifle_MXC_F", "", 20000, 7500 },
@@ -337,27 +336,52 @@ class rebel {
             { "ItemGPS", "", 100, 50, "" },
             { "FirstAidKit", "", 150, 75, "" },
             { "NVGoggles", "", 2000, 1000, "" },
-            { "HandGrenade_Stone", "Blendgranate", 100000, 0, "call life_coplevel >= 5" },
+            { "HandGrenade_Stone", "Blendgranate", 100000, 0, "call life_coplevel >= 6" },
+            //Praktikant
             { "hgun_P07_snds_F", "Taser", 1, 0, "call life_coplevel >= 1" },
+            //Rekrut
             { "arifle_SDAR_F", "Tasergewehr", 1, 0, "call life_coplevel >= 2" },
             { "SMG_02_F", "", 1, 0, "call life_coplevel >= 2" },
+            { "SMG_05_F", "", 1, 0, "" },
+            //Polizist
             { "arifle_MXC_Black_F", "", 1, 0, "call life_coplevel >= 3" },
+            { "SMG_03_TR_black", "", 1, 0, "call life_coplevel >= 3" },
+            //Polizeimeister
+            { "arifle_Katiba_F", "", 1, 0, "call life_coplevel >= 4" },
             { "arifle_MX_Black_F", "", 1, 0, "call life_coplevel >= 4" },
+            //Polizeiobermeister
             { "arifle_MXM_Black_F", "", 1, 0, "call life_coplevel >= 5" },
-            { "arifle_SPAR_01_blk_F", "", 1, 0, "call life_coplevel >= 6" },
+            { "arifle_SPAR_01_blk_F", "", 1, 0, "call life_coplevel >= 5" },
+            //Polizeihauptmeister
+            { "arifle_MSBS65_black_F", "", 1, 0, "call life_coplevel >= 6" },
+            { "arifle_SPAR_02_blk_F", "", 1, 0, "call life_coplevel >= 6" },
+            { "SMG_03_TR_black", "", 1, 0, "call life_coplevel >= 6" },
+            //Polizeikommissar
+            { "arifle_MX_SW_Black_F", "", 500000, 0, "call life_coplevel >= 7" },
+            { "arifle_MSBS65_Mark_black_F", "", 1, 0, "call life_coplevel >= 7" },
+            //PolizeiOberKOmmissar
             { "srifle_EBR_F", "", 1, 0, "call life_coplevel >= 8" },
-            { "srifle_DMR_02_F", "", 500000, 0, "call life_coplevel >= 9" },
-            { "arifle_ARX_blk_F", "", 1, 0, "call life_coplevel >= 9" },
-            { "arifle_SPAR_02_blk_F", "", 500000, 0, "call life_coplevel >= 10" },
-            { "srifle_DMR_07_blk_F_arco_flash_F", "", 1, 0, "call life_coplevel >= 10" },
-            { "arifle_SPAR_03_blk_F", "", 1, 0, "call life_coplevel >= 12" },
-            { "SMG_03_TR_black", "", 1, 0, "call life_coplevel >= 16" },
-            { "arifle_MX_SW_Black_F", "", 500000, 0, "call life_coplevel >= 7" }
+            { "srifle_DMR_03_F", "", 1, 0, "call life_coplevel >= 8" },
+            { "srifle_DMR_07_blk_F_arco_flash_F", "", 1, 0, "call life_coplevel >= 8" },
+            //Polizeihauptkommissar
+            { "srifle_DMR_02_F", "", 1, 0, "call life_coplevel >= 9" },
+            { "arifle_MSBS65_UBS_black_ico_F", "", 1, 0, "call life_coplevel >= 9" },
+            //Polizeirat
+            { "arifle_ARX_blk_F", "", 1, 0, "call life_coplevel >= 10" },
+            //Polizeiboerrat
+            { "LMG_Mk200_black_F", "", 1, 0, "call life_coplevel >= 11" },
+            //L.Polizeidirektor
+            { "srifle_DMR_05_blk_F", "", 1, 0, "call life_coplevel >= 13" },
+            //PoizeiVizepräsident / Polizeipräsident
+            { "srifle_LRR_F", "", 1, 0, "call life_coplevel >= 14" }
+
+
         };
         mags[] = {
             { "16Rnd_9x21_Mag", "", 125, 60, "" },
             { "30Rnd_9x21_Mag", "", 125, 60, "" },
             { "30Rnd_9x21_Mag_SMG_02", "", 125, 60, "" },
+            { "50Rnd_570x28_SMG_03", "", 125, 60, "" },
             { "30Rnd_9x21_Mag_SMG_02_Tracer_Yellow", "", 125, 60, "" },
             { "30Rnd_65x39_caseless_mag", "", 125, 60, "" },
             { "30Rnd_65x39_caseless_mag_Tracer", "", 125, 60, "" },
@@ -371,7 +395,12 @@ class rebel {
             { "20Rnd_556x45_UW_mag", "TaserMagazin", 125, 60, "" },
             { "11Rnd_45ACP_Mag", "", 130, 65, "" },
             { "30Rnd_65x39_caseless_mag", "", 130, 65, "" },
-            { "30Rnd_9x21_Mag", "", 250, 125, "" },
+            { "30Rnd_65x39_caseless_msbs_mag", "", 130, 65, "" },
+            { "6Rnd_12Gauge_Pellets", "", 130, 65, "" },
+            { "200Rnd_65x39_cased_Box", "", 130, 65, "" },
+            { "10Rnd_93x64_DMR_05_Mag", "", 130, 65, "" },
+            { "7Rnd_408_Mag", "", 130, 65, "" },
+            { "10Rnd_50BWMag", "", 130, 65, "" },
             { "150Rnd_556x45_Drum_Mag_F", "", 200, 100, "" },
             { "20Rnd_650x39_Cased_Mag_F", "", 200, 100, "" },
             { "20Rnd_762x51_Mag", "", 200, 100, "" },
@@ -412,32 +441,33 @@ class rebel {
          license = "";
          conditions = "call life_coplevel >= 22";
          items[] = {
-             { "hgun_P07_snds_F", "Taser", 2000, 650 "call life_coplevel >= 22" },
-             { "SMG_02_F", "Sting", 2000, 650 "call life_coplevel >= 22" },
-             { "arifle_MX_black_F", "", 2000, 650 "call life_coplevel >= 22" },
-             { "arifle_MXC_black_F", "", 2000, 650 "call life_coplevel >= 22" },
-             { "arifle_MX_SW_black_F", "", 2000, 650 "call life_coplevel >= 22" },
-             { "arifle_SPAR_03_blk_F", "", 2000, 650 "call life_coplevel >= 22" },
-             { "srifle_DMR_02_F", "", 2000, 650 "call life_coplevel >= 22" },
-             { "srifle_DMR_07_blk_F", "", 2000, 650 "call life_coplevel >= 22" },
-             { "arifle_SPAR_02_blk_F", "", 2000, 650 "call life_coplevel >= 22" },
-             { "srifle_EBR_F", "", 2000, 650 "call life_coplevel >= 22" },
-             { "LMG_03_F", "", 2000, 650 "call life_coplevel >= 22" },
-             { "MMG_02_black_F", "", 2000, 650 "call life_coplevel >= 22" },
-             { "launch_NLAW_F", "", 2000, 650 "call life_coplevel >= 22" },
-             { "arifle_ARX_blk_F", "", 2000, 650 "call life_coplevel >= 22" },
-             { "srifle_DMR_05_blk_F", "", 2000, 650 "call life_coplevel >= 22" },
-             { "srifle_GM6_F", "", 2000, 650 "call life_coplevel >= 22" },
-             { "HandGrenade_Stone", "Blendgranate", 1700, -1 "call life_coplevel >= 22" },
-             { "Binocular", "", 150, -1 "call life_coplevel >= 22" },
-             { "ItemGPS", "", 100, 45 "call life_coplevel >= 22" },
-             { "FirstAidKit", "", 150, 65 "call life_coplevel >= 22" },
-             { "Rangefinder", "", 150, 65 "call life_coplevel >= 22" },
-             { "B_UavTerminal", "", 150, 65 "call life_coplevel >= 22" },
-             { "hgun_Pistol_heavy_01_MRD_F", "", 2000, 650 "call life_coplevel >= 22" },
-             { "Laserdesignator_02", "", 150, 65 "call life_coplevel >= 22" },
-             { "SmokeShellgreen", "Tränengas", 150, 65 "call life_coplevel >= 22" },
-             { "NVGoggles", "", 2000, 980 "call life_coplevel >= 22" }
+             { "hgun_P07_snds_F", "Taser", 2000, 650 "" },
+             { "SMG_02_F", "Sting", 2000, 650 "" },
+             { "arifle_MX_black_F", "", 2000, 650 "" },
+             { "arifle_MXC_black_F", "", 2000, 650 "" },
+             { "arifle_MX_SW_black_F", "", 2000, 650 "" },
+             { "arifle_SPAR_03_blk_F", "", 2000, 650 "" },
+             { "srifle_DMR_02_F", "", 2000, 650 "" },
+             { "srifle_DMR_07_blk_F", "", 2000, 650 "" },
+             { "arifle_SPAR_02_blk_F", "", 2000, 650 "" },
+             { "srifle_EBR_F", "", 2000, 650 "" },
+             { "LMG_03_F", "", 2000, 650 "" },
+             { "MMG_02_black_F", "", 2000, 650 "" },
+             { "launch_NLAW_F", "", 2000, 650 "" },
+             { "arifle_ARX_blk_F", "", 2000, 650 "" },
+             { "srifle_DMR_05_blk_F", "", 2000, 650 "" },
+             { "srifle_GM6_F", "", 2000, 650 "" },
+             { "HandGrenade_Stone", "Blendgranate", 1700, -1 "" },
+             { "Binocular", "", 150, -1 "" },
+             { "ItemGPS", "", 100, 45 "" },
+             { "FirstAidKit", "", 150, 65 "" },
+             { "Rangefinder", "", 150, 65 "" },
+             { "B_UavTerminal", "", 150, 65 "" },
+             { "hgun_Pistol_heavy_01_MRD_F", "", 2000, 650 "" },
+             { "Laserdesignator_02", "", 150, 65 "" },
+             { "SmokeShellgreen", "Tränengas", 150, 65 "" },
+             { "NVGoggles", "", 2000, 980 "" },
+            { "srifle_LRR_F", "", 1, 0, "" }
          };
          mags[] = {
              { "30Rnd_9x21_Mag", "Taser Munition", 45 },
@@ -457,7 +487,8 @@ class rebel {
              { "100Rnd_65x39_caseless_mag", "", 45 },
              { "150Rnd_556x45_Drum_Mag_Tracer_F", "", 45 },
              { "11Rnd_45ACP_Mag", "", 45 },
- 			{ "30Rnd_9x21_Mag_SMG_02_Tracer_Green", "", 45 }
+             { "7Rnd_408_Mag", "", 130, 65, "" },
+ 			       { "30Rnd_9x21_Mag_SMG_02_Tracer_Green", "", 45 }
          };
          accs[] = {
              { "muzzle_snds_L", "", 650 },
@@ -465,26 +496,26 @@ class rebel {
              { "muzzle_snds_b", "", 650 },
              { "muzzle_snds_338_black", "", 650 },
              { "muzzle_snds_65_TI_blk_F", "", 650 },
- 			{ "ACC_pointer_IR", "", 3500 },
- 			{ "bipod_01_F_blk", "", 3500 },
- 			{ "muzzle_sdns_h", "", 3500 },
- 			{ "muzzle_sdns_m", "", 3500 },
- 			{ "optic_SOS", "", 3500 },
- 			{ "muzzle_snds_H", "", 3500 },
- 			{ "muzzle_snds_M", "", 3500 },
- 			{ "optic_Aco", "", 3500 },
- 			{ "optic_MRCO", "", 3500 },
- 			{ "optic_AMS", "", 3500 },
- 			{ "optic_Nightstalker", "", 3500 },
- 			{ "muzzle_snds_93mmg", "", 3500 },
- 			{ "optic_tws", "", 3500 },
- 			{ "optic_tws_mg", "", 3500 },
- 			{ "optic_KHS_blk", "", 3500 },
- 			{ "optic_LRPS", "", 3500 },
- 			{ "optic_DMS", "", 3500 },
- 			{ "optic_Hamr", "", 3500 },
- 			{ "optic_MRD", "", 3500 },
- 			{ "ACC_flashlight", "", 3500 }
+         			{ "ACC_pointer_IR", "", 3500 },
+         			{ "bipod_01_F_blk", "", 3500 },
+         			{ "muzzle_sdns_h", "", 3500 },
+         			{ "muzzle_sdns_m", "", 3500 },
+         			{ "optic_SOS", "", 3500 },
+         			{ "muzzle_snds_H", "", 3500 },
+         			{ "muzzle_snds_M", "", 3500 },
+         			{ "optic_Aco", "", 3500 },
+         			{ "optic_MRCO", "", 3500 },
+         			{ "optic_AMS", "", 3500 },
+         			{ "optic_Nightstalker", "", 3500 },
+         			{ "muzzle_snds_93mmg", "", 3500 },
+         			{ "optic_tws", "", 3500 },
+         			{ "optic_tws_mg", "", 3500 },
+         			{ "optic_KHS_blk", "", 3500 },
+         			{ "optic_LRPS", "", 3500 },
+         			{ "optic_DMS", "", 3500 },
+         			{ "optic_Hamr", "", 3500 },
+         			{ "optic_MRD", "", 3500 },
+         			{ "ACC_flashlight", "", 3500 }
          };
      };
 
