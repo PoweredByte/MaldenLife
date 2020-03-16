@@ -372,6 +372,9 @@ class rebel {
             { "LMG_Mk200_black_F", "", 1, 0, "call life_coplevel >= 11" },
             //L.Polizeidirektor
             { "srifle_DMR_05_blk_F", "", 1, 0, "call life_coplevel >= 13" },
+            { "10Rnd_50BWMag", "", 1, 0, "call life_coplevel >= 13" },
+            { "6Rnd_12Gauge_Pellets", "", 1, 0, "call life_coplevel >= 10" },
+            { "6Rnd_12Gauge_Slug", "", 1, 0, "call life_coplevel >= 10" },
             //PoizeiVizepräsident / Polizeipräsident
             { "srifle_LRR_F", "", 1, 0, "call life_coplevel >= 14" }
 
@@ -401,6 +404,8 @@ class rebel {
             { "10Rnd_93x64_DMR_05_Mag", "", 130, 65, "" },
             { "7Rnd_408_Mag", "", 130, 65, "" },
             { "10Rnd_50BWMag", "", 130, 65, "" },
+            { "6Rnd_12Gauge_Pellets", "", 130, 65, "" },
+            { "6Rnd_12Gauge_Slug", "", 130, 65, "" },
             { "150Rnd_556x45_Drum_Mag_F", "", 200, 100, "" },
             { "20Rnd_650x39_Cased_Mag_F", "", 200, 100, "" },
             { "20Rnd_762x51_Mag", "", 200, 100, "" },
@@ -431,6 +436,7 @@ class rebel {
             { "optic_ERCO_blk_F", "", 750, 375, "" },
             { "optic_Holosight", "", 1200, 600, "" },
             { "optic_Arco", "", 2500, 1250, "" },
+            { "muzzle_snds_58_blk_F", "", 2500, 1250, "" },
             { "muzzle_snds_H", "", 2750, 1375, "" }
         };
     };
@@ -441,33 +447,33 @@ class rebel {
          license = "";
          conditions = "call life_coplevel >= 22";
          items[] = {
-             { "hgun_P07_snds_F", "Taser", 2000, 650 "" },
-             { "SMG_02_F", "Sting", 2000, 650 "" },
-             { "arifle_MX_black_F", "", 2000, 650 "" },
-             { "arifle_MXC_black_F", "", 2000, 650 "" },
-             { "arifle_MX_SW_black_F", "", 2000, 650 "" },
-             { "arifle_SPAR_03_blk_F", "", 2000, 650 "" },
-             { "srifle_DMR_02_F", "", 2000, 650 "" },
-             { "srifle_DMR_07_blk_F", "", 2000, 650 "" },
-             { "arifle_SPAR_02_blk_F", "", 2000, 650 "" },
-             { "srifle_EBR_F", "", 2000, 650 "" },
-             { "LMG_03_F", "", 2000, 650 "" },
-             { "MMG_02_black_F", "", 2000, 650 "" },
-             { "launch_NLAW_F", "", 2000, 650 "" },
-             { "arifle_ARX_blk_F", "", 2000, 650 "" },
-             { "srifle_DMR_05_blk_F", "", 2000, 650 "" },
-             { "srifle_GM6_F", "", 2000, 650 "" },
-             { "HandGrenade_Stone", "Blendgranate", 1700, -1 "" },
-             { "Binocular", "", 150, -1 "" },
-             { "ItemGPS", "", 100, 45 "" },
+             { "hgun_P07_snds_F", "Taser", 2000, 650, "" },
+             { "SMG_02_F", "Sting", 2000, 650, "" },
+             { "arifle_MX_black_F", "", 2000, 650, "" },
+             { "arifle_MXC_black_F", "", 2000, 650, "" },
+             { "arifle_MX_SW_black_F", "", 2000, 650, "" },
+             { "arifle_SPAR_03_blk_F", "", 2000, 650, "" },
+             { "srifle_DMR_02_F", "", 2000, 650, "" },
+             { "srifle_DMR_07_blk_F", "", 2000, 650, "" },
+             { "arifle_SPAR_02_blk_F", "", 2000, 650, "" },
+             { "srifle_EBR_F", "", 2000, 650, "" },
+             { "LMG_03_F", "", 2000, 650, "" },
+             { "MMG_02_black_F", "", 2000, 650, "" },
+             { "launch_NLAW_F", "", 2000, 650, "" },
+             { "arifle_ARX_blk_F", "", 2000, 650, "" },
+             { "srifle_DMR_05_blk_F", "", 2000, 650, "" },
+             { "srifle_GM6_F", "", 2000, 650, "" },
+             { "HandGrenade_Stone", "Blendgranate", 1700, -1, "" },
+             { "Binocular", "", 150, -1, "" },
+             { "ItemGPS", "", 100, 45, "" },
              { "FirstAidKit", "", 150, 65 "" },
-             { "Rangefinder", "", 150, 65 "" },
-             { "B_UavTerminal", "", 150, 65 "" },
-             { "hgun_Pistol_heavy_01_MRD_F", "", 2000, 650 "" },
-             { "Laserdesignator_02", "", 150, 65 "" },
-             { "SmokeShellgreen", "Tränengas", 150, 65 "" },
-             { "NVGoggles", "", 2000, 980 "" },
-            { "srifle_LRR_F", "", 1, 0, "" }
+             { "Rangefinder", "", 150, 65, "" },
+             { "B_UavTerminal", "", 150, 65б "" },
+             { "hgun_Pistol_heavy_01_MRD_F", "", 2000, 650, "" },
+             { "Laserdesignator_02", "", 150, 65б, "" },
+             { "SmokeShellgreen", "Tränengas", 150, 65б, "" },
+             { "NVGoggles", "", 2000, 980, "" },
+             { "srifle_LRR_F", "", 1, 0, "" }
          };
          mags[] = {
              { "30Rnd_9x21_Mag", "Taser Munition", 45 },
