@@ -64,6 +64,27 @@ switch (playerSide) do {
 		if ((uniform player) isEqualTo "U_B_CombatUniform_mcam" && FETCH_CONST(life_coplevel) isEqualTo 16) then {
 				player setObjectTextureGlobal [0, "textures\polizei\16.jpg"];
 			};
+        //EinsatzUniform
+      if ((uniform player) isEqualTo "U_B_CombatUniform_mcam_vest" && FETCH_CONST(life_coplevel) >= 1 ) then {
+  				player setObjectTextureGlobal [0, "textures\polizei\Einsatz_Uniform.paa"];
+  			};
+
+    if ((uniform player) isEqualTo "U_B_GEN_Commander_F" && FETCH_CONST(life_coplevel) >= 1 ) then {
+				player setObjectTextureGlobal [0, "textures\polizei\Polizei_Pullover.paa"];
+			};
+
+
+
+      //Einsatz SEK
+      if ((uniform player) isEqualTo "U_B_CombatUniform_mcam" && FETCH_CONST(life_coplevel) isEqualTo 22) then {
+            player setObjectTextureGlobal [0, "textures\polizei\Einsatz_Uniform.paa"];
+        };
+    if ((uniform player) isEqualTo "U_B_CombatUniform_mcam" && FETCH_CONST(life_coplevel) isEqualTo 23) then {
+            player setObjectTextureGlobal [0, "textures\polizei\Einsatz_Uniform.paa"];
+        };
+    if ((uniform player) isEqualTo "U_B_CombatUniform_mcam" && FETCH_CONST(life_coplevel) isEqualTo 24) then {
+            player setObjectTextureGlobal [0, "textures\polizei\Einsatz_Uniform.paa"];
+        };
 		if ((uniform player) isEqualTo "U_B_CombatUniform_mcam_vest" && FETCH_CONST(life_coplevel) isEqualTo 22) then {
 				player setObjectTextureGlobal [0, "textures\sek\SEK.paa"];
 			};
@@ -85,7 +106,7 @@ switch (playerSide) do {
     if (uniform player isEqualTo "U_I_CombatUniform") then {
                 player setObjectTextureGlobal [0, "textures\polizei\bfe.jpg"];
         };
-        
+
 		if (backpack player isEqualTo "B_ViperLightHarness_blk_F") then {
 			(backpackContainer player) setObjectTextureGlobal[0,"textures\sek\ViperRucksack.jpg"];
 		};

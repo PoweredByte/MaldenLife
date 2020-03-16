@@ -171,22 +171,25 @@ class Clothing {
             { "NONE", "Kleidung entfernen", 0, { "", "", -1 } },
             { "U_Rangemaster", "Polizei-Kleidung", 25, { "", "", -1 } },
             { "U_B_CombatUniform_mcam", "Polizei-Kleidung", 25, { "", "", -1 } },
-			{ "U_B_Wetsuit", "", 2000, { "", "", -1 } },
+            { "U_B_GEN_Commander_F", "Polizei-Pullover", 25, { "", "", -1 } },
             { "U_I_CombatUniform", "Taktische Uniform", 350, "call life_coplevel >= 2" },
-            { "U_B_CombatUniform_mcam_vest", "SEK-KLEIDUNG", 350, "call life_coplevel >= 21" },
+            { "U_O_R_Gorka_01_black_F", "Sneaky Peaky Uniform", 350, "call life_coplevel >= 15" },
+            { "U_B_CombatUniform_mcam_vest", "SEK-KLEIDUNG", 350, "" },
+	          { "U_B_Wetsuit", "", 2000, { "", "", -1 } },
             { "U_O_T_FullGhillie_tna_F", "SEK-Ghillie", 350, "call life_coplevel >= 22" }
         };
         headgear[] = {
             { "NONE", "Remove Hat", 0, { "", "", -1 } },
             { "H_Cap_police", "", 25, { "", "", -1 } },
             { "H_Beret_02", "", 25, { "", "", -1 } },
-            { "H_Beret_Colonel", "", 25, "call life_coplevel >= 22" },
-            { "H_Beret_blk_POLICE", "", 50, "call life_coplevel >= 22" },
+            { "H_HelmetSpecB_blk", "", 25, { "", "", -1 } },
+            { "H_Beret_Colonel", "", 25, "call life_coplevel >= 14" },
+            { "H_Beret_blk_POLICE", "", 50, "call life_coplevel >= 2" },
             { "H_HelmetB_plain_mcamo", "", 75, "call life_coplevel >= 22" },
             { "H_MilCap_mcamo", "", 100, "call life_coplevel >= 22" },
             { "H_MilCap_mcamo", "", 100, "call life_coplevel >= 22" },
             { "H_HelmetCrew_I", "SEK HELM", 100, "call life_coplevel >= 22" },
-			{ "H_CrewHelmetHeli_B", "GASMASKE", 2500, "call life_coplevel >= 22" }
+			      { "H_CrewHelmetHeli_B", "GASMASKE", 2500, "call life_coplevel >= 22" }
         };
         goggles[] = {
             { "NONE", "Remove Glasses", 0, { "", "", -1 } },
