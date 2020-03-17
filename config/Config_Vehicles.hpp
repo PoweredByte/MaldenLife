@@ -198,7 +198,7 @@ class CarShops {
             { "C_Hatchback_01_sport_F", { "life_coplevel", "SCALAR", 22 } },
             { "B_T_APC_Wheeled_01_cannon_F", { "life_coplevel", "SCALAR", 22 } },
             { "C_Offroad_02_unarmed_F", { "life_coplevel", "SCALAR", 22 } },
-            { "	O_APC_Wheeled_02_rcws_v2_F", { "life_coplevel", "SCALAR", 22 } },
+            { "O_APC_Wheeled_02_rcws_v2_F", { "life_coplevel", "SCALAR", 22 } },
             { "B_LSV_01_unarmed_black_F", { "life_coplevel", "SCALAR", 22 } },
             { "B_MRAP_01_hmg_F", { "life_coplevel", "SCALAR", 22 } },
 			      { "B_MRAP_01_F", { "life_coplevel", "SCALAR", 22 } },
@@ -225,7 +225,8 @@ class CarShops {
             { "B_Heli_Light_01_F", { "life_coplevel", "SCALAR", 22 } },
             { "I_Heli_light_03_unarmed_F", { "life_coplevel", "SCALAR", 22 } },
             { "I_Heli_light_03_F", { "life_coplevel", "SCALAR", 22 } },
-            { "B_Heli_Transport_01_F", { "life_coplevel", "SCALAR", 22 } },
+            { "B_Heli_Transport_01_sand_F", { "life_coplevel", "SCALAR", 22 } },
+            { "B_Heli_Transport_03_F", { "life_coplevel", "SCALAR", 22 } },
             { "B_Heli_Attack_01_F", { "life_coplevel", "SCALAR", 22 } }
         };
     };
@@ -539,15 +540,27 @@ class LifeCfgVehicles {
     class B_Heli_Transport_01_F {
         vItemSpace = 200;
         licenses[] = { {""}, {"cAir"}, {""}, {""} };
-        price = 200000;
+        price = 1;
         textures[] = {
         	{ "Polizei", "cop", {
-                "textures\sek\ghost0.jpg",
-				"textures\sek\ghost1.jpg"
+                "textures\polizei\Ghost1.jpg",
+				        "textures\polizei\Ghost2.jpg"
+		    } }
+		};
+    };
+
+    class B_Heli_Transport_01_sand_F {
+        vItemSpace = 200;
+        licenses[] = { {""}, {"cAir"}, {""}, {""} };
+        price = 1;
+        textures[] = {
+        	{ "Polizei", "cop", {
+            "textures\polizei\Ghost1.jpg",
+            "textures\polizei\Ghost2.jpg"
 		    } },
         	{ "SEK", "cop", {
-                "textures\sek\ghost0.jpg",
-				"textures\sek\ghost1.jpg"
+            "textures\sek\ghost0.jpg",
+		        "textures\sek\ghost1.jpg"
 		    } }
 		};
     };
@@ -968,6 +981,9 @@ will modify the virtual space and the price of the vehicle, but other informatio
             { "SEK-Einsatzleitung", "cop", {
 				"textures\sek\sekESUV.jpg"
             } },
+            { "SEK", "cop", {
+				"textures\sek\SEK_CAR.paa"
+            } },
 			{ "Undercover", "cop", {
 				"\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_03_co.paa"
             } },
@@ -1216,6 +1232,19 @@ will modify the virtual space and the price of the vehicle, but other informatio
             { "White", "civ", {
                 "\A3\Soft_F_Beta\Truck_02\data\truck_02_kab_co.paa",
                 "\A3\Soft_F_Beta\Truck_02\data\truck_02_fuel_co.paa"
+            }, "" }
+        };
+    };
+
+    class B_Heli_Transport_03_F {
+        vItemSpace = 40;
+        vFuelSpace = 42000;
+        conditions = "";
+        price = 1;
+        textures[] = {
+            { "Pozilei", "cop", {
+                "textures\polizei\Huron0.jpg",
+                "textures\polizei\Huron1.jpg"
             }, "" }
         };
     };

@@ -14,6 +14,7 @@ _ctrlKey = _this select 3;
 _alt = _this select 4;
 _speed = speed cursorObject;
 _handled = false;
+_emp = getArray (configFile >> "ZionHost" >> "emp");
 
 _interactionKey = if (count (actionKeys "User10") isEqualTo 0) then {219} else {(actionKeys "User10") select 0};
 //hint str _code;
@@ -100,7 +101,7 @@ switch (_code) do {
             _handled = true;
         };
     };
-	
+
 //--------------------------------------------- ANTI DUPE | WHERE THE FUN BEGINS!!
 
 case 74: {
@@ -133,7 +134,7 @@ case 57: {
  _handled = true;
  };
 };
-	
+
 	//Ö-Key
 	case 39: {
 		if (playerSide in [east,independent,west]) then {
@@ -142,7 +143,7 @@ case 57: {
 		};
 		_handled = true;
 	};
-/*	
+/*
 	//ENTF-Key
 	case 211: {
 		if {(typeOf cursorTarget) in life_definePlaceables} then {
@@ -151,7 +152,7 @@ case 57: {
 			};
 		};
 	};
-*/	
+*/
 
     //Surrender (Shift + B)
     case 48: {
@@ -169,12 +170,12 @@ case 57: {
 
     case 37:
     {
-        if (!_shift && !_alt && !_ctrlKey && (playerSide == west) && (vehicle player != player && (typeOf vehicle player) in ["B_Heli_Light_01_F"])) then
+        if (!_shift && !_alt && !_ctrlKey && (playerSide == west) && (vehicle player != player && (typeOf vehicle player) in _emp)) then
         {
             [] call life_fnc_openEmpMenu; [_this] call life_fnc_isEmpOperator;
         };
     };
-	
+
     //Holster / recall weapon. (Shift + H)
     case 35: {
         if (_shift && !_ctrlKey && !(currentWeapon player isEqualTo "")) then {
@@ -275,7 +276,7 @@ case 57: {
     case 2:
 	{
 
-		if(vehicle player isEqualTo player) then {	
+		if(vehicle player isEqualTo player) then {
 		if(player getVariable ["restrained",false]) exitWith {["Du bist Festgenommen!","ZionHost-System","red",false] call MSG_fnc_handle;};
 			if(!life_action_inUse) then {
 				player playActionNow "gestureHi";
@@ -316,7 +317,7 @@ case 57: {
     case 3:
 	{
 
-		if(vehicle player isEqualTo player) then {	
+		if(vehicle player isEqualTo player) then {
 		if(player getVariable ["restrained",false]) exitWith {["Du bist Festgenommen!","ZionHost-System","red",false] call MSG_fnc_handle;};
 			if(!life_action_inUse) then {
 				player playActionNow "gestureHiC";
@@ -354,10 +355,10 @@ case 57: {
     };
 };
     //3
-    case 4: 
+    case 4:
 {
 
-		if(vehicle player isEqualTo player) then {	
+		if(vehicle player isEqualTo player) then {
 		if(player getVariable ["restrained",false]) exitWith {["Du bist Festgenommen!","ZionHost-System","red",false] call MSG_fnc_handle;};
 			if(!life_action_inUse) then {
 				player playActionNow "gestureHiB";
@@ -398,7 +399,7 @@ case 57: {
     case 5:
 	{
 
-		if(vehicle player isEqualTo player) then {	
+		if(vehicle player isEqualTo player) then {
 		if(player getVariable ["restrained",false]) exitWith {["Du bist Festgenommen!","ZionHost-System","red",false] call MSG_fnc_handle;};
 			if(!life_action_inUse) then {
 				player playActionNow "gesturenod";
@@ -467,12 +468,12 @@ case 57: {
             };
         };
     };
-	
+
 /*							//////////////////////////////////////////////////////////////////////////////////////////////////////			*/
 
     //O Key
     case 24: {
-        if(playerSide in [west,independent,east]) then 
+        if(playerSide in [west,independent,east]) then
         {
             call life_fnc_Opener;
         };
