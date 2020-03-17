@@ -9,7 +9,6 @@ playerNearGas=false;
 [] spawn {
     while {true} do
     {
-        G_40mm_Smoke
         if
         (
 
