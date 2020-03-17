@@ -2,6 +2,6 @@
 - Gras, Ecstasy, Zauberpilze kann man nid farmen
 
 
-- MX keine Munition
+//- MX keine Munition
 - Cyrus Silencer ab lvl 13
 - RPK Schwarz auch in Schwarzmarkt
