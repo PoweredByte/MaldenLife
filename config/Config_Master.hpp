@@ -10,7 +10,7 @@ class Toxic_Repair_Config {
     Cop_Repairing = true; //Allow cops to repair objects
     Medic_Repairing = true; //Allow medics to repair objects
     Civ_Repairing = true; //Allow civs to repair objects
-    Adac_Repairing = true; //Allow civs to repair objects	
+    Adac_Repairing = true; //Allow civs to repair objects
 
     class Civilian {
         Repair_Reward = 1000000; //How much they get per object they repair
@@ -41,9 +41,9 @@ class Life_Settings {
 
     /* Data Logging Settings */
     battlEye_friendlyLogging = false; //False [default] - Read the logs from the server.rpt. True - Read the logs from the publicVariable.log. NOTE: Due to how diag_log works it will log to both files either way and the setting is merely for beautification purposes.
-    player_advancedLog = false; //False [default] - No advanced logging. True - Logs house purchase and sale, vehicle purchase, sale, and chop shopping, police arrests, and gang creations. Search for: advanced_log
-    player_moneyLog = false; //False [default] - No money logging. True - Logs player bank deposits, withdraws, and transfers, gang bank deposits and withdraws, money picked up off of the ground, and player robbery. Search for: money_log
-    player_deathLog = false; //False [default] - No death logging. True - Logs victim and killer, and vehicle or weapon if used, when a player dies. Search for: death_log
+    player_advancedLog = true; //False [default] - No advanced logging. True - Logs house purchase and sale, vehicle purchase, sale, and chop shopping, police arrests, and gang creations. Search for: advanced_log
+    player_moneyLog = true; //False [default] - No money logging. True - Logs player bank deposits, withdraws, and transfers, gang bank deposits and withdraws, money picked up off of the ground, and player robbery. Search for: money_log
+    player_deathLog = true; //False [default] - No death logging. True - Logs victim and killer, and vehicle or weapon if used, when a player dies. Search for: death_log
 
 /* Database Related Settings */
     /* Player Data Saving */
@@ -114,9 +114,9 @@ class Life_Settings {
     houseGarage_sellPrice = 350000;
 
 	/*					FARMING					*/
-	
+
 	farm_limit = 1;
-	
+
     /* Hunting & Fishing System Configurations */
     animaltypes_fish[] = { "Salema_F", "Ornate_random_F", "Mackerel_F", "Tuna_F", "Mullet_F", "CatShark_F", "Turtle_F" }; //Classnames of fish you can catch
     animaltypes_hunting[] = { "Sheep_random_F", "Goat_random_F", "Hen_random_F", "Cock_random_F", "Rabbit_F" }; //Classnames of aniamls you can hunt/gut
@@ -140,7 +140,7 @@ class Life_Settings {
     revive_east = true; //true to enable opfor the ability to revive everyone or false for only medics/ems or medic/ems/cops.
     revive_fee = 1500; //Revive fee that players have to pay and medics only EMS(independent) are rewarded with this amount.
     hospital_heal_fee = 100; //Fee to heal at a hospital NPC
-	
+
     /* Paycheck & Bank System Configurations */
     bank_cop = 1000000000; //Amount of cash in bank for new cops
     bank_civ = 1000000000; //Amount of cash in bank for new civillians
@@ -246,11 +246,11 @@ class Life_Settings {
         {"STR_Crime_24","10000","24"},
         {"STR_Crime_25","20000","25"}
     };
-    
+
     /* ! --- Do not change --- ! */
     framework_version = "5.0.0";
     /* ------------------------- */
-    
+
 };
 
 #include "Config_Clothing.hpp"

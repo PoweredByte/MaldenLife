@@ -199,7 +199,8 @@ class CarShops {
             { "O_APC_Wheeled_02_rcws_F", { "life_coplevel", "SCALAR", 22 } },
             { "B_LSV_01_unarmed_black_F", { "life_coplevel", "SCALAR", 22 } },
             { "B_MRAP_01_hmg_F", { "life_coplevel", "SCALAR", 22 } },
-			{ "B_MRAP_01_F", { "life_coplevel", "SCALAR", 22 } }
+			      { "B_MRAP_01_F", { "life_coplevel", "SCALAR", 22 } },
+            { "C_Van_01_transport_F", { "life_coplevel", "SCALAR", 22 } },
         };
     };
 
@@ -339,7 +340,7 @@ class LifeCfgVehicles {
         	{ "Polizei", "cop", {
                 "textures\sek\sekmarshall1.jpg",
                 "textures\sek\sekmarshall2.jpg",
-				"textures\sek\sekmarshall3.paa"
+				        "textures\sek\sekmarshall3.jpg"
             } }
         };
     };
@@ -873,7 +874,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
               "textures\polizei\Truck1.jpg","textures\polizei\Truck2.jpg","textures\polizei\Truck3.jpg","textures\polizei\Truck4.jpg"
           }, "" },
           { "Kat Schutz", "med", {
-              "textures\medic\Truck1.jpg","textures\medic\Truck2.jpg","textures\medic\Truck3.jpg","textures\medic\Truck4.jpg"
+              "textures\medic\Truck0.jpg","textures\medic\Truck1.jpg","textures\medic\Truck2.jpg","textures\medic\Truck3.jpg"
           }, "" }
         };
     };

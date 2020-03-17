@@ -1,3 +1,2 @@
 - HUD wieder einfügen
-- Gefängniss Funktionsfähig machen
 - Gras, Ecstasy, Zauberpilze kann man nid farmen

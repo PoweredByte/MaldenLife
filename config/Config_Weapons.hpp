@@ -378,14 +378,14 @@ class rebel {
             //Polizeirat
             { "arifle_ARX_blk_F", "", 1, 0, "call life_coplevel >= 10" },
             //Polizeiboerrat
-            { "LMG_Mk200_black_F", "", 1, 0, "call life_coplevel >= 11" }, //Vlt.Raus MK200
+            //{ "LMG_Mk200_black_F", "", 1, 0, "call life_coplevel >= 11" }, //Vlt.Raus MK200
             //L.Polizeidirektor
             { "srifle_DMR_05_blk_F", "", 1, 0, "call life_coplevel >= 13" },
             { "6Rnd_12Gauge_Pellets", "", 1, 0, "call life_coplevel >= 10" },
             { "muzzle_snds_58_blk_F", "", 1, 0, "call life_coplevel >= 10" },
-            { "6Rnd_12Gauge_Slug", "", 1, 0, "call life_coplevel >= 10" },
+            { "6Rnd_12Gauge_Slug", "", 1, 0, "call life_coplevel >= 10" }
             //PoizeiVizepräsident / Polizeipräsident
-            { "srifle_LRR_F", "", 1, 0, "call life_coplevel >= 14" } //Vlt.Raus
+            //{ "srifle_LRR_F", "", 1, 0, "call life_coplevel >= 14" } //Vlt.Raus
 
 
         };

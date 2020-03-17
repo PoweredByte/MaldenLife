@@ -94,12 +94,6 @@ class CfgSpawnPoints {
                 icon = "\a3\ui_f\data\map\MapControl\bunker_CA.paa";
                 conditions = "call life_coplevel >= 22";
             };
-            class SekBaser {
-                displayName = "Sek Water HQ";
-                spawnMarker = "cop_spawn_3";
-                icon = "\a3\ui_f\data\map\MapControl\bunker_CA.paa";
-                conditions = "call life_coplevel >= 22";
-            };
 /*
             class Athira {
                 displayName = "Athira HQ";
