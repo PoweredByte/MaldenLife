@@ -570,10 +570,22 @@ class LifeCfgVehicles {
         };
     };
 
+    class I_LT_01_scout_F {
+        vItemSpace = 100;
+        licenses[] = { {""}, {""}, {""}, {""} };
+        price = 1;
+        textures[] = {
+            { "SEK", "cop", {
+                "textures\sek\Lyx_1.jpg",
+                "textures\sek\Lyx_2.jpg"
+            } }
+        };
+    };
+
     class C_Van_02_vehicle_F {
         vItemSpace = 100;
         licenses[] = { {""}, {""}, {""}, {""} };
-        price = 1300000000;
+        price = 1;
         textures[] = {
             { "Black", "cop", {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
@@ -584,7 +596,7 @@ class LifeCfgVehicles {
     class C_Van_02_transport_F {
         vItemSpace = 100;
         licenses[] = { {""}, {""}, {""}, {""} };
-        price = 1300000000;
+        price = 1;
         textures[] = {
             { "Black", "cop", {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
