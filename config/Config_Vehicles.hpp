@@ -225,7 +225,7 @@ class CarShops {
             { "B_Heli_Light_01_F", { "life_coplevel", "SCALAR", 22 } },
             { "I_Heli_light_03_unarmed_F", { "life_coplevel", "SCALAR", 22 } },
             { "I_Heli_light_03_F", { "life_coplevel", "SCALAR", 22 } },
-            { "B_Heli_Transport_01_sand_F", { "life_coplevel", "SCALAR", 22 } },
+            { "B_Heli_Transport_01_camo_F", { "life_coplevel", "SCALAR", 22 } },
             { "B_Heli_Transport_03_F", { "life_coplevel", "SCALAR", 22 } },
             { "B_Heli_Attack_01_F", { "life_coplevel", "SCALAR", 22 } }
         };
@@ -549,7 +549,7 @@ class LifeCfgVehicles {
 		};
     };
 
-    class B_Heli_Transport_01_sand_F {
+    class B_Heli_Transport_01_camo_F {
         vItemSpace = 200;
         licenses[] = { {""}, {"cAir"}, {""}, {""} };
         price = 1;
@@ -708,7 +708,7 @@ class LifeCfgVehicles {
         textures[] = {
             { "Tarnung", "civ", {
                 "textures\civ\Rebell-M900.camo.klein.jpg"
-			} }
+			      } }
 		};
 	};
 
