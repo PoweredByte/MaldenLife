@@ -1,7 +1,7 @@
 /*
     File: fn_teargas.sqf
     Author: Blackd0g, Updated by Jokahghost
-    Description: 
+    Description:
     Fucks their shit up
 */
 playerNearGas=false;
@@ -9,12 +9,16 @@ playerNearGas=false;
 [] spawn {
     while {true} do
     {
-
+        G_40mm_Smoke
         if
         (
+
         (((nearestObject [getpos player, "SmokeShellgreen"]) distance player < 20))
+
         or
-        (((nearestObject [getpos player, "G_40mm_SmokeYellow"]) distance player < 15))
+
+        (((nearestObject [getpos player, "G_40mm_SmokeGreen"]) distance player < 15))
+
         ) then
         {
         playerNearGas=true;

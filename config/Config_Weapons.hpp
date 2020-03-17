@@ -462,6 +462,8 @@ class rebel {
              { "arifle_MXC_black_F", "", 2000, 650, "" },
              { "arifle_MX_SW_black_F", "", 2000, 650, "" },
              { "arifle_SPAR_03_blk_F", "", 2000, 650, "" },
+             { "arifle_SPAR_01_GL_blk_F", "", 2000, 650, "" },
+             { "arifle_MX_GL_Black_F", "", 2000, 650, "" },
              { "srifle_DMR_02_F", "", 2000, 650, "" },
              { "srifle_DMR_07_blk_F", "", 2000, 650, "" },
              { "arifle_SPAR_02_blk_F", "", 2000, 650, "" },
@@ -482,6 +484,7 @@ class rebel {
              { "Laserdesignator_02", "", 150, 65б, "" },
              { "SmokeShellgreen", "Tränengas", 150, 65б, "" },
              { "NVGoggles", "", 2000, 980, "" },
+             { "1Rnd_SmokeGreen_Grenade_shell", "", 1, 0, "" },
              { "srifle_LRR_F", "", 1, 0, "" }
          };
          mags[] = {
@@ -503,6 +506,7 @@ class rebel {
              { "150Rnd_556x45_Drum_Mag_Tracer_F", "", 45 },
              { "11Rnd_45ACP_Mag", "", 45 },
              { "7Rnd_408_Mag", "", 130, 65, "" },
+             { "1Rnd_SmokeGreen_Grenade_shell", "", 130, 65, "" },
  			       { "30Rnd_9x21_Mag_SMG_02_Tracer_Green", "", 45 }
          };
          accs[] = {
