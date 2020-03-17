@@ -346,6 +346,7 @@ class rebel {
             { "Binocular", "", 150, 75, "" },
             { "ItemGPS", "", 100, 50, "" },
             { "FirstAidKit", "", 150, 75, "" },
+            { "Rangefinder", "", 150, 65, "" },
             { "NVGoggles", "", 2000, 1000, "" },
             { "HandGrenade_Stone", "Blendgranate", 100000, 0, "call life_coplevel >= 6" },
             //Praktikant
