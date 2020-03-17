@@ -87,9 +87,8 @@ class CfgFunctions {
 
 };
 
-class ZionHost
-{
-	#include "\yk_config\config.hpp"
+class ZionHost {
+	#include "ZionHost\config.hpp"
 };
 
 
