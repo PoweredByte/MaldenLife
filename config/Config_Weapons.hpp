@@ -374,6 +374,7 @@ class rebel {
             { "srifle_DMR_07_blk_F_arco_flash_F", "", 1, 0, "call life_coplevel >= 8" },
             //Polizeihauptkommissar
             { "srifle_DMR_02_F", "", 1, 0, "call life_coplevel >= 9" },
+            { "arifle_SPAR_03_blk_F", "", 1, 0, "call life_coplevel >= 9" },
             { "arifle_MSBS65_UBS_black_ico_F", "", 1, 0, "call life_coplevel >= 9" },
             //Polizeirat
             { "arifle_ARX_blk_F", "", 1, 0, "call life_coplevel >= 10" },
@@ -417,7 +418,6 @@ class rebel {
             { "6Rnd_12Gauge_Slug", "", 130, 65, "" },
             { "150Rnd_556x45_Drum_Mag_F", "", 200, 100, "" },
             { "20Rnd_650x39_Cased_Mag_F", "", 200, 100, "" },
-            { "20Rnd_762x51_Mag", "", 200, 100, "" },
             { "ADR-97-Mag", "", 200, 100, "" },
             { "20Rnd_650x39_Cased_Mag_F", "", 200, 100, "" }
         };
@@ -501,7 +501,7 @@ class rebel {
              { "10Rnd_50BW_Mag_F", "", 45 },
              { "30Rnd_65x39_caseless_green", "", 125, 60, "" },
              { "200Rnd_556x45_Box_Tracer_F", "", 45 },
-             { "150Rnd_556x45_Drum_Mag_F", "", 200, 100, "" },             
+             { "150Rnd_556x45_Drum_Mag_F", "", 200, 100, "" },
              { "10Rnd_93x64_DMR_05_Mag", "", 45 },
              { "30Rnd_556x45_Stanag", "", 45 },
              { "100Rnd_65x39_caseless_mag", "", 45 },

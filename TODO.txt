@@ -1,2 +1,6 @@
 - HUD wieder einfügen
 - Gras, Ecstasy, Zauberpilze kann man nid farmen
+
+
+- MX keine Munition
+- Cyrus Silencer ab lvl 13

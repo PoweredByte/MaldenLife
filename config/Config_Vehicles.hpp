@@ -193,14 +193,17 @@ class CarShops {
         vehicles[] = {
             { "C_Offroad_01_F", { "", "", 22 } },
             { "C_SUV_01_F", { "", "", 22 } },
+            { "C_Van_02_transport_F", { "", "", 22 } },
+            { "C_Van_02_vehicle_F", { "", "", 22 } },
             { "C_Hatchback_01_sport_F", { "life_coplevel", "SCALAR", 22 } },
             { "B_T_APC_Wheeled_01_cannon_F", { "life_coplevel", "SCALAR", 22 } },
             { "C_Offroad_02_unarmed_F", { "life_coplevel", "SCALAR", 22 } },
-            { "O_APC_Wheeled_02_rcws_F", { "life_coplevel", "SCALAR", 22 } },
+            { "	O_APC_Wheeled_02_rcws_v2_F", { "life_coplevel", "SCALAR", 22 } },
             { "B_LSV_01_unarmed_black_F", { "life_coplevel", "SCALAR", 22 } },
             { "B_MRAP_01_hmg_F", { "life_coplevel", "SCALAR", 22 } },
 			      { "B_MRAP_01_F", { "life_coplevel", "SCALAR", 22 } },
-            { "C_Van_01_transport_F", { "life_coplevel", "SCALAR", 22 } },
+			      { "I_LT_01_scout_F", { "life_coplevel", "SCALAR", 22 } },
+            { "C_Van_01_transport_F", { "life_coplevel", "SCALAR", 22 } }
         };
     };
 
@@ -551,7 +554,7 @@ class LifeCfgVehicles {
 
     class B_MRAP_01_hmg_F {
         vItemSpace = 100;
-        licenses[] = { {"schwarzmarkt"}, {""}, {""}, {""} };
+        licenses[] = { {""}, {""}, {""}, {""} };
         price = 1300000000;
         textures[] = {
             { "Black", "reb", {
@@ -562,6 +565,28 @@ class LifeCfgVehicles {
             { "SEK", "cop", {
                 "textures\sek\Hunter0.jpg",
                 "textures\sek\Hunter1.jpg",
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+            } }
+        };
+    };
+
+    class C_Van_02_vehicle_F {
+        vItemSpace = 100;
+        licenses[] = { {""}, {""}, {""}, {""} };
+        price = 1300000000;
+        textures[] = {
+            { "Black", "cop", {
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+            } }
+        };
+    };
+
+    class C_Van_02_transport_F {
+        vItemSpace = 100;
+        licenses[] = { {""}, {""}, {""}, {""} };
+        price = 1300000000;
+        textures[] = {
+            { "Black", "cop", {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
             } }
         };
@@ -978,7 +1003,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
         };
     };
 
-    class O_APC_Wheeled_02_rcws_F {
+    class O_APC_Wheeled_02_rcws_v2_F {
         vItemSpace = 100;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
         price = 45000;
@@ -1032,6 +1057,10 @@ will modify the virtual space and the price of the vehicle, but other informatio
                 "textures\polizei\hunter0.jpg",
                 "textures\polizei\hunter1.jpg"
 			} },
+      { "SEK", "cop", {
+          "textures\sek\Hunter0.jpg",
+          "textures\sek\Hunter1.jpg"
+      } },
             { "Black", "reb", {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
             } }
