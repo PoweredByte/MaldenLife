@@ -21,7 +21,7 @@ switch (playerSide) do {
     case west: {
         ctrlShow[2011,false];
         ctrlShow[501,false];
-	
+
 		if (_copRepairing isEqualTo 1) then {
 			{
 				_damage = getDammage _x;
@@ -36,7 +36,7 @@ switch (playerSide) do {
 			};
 		} else {
 			ctrlShow[500,false];
-		};			
+		};
     };
 
     case civilian: {
@@ -56,14 +56,14 @@ switch (playerSide) do {
 			};
 		} else {
 			ctrlShow[501,false];
-		};			
+		};
     };
 
     case independent: {
         ctrlShow[2012,false];
         ctrlShow[2011,false];
         ctrlShow[501,false];
-		
+
 		if (_medicRepairing isEqualTo 1) then {
 			{
 				_damage = getDammage _x;
@@ -78,14 +78,14 @@ switch (playerSide) do {
 			};
 		} else {
 			ctrlShow[500,false];
-		};		
+		};
     };
 
     case east: {
         ctrlShow[2012,false];
         ctrlShow[2011,false];
         ctrlShow[501,false];
-		
+
 		if (_medicRepairing isEqualTo 1) then {
 			{
 				_damage = getDammage _x;
@@ -100,8 +100,12 @@ switch (playerSide) do {
 			};
 		} else {
 			ctrlShow[500,false];
-		};		
+		};
     };
+};
+
+if(playerSide isEqualTo CIVILIAN) then {
+	ctrlShow[4111,false];
 };
 
 if (FETCH_CONST(life_adminlevel) < 1) then {

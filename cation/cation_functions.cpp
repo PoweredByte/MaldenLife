@@ -1,0 +1,1 @@
+#include "trade\functions.cpp"

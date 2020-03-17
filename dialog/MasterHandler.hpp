@@ -19,6 +19,7 @@
 #include "trunk.hpp"
 #include "spawnSelection.hpp"
 #include "chop_shop.hpp"
+#include "aapps_callmanagement.hpp"
 #include "pInteraction.hpp"
 #include "deathScreen.hpp"
 #include "vehicleShop.hpp"

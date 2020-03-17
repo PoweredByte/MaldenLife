@@ -83,8 +83,8 @@ class RscTitles {
 
 class CfgFunctions {
     #include "Functions.hpp"
-	#include "maverick\maverick_functions_master.cpp"
-
+    #include "maverick\maverick_functions_master.cpp"
+    #include "cation\cation_functions.cpp"
 };
 
 class CfgSounds {
@@ -345,3 +345,4 @@ class CfgNotifications {
          priority = 5;
     };
 };
+#include "cation\cation_master.cpp"

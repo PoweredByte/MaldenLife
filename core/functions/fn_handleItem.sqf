@@ -417,7 +417,7 @@ if (_bool) then {
                                 _tWeapons = (getWeaponCargo (uniformContainer player)) select 0;
                                 _tWeaponCount = (getWeaponCargo (uniformContainer  player)) select 1;
 
-                                clearWeaponCargo (uniformContainer player);
+                                clearWeaponCargoGlobal (uniformContainer player);
                                 {
                                     _numVestWeps = _tWeaponCount select _forEachIndex;
                                     if (_x == _this) then
@@ -432,7 +432,7 @@ if (_bool) then {
                                 _tWeapons = (getWeaponCargo (vestContainer player)) select 0;
                                 _tWeaponCount = (getWeaponCargo (vestContainer  player)) select 1;
 
-                                clearWeaponCargo (vestContainer player);
+                                clearWeaponCargoGlobal (vestContainer player);
                                 {
                                     _numVestWeps = _tWeaponCount select _forEachIndex;
                                     if (_x == _this) then
@@ -447,7 +447,7 @@ if (_bool) then {
                                 _tWeapons = (getWeaponCargo (backpackContainer player)) select 0;
                                 _tWeaponCount = (getWeaponCargo (backpackContainer  player)) select 1;
 
-                                clearWeaponCargo (backpackContainer player);
+                                clearWeaponCargoGlobal (backpackContainer player);
                                 {
                                     _numVestWeps = _tWeaponCount select _forEachIndex;
                                     if (_x == _this) then

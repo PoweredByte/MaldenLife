@@ -265,6 +265,16 @@ class playerSettings {
             h = (1 / 25);
         };
 
+        class aapps_call : Life_RscButtonMenu {
+        	idc = 4111;
+        	text = "$STR_DC_dispatchcenter";
+        	onButtonClick = "0 call life_call_start";
+        	x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+        	y = 0.885;
+        	w = (6.25 / 40);
+        	h = (1 / 25);
+        };
+
         class ButtonSyncData: Life_RscButtonMenu {
             idc = -1;
             //shortcuts[] = {0x00050000 + 2};

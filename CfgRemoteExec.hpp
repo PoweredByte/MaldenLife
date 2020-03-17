@@ -15,20 +15,20 @@ class CfgRemoteExec {
     class Functions {
         mode = 1;
         jip = 1;
+        #include "cation\cation_remoteExec.cpp"
+	      #include "maverick\maverick_remoteExec_master.cpp"
 
-		#include "maverick\maverick_remoteExec_master.cpp"
 
-	
         /* Client only functions */
-		class AR_Client_Rappel_From_Heli { allowedTargets=0; }; 
-		class AR_Hint { allowedTargets=1; }; 
-		class AR_Hide_Object_Global { allowedTargets=2; }; 
-		class AR_Enable_Rappelling_Animation { allowedTargets=2; }; 
-		class AR_Rappel_From_Heli { allowedTargets=2; }; 
-		class AUR_Hint { allowedTargets=1; }; 
-		class AUR_Hide_Object_Global { allowedTargets=2; }; 
-		class AUR_Enable_Rappelling_Animation_Global { allowedTargets=2; }; 
-		class AUR_Play_Rappelling_Sounds_Global { allowedTargets=2; }; 
+		class AR_Client_Rappel_From_Heli { allowedTargets=0; };
+		class AR_Hint { allowedTargets=1; };
+		class AR_Hide_Object_Global { allowedTargets=2; };
+		class AR_Enable_Rappelling_Animation { allowedTargets=2; };
+		class AR_Rappel_From_Heli { allowedTargets=2; };
+		class AUR_Hint { allowedTargets=1; };
+		class AUR_Hide_Object_Global { allowedTargets=2; };
+		class AUR_Enable_Rappelling_Animation_Global { allowedTargets=2; };
+		class AUR_Play_Rappelling_Sounds_Global { allowedTargets=2; };
         F(life_fnc_vehicleEmpd,CLIENT)
         F(life_fnc_vehicleWarned,CLIENT)
         F(life_fnc_seizeObjects,CLIENT)
@@ -113,9 +113,9 @@ class CfgRemoteExec {
 		F(life_fnc_phoneAddCall,CLIENT)
 		F(life_fnc_phoneChannel,CLIENT)
 		F(life_fnc_phoneAddCallExtra,CLIENT)
-		
-		
-		
+
+
+
 //        F(bis_fnc_debugconsoleexec,ANYONE)		// UNBEDINGT WIEDER LÖSCHEN
 
         /* Server only functions */
@@ -247,8 +247,8 @@ class CfgRemoteExec {
 		};
 		class life_fnc_persozeigen {
 			allowedTargets = 1;
-		};	
- 
+		};
+
     };
 
     class Commands {
@@ -264,5 +264,5 @@ class CfgRemoteExec {
         F(addWeapon,ANYONE)
         F(setFuel,ANYONE)
     };
-	
+
 };

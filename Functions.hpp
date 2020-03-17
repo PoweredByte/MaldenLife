@@ -66,10 +66,10 @@ class Life_Client_Core {
 //        class welcomeNotification {};
     };
 
-    class Adac { 
-        file = "core\adac"; 
-       class adacLoadout {}; 
-       class adacMarkers {}; 
+    class Adac {
+        file = "core\adac";
+       class adacLoadout {};
+       class adacMarkers {};
     };
 
     class Actions {
@@ -111,7 +111,7 @@ class Life_Client_Core {
 		class suicideBomb {};
 		class lockCellAction {};
     };
-	
+
 	class Phone {
 		file = "core\phone";
 		class phoneInit {};
@@ -174,7 +174,7 @@ class Life_Client_Core {
         class vehicleAnimate {};
         class vehicleWeightCfg {};
     };
-	
+
 	class Placeables {
 		file = "core\functions\placeables";
 		class placeablesInit {};
@@ -185,10 +185,11 @@ class Life_Client_Core {
 		class placeableCancel {};
 		class placeablesPlaceComplete {};
 	};
-	
+
     class Cop {
         file = "core\cop";
         class bountyReceive {};
+        class copcallmanagement {};
         class containerInvSearch {};
         class copInteractionMenu {};
         class copLights {};
@@ -300,8 +301,8 @@ class Life_Client_Core {
         class whereAmI {};
 		class emergencyLights {};
 		class robstore {};
-		class speaking {}; 
-		class opener {}; 
+		class speaking {};
+		class opener {};
     };
 
     class Gangs {
@@ -361,6 +362,7 @@ class Life_Client_Core {
     class Medical_System {
         file = "core\medical";
         class deathScreen {};
+        class medcallmanagement {};
         class medicLights {};
         class medicLoadout {};
         class medicMarkers {};
@@ -440,7 +442,7 @@ class Life_Client_Core {
         class weaponShopMenu {};
         class weaponShopSelection {};
     };
-	
+
 	class Special
 	{
 		file = "core\special";
@@ -452,7 +454,7 @@ class Life_Client_Core {
 		class vehicleWarned {};
 		class vehicleEmpd {};
 	};
-	
+
     class Vehicle {
         file = "core\vehicle";
         class addVehicle2Chain {};
@@ -479,7 +481,7 @@ class Life_Client_Core {
 		class ArrayIndexErhalten {};
 		class ENS {};
 		class ENS_Hint {};
-	}; 
+	};
 
 	class Personalausweis {
 		file = "felixvonstudsinske\Personalausweis";
