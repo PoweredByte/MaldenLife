@@ -231,6 +231,16 @@ class CarShops {
         };
     };
 
+    class sek_air_1 {
+        side = "cop";
+        conditions = "call life_coplevel >= 22";
+        vehicles[] = {
+            { "B_T_VTOL_01_vehicle_F", { "life_coplevel", "SCALAR", 23 } },
+            { "B_Plane_Fighter_01_F", { "life_coplevel", "SCALAR", 23 } }
+        };
+    };
+
+
     class cop_ship {
         side = "cop";
         conditions = "call life_coplevel >= 1";
@@ -752,6 +762,28 @@ class LifeCfgVehicles {
             { "Black", "civ", {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
             }, "" }
+		};
+    };
+
+    class B_T_VTOL_01_vehicle_F {
+        vItemSpace = 300;
+        conditions = "";
+        price = 1;
+        textures[] = {
+            { "SEK", "cop", {
+                "textures\sek\Blackfish0.jpg","textures\sek\Blackfish1.jpg","textures\sek\Blackfish2.jpg","textures\sek\Blackfish3.jpg"
+            }, "" }
+  		};
+      };
+
+    class B_Plane_Fighter_01_F {
+        vItemSpace = 60;
+        conditions = "";
+        price = 1;
+        textures[] = {
+          { "SEK", "cop", {
+              "textures\sek\BlackWasp0.jpg","textures\sek\BlackWasp1.jpg"
+          }, "" }
 		};
     };
 
