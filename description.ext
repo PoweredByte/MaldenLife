@@ -87,11 +87,6 @@ class CfgFunctions {
 
 };
 
-class ZionHost {
-	#include "ZionHost\config.hpp"
-};
-
-
 class CfgSounds {
     sounds[] = {};
     class siren1 {

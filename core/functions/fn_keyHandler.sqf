@@ -14,7 +14,6 @@ _ctrlKey = _this select 3;
 _alt = _this select 4;
 _speed = speed cursorObject;
 _handled = false;
-_emp = getArray (configFile >> "ZionHost" >> "emp");
 
 _interactionKey = if (count (actionKeys "User10") isEqualTo 0) then {219} else {(actionKeys "User10") select 0};
 //hint str _code;
@@ -170,7 +169,7 @@ case 57: {
 
     case 37:
     {
-        if (!_shift && !_alt && !_ctrlKey && (playerSide == west) && (vehicle player != player && (typeOf vehicle player) in _emp)) then
+        if (!_shift && !_alt && !_ctrlKey && (playerSide == west) && (vehicle player != player && (typeOf vehicle player) in ["B_MRAP_01_hmg_F","B_Heli_Light_01_F","B_Heli_Transport_01_F","I_Heli_light_03_unarmed_F"])) then
         {
             [] call life_fnc_openEmpMenu; [_this] call life_fnc_isEmpOperator;
         };
