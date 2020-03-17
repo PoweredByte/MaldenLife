@@ -88,6 +88,18 @@ class CfgSpawnPoints {
                 icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
                 conditions = "";
             };
+            class SekHQ {
+                displayName = "Sek Kaserne";
+                spawnMarker = "cop_spawn_2";
+                icon = "\a3\ui_f\data\map\MapControl\bunker_CA.paa";
+                conditions = "call life_coplevel >= 22";
+            };
+            class SekBaser {
+                displayName = "Sek Water HQ";
+                spawnMarker = "cop_spawn_3";
+                icon = "\a3\ui_f\data\map\MapControl\bunker_CA.paa";
+                conditions = "call life_coplevel >= 22";
+            };
 /*
             class Athira {
                 displayName = "Athira HQ";
@@ -150,7 +162,7 @@ class CfgSpawnPoints {
             icon = "\a3\ui_f\data\map\MapControl\hospital_ca.paa";
             conditions = "";
             };
-        };   
+        };
 
 
     };
