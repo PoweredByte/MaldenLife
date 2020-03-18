@@ -33,6 +33,11 @@ switch (true) do {
         closeDialog 0;
     };
 
+  case (_item isEqualTo "caropen"): {
+    [cursorObject] spawn life_fnc_caropen;
+    closeDialog 0;
+  };
+
 	case (_item isEqualTo "sos"): {
 		[] spawn life_fnc_copbackup;
 		closeDialog 0;

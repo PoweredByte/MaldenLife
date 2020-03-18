@@ -325,7 +325,7 @@ class LifeCfgVehicles {
             } },
 		{ "SEK", "cop", {
         "textures\sek\Hellcat.jpg"
-            } }
+            }, "call life_coplevel >= 22"  }
 		};
 	};
 
@@ -668,7 +668,7 @@ class LifeCfgVehicles {
             } },
         	{ "SEK", "cop", {
                 "textures\sek\Hellcat.jpg"
-            } }
+            }, "call life_coplevel >= 22"  }
         };
     };
 
@@ -875,7 +875,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
             }, "" },
             { "SEK", "cop", {
                 "textures\sek\SekHatchback.jpg"
-			} },
+			      }, "call life_coplevel >= 22" },
             { "Polizei", "cop", {
                 "textures\polizei\AutobahnSportLimo.jpg"
 			} },
@@ -1029,7 +1029,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
             } },
             { "SEK", "cop", {
 				"textures\sek\SEK_CAR.paa"
-            } },
+      }, "call life_coplevel >= 22" },
 			{ "Undercover", "cop", {
 				"\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_03_co.paa"
             } },
@@ -1055,11 +1055,11 @@ will modify the virtual space and the price of the vehicle, but other informatio
 			{ "Gefangenentransport", "cop", {
                 "textures\sek\gefangenenSTRIDER.jpg"
 
-			} },
+			}, "call life_coplevel >= 22"  },
 			{ "SEK", "cop", {
                 "textures\sek\sekSTRIDER.jpg"
 
-			} }
+			}, "call life_coplevel >= 22"  }
         };
     };
 
@@ -1146,7 +1146,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
       { "SEK", "cop", {
           "textures\sek\Hunter0.jpg",
           "textures\sek\Hunter1.jpg"
-      } },
+      }, "call life_coplevel >= 22"  },
             { "Black", "reb", {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
             } }

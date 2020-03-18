@@ -6245,6 +6245,9 @@
         <Key ID="STR_Item_BleiVerarbeitet">
             <Original>Blei Verarbeitet</Original>
         </Key>
+        <Key ID="caropen">
+            <Original>Schlaghammer</Original>
+       </Key>
         <Key ID="STR_Item_FeuersteinUnverarbeitet">
             <Original>Feuerstein Unverarbeitet</Original>
         </Key>
@@ -12482,5 +12485,5 @@
     		<Original>We. do. not. negotiate. with. terorist. Find yourself a bomb!</Original>
     		<German>Guten Tag! Wir verhandeln nicht mit Terroristen. Suchen Sie sich einfach eine Bombe!</German>
     	</Key>
-    </Package>    
+    </Package>
 </Project>

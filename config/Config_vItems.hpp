@@ -15,12 +15,12 @@ class VirtualShops {
         conditions = "";
         items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "pickaxe", "toolkit", "fuelFull", "peach", "storagesmall", "storagebig", "rabbit_raw", "hen_raw", "rooster_raw", "sheep_raw", "goat_raw" };
     };
-	
+
     class adac {
         name = "STR_Shops_Market";
         side = "civ";
         conditions = "";
-        items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "pickaxe", "toolkit", "fuelFull", "peach", "storagesmall", "storagebig", "rabbit_raw", "hen_raw", "rooster_raw", "sheep_raw", "goat_raw","lockpick" };
+        items[] = { "caropen","waterBottle", "rabbit", "apple", "redgull", "tbacon", "pickaxe", "toolkit", "fuelFull", "peach", "storagesmall", "storagebig", "rabbit_raw", "hen_raw", "rooster_raw", "sheep_raw", "goat_raw","lockpick" };
     };
     class med_market {
         name = "STR_Shops_Market";
@@ -35,14 +35,14 @@ class VirtualShops {
         conditions = "license_civ_rebel";
         items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "toolkit", "fuelFull", "peach", "boltcutter", "blastingcharge" };
     };
-	
+
     class schwarzmarkt {
         name = "STR_Shops_Schwarzmarkt";
         side = "civ";
         conditions = "license_civ_schwarzmarkt";
         items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "toolkit", "fuelFull", "peach", "boltcutter", "blastingcharge","cprKit","handcuffs","keys" };
     };
-	
+
     class gang {
         name = "STR_Shops_Gang";
         side = "civ";
@@ -138,7 +138,7 @@ class VirtualShops {
         name = "STR_Shops_Cop";
         side = "cop";
         conditions = "";
-        items[] = { "donuts", "coffee", "spikeStrip", "waterBottle", "rabbit", "apple", "redgull", "toolkit", "fuelFull", "defusekit","handcuffs","keys","sos","lockpick","cprKit","schmerzmittel" };
+        items[] = { "caropen", "donuts", "coffee", "spikeStrip", "waterBottle", "rabbit", "apple", "redgull", "toolkit", "fuelFull", "defusekit","handcuffs","keys","sos","lockpick","cprKit","schmerzmittel" };
     };
 //CONFIG SHOPS //START
     class blei_shop {
@@ -183,7 +183,7 @@ class VirtualShops {
         conditions = "";
         items[] = { "uran_verarbeitet","uran_unverarbeitet" };
     };
-	
+
 //CONFIG SHOPS //ENDE
 };
 
@@ -213,6 +213,15 @@ class VirtualItems {
         edible = -1;
         icon = "icons\ico_pickaxe.paa";
     };
+    class caropen {
+      variable = "caropen";
+      displayName = "caropen";
+      weight = 2;
+      buyPrice = 1000;
+      sellPrice = -1;
+      illegal = false;
+      edible = -1;
+      icon = ""; };
     class machete {
         variable = "machete";
         displayName = "";
@@ -274,7 +283,7 @@ class VirtualItems {
         edible = -1;
 		icon = "icons\ico_schmerzmittel.paa";
     };
-	
+
     class beutel {
         variable = "beutel";
         displayName = "";
@@ -295,7 +304,7 @@ class VirtualItems {
         edible = -1;
         icon = "icons\ico_defibrillator.paa";
     };
-*/	
+*/
     class cprKit {
         variable = "cprKit";
         displayName = "STR_Item_Defibrillator";
@@ -317,7 +326,7 @@ class VirtualItems {
 		edible = -1;
 		icon = "icons\ico_sosKnopf.paa";
 	};
- 
+
     class toolkit {
         variable = "toolkit";
         displayName = "STR_Item_Toolkit";
@@ -383,7 +392,7 @@ class VirtualItems {
         edible = -1;
         icon = "icons\ico_goldBar.paa";
     };
-	
+
     class handcuffs {
         variable = "handcuffs";
         displayName = "STR_Item_lol";
@@ -393,8 +402,8 @@ class VirtualItems {
         illegal = false;
         edible = -1;
         icon = "icons\cuffs.paa";
-    };		
-	
+    };
+
     class keys {
         variable = "keys";
         displayName = "STR_Item_Keys";
@@ -405,7 +414,7 @@ class VirtualItems {
         edible = -1;
         icon = "icons\icon_keys.paa";
     };
-	
+
     class blastingcharge {
         variable = "blastingCharge";
         displayName = "STR_Item_BCharge";
@@ -1028,7 +1037,7 @@ class VirtualItems {
         edible = 100;
         icon = "icons\ico_muttonLeg.paa";
     };
-	
+
 
 //CUSTOM ITEMS //ANFANG
     class weintrauben {
@@ -1041,7 +1050,7 @@ class VirtualItems {
         edible = 100;
         icon = "icons\ico_muttonLeg.paa";
     };
-	
+
     class blei_unverarbeitet {
         variable = "blei_unverarbeitet";
         displayName = "STR_Item_BleiUnverarbeitet";
