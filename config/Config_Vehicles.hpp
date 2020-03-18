@@ -199,6 +199,7 @@ class CarShops {
             { "B_T_APC_Wheeled_01_cannon_F", { "life_coplevel", "SCALAR", 22 } },
             { "C_Offroad_02_unarmed_F", { "life_coplevel", "SCALAR", 22 } },
             { "O_APC_Wheeled_02_rcws_v2_F", { "life_coplevel", "SCALAR", 22 } },
+            { "O_T_APC_Wheeled_02_rcws_ghex_F", { "life_coplevel", "SCALAR", 22 } },
             { "B_LSV_01_unarmed_black_F", { "life_coplevel", "SCALAR", 22 } },
             { "B_MRAP_01_hmg_F", { "life_coplevel", "SCALAR", 22 } },
 			      { "B_MRAP_01_F", { "life_coplevel", "SCALAR", 22 } },
@@ -578,7 +579,7 @@ class LifeCfgVehicles {
     class B_MRAP_01_hmg_F {
         vItemSpace = 100;
         licenses[] = { {""}, {""}, {""}, {""} };
-        price = 1300000000;
+        price = 13000000000;
         textures[] = {
             { "Black", "reb", {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)",
@@ -714,7 +715,7 @@ class LifeCfgVehicles {
     class B_Heli_Light_01_armed_F {
         vItemSpace = 150;
         licenses[] = { {"schwarzmarkt"}, {""}, {""}, {""} };
-        price = 2500000000;
+        price = 25000000000;
         textures[] = {
             { "Tarnung", "civ", {
                 "textures\civ\Rebell-M900.camo.klein.jpg"
@@ -1062,10 +1063,10 @@ will modify the virtual space and the price of the vehicle, but other informatio
             }, "" }
         };
     };
-
+    //Unarmed
     class O_APC_Wheeled_02_rcws_v2_F {
         vItemSpace = 100;
-        conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
+        conditions = "";
         price = 45000;
         textures[] = {
             { "SEK", "civ", {
@@ -1073,6 +1074,18 @@ will modify the virtual space and the price of the vehicle, but other informatio
             }, "" }
         };
     };
+    //armed
+    class O_T_APC_Wheeled_02_rcws_ghex_F {
+        vItemSpace = 100;
+        conditions = "";
+        price = 45000;
+        textures[] = {
+            { "SEK", "civ", {
+                "textures\sek\Marid0.jpg","textures\sek\Marid1.jpg","#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+            }, "" }
+        };
+    };
+
     class C_Van_01_box_F {
         vItemSpace = 150;
         conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
