@@ -534,7 +534,7 @@ class DynamicSimulation
 randomSeed=10351213;
 class ScenarioData
 {
-	author="ZionHost";
+	author="PoweredByte | ZH_Nico | YouKnowIt";
 	overViewPicture="textures\armalife.jpg";
 	loadScreen="textures\armalife.jpg";
 	showCompass=0;
@@ -602,7 +602,7 @@ class Mission
 	appId=639600;
 	class Intel
 	{
-		briefingName="ZionHost | Funserver ";
+		briefingName="Malden-Life | Funserver";
 		resistanceEast=1;
 		timeOfChanges=1800.0002;
 		startWeather=0.30938664;
