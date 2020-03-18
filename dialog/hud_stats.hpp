@@ -1,5 +1,3 @@
-#define IDC_LIFE_BAR_SeatBelt 4203
-
 /*class LIFE_BAR_SeatBelt: Life_RscPicture
 {
     idc = IDC_LIFE_BAR_SeatBelt;
