@@ -90,8 +90,13 @@ class CfgFunctions {
 class CfgSounds {
     sounds[] = {};
       class hammer {
-          name = "siren1";
+          name = "hammer";
           sound[] = {"\sounds\fahrzeugblech.ogg", db+15, 1};
+          titles[] = {};
+      };
+      class reifen {
+          name = "reifen";
+          sound[] = {"\sounds\reifen.ogg", db+15, 1};
           titles[] = {};
       };
     class siren1 {
