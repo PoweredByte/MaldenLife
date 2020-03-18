@@ -357,6 +357,7 @@ class rebel {
             { "SMG_05_F", "", 1, 0, "" },
             //Polizist
             { "arifle_MXC_Black_F", "", 1, 0, "call life_coplevel >= 3" },
+            { "30Rnd_65x39_caseless_black_mag", "", 1, 0, "call life_coplevel >= 3" },
             { "SMG_03_TR_black", "", 1, 0, "call life_coplevel >= 3" },
             //Polizeimeister
             { "arifle_Katiba_F", "", 1, 0, "call life_coplevel >= 4" },
@@ -408,6 +409,7 @@ class rebel {
             { "20Rnd_762x51_Mag", "", 125, 60, "" },
             { "10Rnd_338_Mag", "", 125, 60, "" },
             { "30Rnd_65x39_caseless_green", "", 125, 60, "" },
+            { "30Rnd_65x39_caseless_black_mag", "", 125, 60, "" },
             { "20Rnd_556x45_UW_mag", "TaserMagazin", 125, 60, "" },
             { "11Rnd_45ACP_Mag", "", 130, 65, "" },
             { "75rnd_762x39_AK12_Mag_F", "", 130, 65, "" },
