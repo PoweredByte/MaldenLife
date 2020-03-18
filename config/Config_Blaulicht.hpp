@@ -1,7 +1,7 @@
 class emergencyLightsConfig {
  engineTimeout = 0.05;
  defaultAttenuation[] = {0.181, 0, 1000, 130};
-	class west {		
+	class west {
 		class C_SUV_01_F {
 			class S1 {
 				status = false;
@@ -28,6 +28,20 @@ class emergencyLightsConfig {
 				timeout = 0;
 			};
 		};
+    class I_MRAP_03_F {
+      class S1 {
+        status = false;
+        color[] = {0.0863, 0.5137, 0.9412};
+        ambientColor[] = {0.145,0.153,0.698};
+        brightnessMinimum = 0.05;
+        brightnessMaximum = 11;
+        position[] = {0, -1.2, 0.55};
+        attenuation[] = {0.3, 0, 100, 130};
+        phaseTime = 0.25;
+        timeout = 0;
+      };
+    };
+
 		class O_T_LSV_02_armed_F {
 			class S1 {
 				status = false;
@@ -94,7 +108,7 @@ class emergencyLightsConfig {
 			};
 		};
 	};
-	
+
 	class independent {
 		class C_SUV_01_F {
 			class S1 {
@@ -186,7 +200,7 @@ class emergencyLightsConfig {
 				phaseTime = 0.25;
 				timeout = 0;
 			};
-		};	 
+		};
 	};
 
 	class civilian {
@@ -280,9 +294,9 @@ class emergencyLightsConfig {
 				phaseTime = 0.25;
 				timeout = 0;
 			};
-		};	
+		};
 	};
-	
+
 	class east {
 		class C_SUV_01_F {
 			class S1 {
@@ -374,7 +388,7 @@ class emergencyLightsConfig {
 				phaseTime = 0.25;
 				timeout = 0;
 			};
-		};	
+		};
 	};
-	
+
 };
