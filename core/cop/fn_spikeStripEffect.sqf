@@ -9,7 +9,6 @@
 private ["_vehicle"];
 _vehicle = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 if (isNull _vehicle) exitWith {}; //Bad vehicle type
-
-_vehicle say3D ["reifen", 100, 1];
+ [_vehicle,"reifen",50,1] remoteExec ["life_fnc_say3D",0];
 _vehicle setHitPointDamage["HitLFWheel",1];
 _vehicle setHitPointDamage["HitRFWheel",1];
