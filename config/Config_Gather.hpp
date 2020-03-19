@@ -23,14 +23,14 @@ class CfgGather {
 
         class cocaine_unprocessed {
             amount = 3;
-            zones[] = { "cocaine_1" };
+            zones[] = { "coke_1" };
             item = "";
             zoneSize = 30;
         };
 
         class cannabis {
             amount = 3;
-            zones[] = { "weed_1" };
+            zones[] = { "weed_area_1" };
             item = "";
             zoneSize = 30;
         };
@@ -70,8 +70,8 @@ Example 2:
 */
 
     class Minerals {
-		
-		
+
+
 //CUSTOM MINING //ANFANG
         class blei_unverarbeitet {
             amount = 3;
@@ -122,7 +122,7 @@ Example 2:
             mined[] = {"uran_unverarbeitet"};
             zoneSize = 30;
         };
-//CUSTOM MINING //ENDE	
+//CUSTOM MINING //ENDE
 
 
         class copper_unrefined {
