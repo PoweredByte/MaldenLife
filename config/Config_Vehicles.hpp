@@ -200,7 +200,7 @@ class CarShops {
             { "C_Offroad_02_unarmed_F", { "life_coplevel", "SCALAR", 22 } },
             { "O_APC_Wheeled_02_rcws_v2_F", { "life_coplevel", "SCALAR", 22 } },
             { "O_Truck_03_covered_F", { "life_coplevel", "SCALAR", 22 } },
-            { "O_Truck_03_ammo_ghex_F", { "life_coplevel", "SCALAR", 22 } },
+            { "O_Truck_03_ammo_F", { "life_coplevel", "SCALAR", 22 } },
             { "O_T_APC_Wheeled_02_rcws_v2_ghex_F", { "life_coplevel", "SCALAR", 22 } },
             { "B_LSV_01_unarmed_black_F", { "life_coplevel", "SCALAR", 22 } },
             { "B_MRAP_01_hmg_F", { "life_coplevel", "SCALAR", 22 } },
@@ -964,7 +964,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
         };
     };
 
-    class O_Truck_03_ammo_ghex_F {
+    class O_Truck_03_ammo_F {
         vItemSpace = 400;
         conditions = "";
         price = 0;

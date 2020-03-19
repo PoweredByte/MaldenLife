@@ -21,10 +21,10 @@ _action = [
 
 if (_action) then {
  closeDialog 0;
+ _player = player;
  _player say3D ["hammer",50,1];
  if (player distance (_this select 0) > 5) exitWith {life_action_inUse = false; titleText["Du hast dich entfernt!","PLAIN"]};
  cursorTarget setVehicleLock "UNLOCKED";
- _player = player;
  _veh = cursorTarget;
  life_action_inUse = false;
 } else {
