@@ -16,7 +16,7 @@ if ((_veh isKindOf "Car") || (_veh isKindOf "Ship") || (_veh isKindOf "Air")) th
         _displayName = FETCH_CONFIG2(getText,"CfgVehicles",(typeOf _veh),"displayName");
         _upp = format [localize "STR_NOTF_Repairing",_displayName];
 
-        //Setup our progress bar.
+        //Setup our progress bar
         disableSerialization;
         "progressBar" cutRsc ["life_progress","PLAIN"];
         _ui = uiNamespace getVariable "life_progress";

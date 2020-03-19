@@ -20,8 +20,9 @@ _action = [
 ] call BIS_fnc_guiMessage;
 
 if (_action) then {
+ life_action_inUse = true;
  closeDialog 0;
-
+ _upp = "Breche Fahrzeug auf!"
  //Setup our progress bar.
  disableSerialization;
  "progressBar" cutRsc ["life_progress","PLAIN"];
@@ -48,6 +49,8 @@ if (_action) then {
      if !(isNull objectParent player) exitWith {};
      if (life_interrupted) exitWith {};
  };
+ "progressBar" cutText ["","PLAIN"];
+ player playActionNow "stop";
  _player = player;
  if (player distance (_this select 0) > 5) exitWith {life_action_inUse = false; titleText["Du hast dich entfernt!","PLAIN"]};
  cursorTarget setVehicleLock "UNLOCKED";
