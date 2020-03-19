@@ -22,7 +22,7 @@ _action = [
 if (_action) then {
  life_action_inUse = true;
  closeDialog 0;
- _upp = "Breche Fahrzeug auf!"
+ _upp = "Breche Fahrzeug auf!";
  //Setup our progress bar.
  disableSerialization;
  "progressBar" cutRsc ["life_progress","PLAIN"];
