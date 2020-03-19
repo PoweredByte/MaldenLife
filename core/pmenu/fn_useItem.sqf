@@ -71,6 +71,30 @@ switch (true) do {
         };
     };
 
+    case (_item == "cocainep"):
+    {
+        if(([false,_item,1] call life_fnc_handleInv)) then
+        {
+            [] spawn life_fnc_cocaine;
+        };
+    };
+
+    case (_item == "heroinp"):
+    {
+        if(([false,_item,1] call life_fnc_handleInv)) then
+        {
+            [] spawn life_fnc_heroin;
+        };
+    };
+
+        case (_item == "shroomsp"):
+    {
+        if(([false,_item,1] call life_fnc_handleInv)) then
+        {
+            [] spawn life_fnc_shroom;
+        };
+    };
+
     case (_item isEqualTo "fuelFull"): {
         if !(isNull objectParent player) exitWith {hint localize "STR_ISTR_RefuelInVehicle"};
         [] spawn life_fnc_jerryRefuel;

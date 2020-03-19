@@ -348,7 +348,10 @@ class Life_Client_Core {
         class blastingCharge {};
         class boltcutter {};
         class defuseKit {};
-        class weed {};        
+        class weed {};
+        class cocaine {};
+        class heroin {};
+        class shroom {};
         class caropen {};
         class flashbang {};
         class jerrycanRefuel {};
