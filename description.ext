@@ -100,6 +100,11 @@ class CfgSounds {
           sound[] = {"\sounds\reifen.ogg", db+15, 1};
           titles[] = {};
       };
+      class alarmanlage {
+        name = "alarmanlage";
+        sound[] = {"\sounds\alarmanlage.ogg", 1, 1};
+        titles[] = {};
+        };
     class siren1 {
         name = "siren1";
         sound[] = {"\sounds\siren1.ogg", db+15, 1};
