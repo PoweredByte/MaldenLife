@@ -26,7 +26,7 @@ class maverick_weaponshop_cfg {
 		msgInfoTooltip2 = 					"--> DOUBLE CLICK ON AN ITEM IN THE CART TO REMOVE IT.\n--> USE THE 'OVERRIDE GEAR' CHECKBOX TO REPLACE WEAPONS ON HAND WITH PURCHASED WEAPONS.";
 		msgEmptyShop = 						"Nothing Found...";
 		msgInfoText	=						"<t color='#FFFFFF'>Price:</t> <t color='%1'>%3%2</t>";
-		msgCartFull	=						"Cart is Full";
+		msgCartFull	=						"Cart is Full"
 		msgCartEmpty =						"Cart is Empty";
 		msgNotEnoughCash =					"Not enough Cash for this Transaction";
 		msgOverrideAlert =					"Use the override feature to override gear!";
@@ -473,8 +473,6 @@ class maverick_weaponshop_cfg {
 				{ "6Rnd_12Gauge_Slug",1, "call life_coplevel >= 10", "" }
 			};
 			magazines[] = {
-				{ "NONE", 0, "true", ""}
-
 				{ "16Rnd_9x21_Mag", "", 125, 60, "" },
 				{ "30Rnd_9x21_Mag", "", 125, 60, "" },
 				{ "30Rnd_9x21_Mag_SMG_02", "", 125, 60, "" },
