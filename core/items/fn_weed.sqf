@@ -12,7 +12,7 @@ sleep 3;
 "chromAberration" ppEffectEnable true;
 "radialBlur" ppEffectEnable true;
 enableCamShake true;
-_smoke = "SmokeShellGreen" createVehicle position player;
+_smoke = "SmokeShell" createVehicle position player;
 if (vehicle player != player) then
     {
         _smoke attachTo [vehicle player, [-0.6,-1,0]];
