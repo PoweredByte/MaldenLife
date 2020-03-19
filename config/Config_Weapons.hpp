@@ -21,6 +21,8 @@
 */
 class WeaponShops {
     //Armory Shops
+
+    //DONE
     class gun {
         name = "Billy Joe's Firearms";
         side = "civ";
@@ -47,6 +49,7 @@ class WeaponShops {
         };
     };
 
+//Done
 class schwarzmarkt {
         name = "Schwarzmarkt";
         side = "civ";
@@ -168,7 +171,7 @@ class schwarzmarkt {
             { "acc_flashlight", "", 1000, 500, "" }
         };
     };
-
+//Done
 class rebel {
         name = "Rebellenmarkt";
         side = "civ";
@@ -295,6 +298,8 @@ class rebel {
         };
     };
 
+
+    //Done
     //Basic Shops
     class genstore {
         name = "Altis General Store";
