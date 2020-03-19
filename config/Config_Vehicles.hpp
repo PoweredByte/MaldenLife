@@ -187,6 +187,7 @@ class CarShops {
         };
 	};
 
+    //Only SEK Skin }, "call life_coplevel >= 22" }
     class sek_car {
         side = "cop";
         conditions = "call life_coplevel >= 22";
@@ -958,6 +959,9 @@ will modify the virtual space and the price of the vehicle, but other informatio
           { "Polizei", "cop", {
               "textures\polizei\Truck1.jpg","textures\polizei\Truck2.jpg","textures\polizei\Truck3.jpg","textures\polizei\Truck4.jpg"
           }, "" },
+          { "Bund", "cop", {
+              "textures\sek\wd_ext01.paa","textures\sek\wd_ext02.paa","textures\sek\wd_cargo.paa","textures\sek\wd_cover.paa"
+          }, "call life_coplevel >= 22" },
           { "Kat Schutz", "med", {
               "textures\medic\Truck0.jpg","textures\medic\Truck1.jpg","textures\medic\Truck2.jpg","textures\medic\Truck3.jpg"
           }, "" }
@@ -969,9 +973,9 @@ will modify the virtual space and the price of the vehicle, but other informatio
         conditions = "";
         price = 0;
         textures[] = {
-          { "Polizei", "cop", {
-              "textures\polizei\Truck1.jpg","textures\polizei\Truck2.jpg","textures\polizei\Truck3.jpg","textures\polizei\Truck4.jpg"
-          }, "" }
+          { "Bund", "cop", {
+              "textures\sek\wd_ext01.paa","textures\sek\wd_ext02.paa","textures\sek\wd_cargo.paa","\A3\Structures_F\Data\Metal\Containers\Containers_02_set_CO.paa"
+          }, "call life_coplevel >= 22" }
         };
     };
 
@@ -1026,7 +1030,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
             } },
             { "SEK-Einsatzleitung", "cop", {
 				"textures\sek\sekESUV.jpg"
-            } },
+            }, "call life_coplevel >= 22" },
             { "SEK", "cop", {
 				"textures\sek\SEK_CAR.paa"
       }, "call life_coplevel >= 22" },
