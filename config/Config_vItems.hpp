@@ -1138,7 +1138,7 @@ class VirtualItems {
     class lavagestein_unverarbeitet {
         variable = "lavagestein_unverarbeitet";
         displayName = "STR_Item_LavagesteinUnverarbeitet";
-        weight = 4
+        weight = 4;
         buyPrice = 1200000;
         sellPrice = 1000000;
         illegal = false;
