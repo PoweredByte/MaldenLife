@@ -98,7 +98,6 @@ class CarShops {
             { "B_Quadbike_01_F", { "", "", -1 } },
             { "B_G_Offroad_01_F", { "", "", -1 } },
             { "O_MRAP_02_F", { "", "", -1 } },
-            { "B_Heli_Light_01_stripped_F", { "", "", -1 } },
             { "B_G_Offroad_01_armed_F", { "", "", -1 } },
 			{ "O_T_LSV_02_unarmed_F", { "", "", -1 } },
             { "B_MRAP_01_F", { "", "", -1 } }
