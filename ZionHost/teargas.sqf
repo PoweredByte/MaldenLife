@@ -46,6 +46,9 @@ playerNearGas=false;
 
         if (headgear player != "H_CrewHelmetHeli_B") then {antidote1 = 2583}; // Player has no Suit
         if (headgear player == "H_CrewHelmetHeli_B") then {antidote1 = 2581}; // Player carries the Gas Suit
+        if (goggles player != "G_AirPurifyingRespirator_02_black_F") then {antidote1 = 2583};
+        if (goggles player == "G_AirPurifyingRespirator_02_black_F") then {antidote1 = 2581};
+
 
         if (antidote1 == 2583) then {
          "dynamicBlur" ppEffectEnable true; // enables ppeffect

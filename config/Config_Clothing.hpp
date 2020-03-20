@@ -206,6 +206,7 @@ class Clothing {
             { "G_Lady_Mirror", "", 150, { "", "", -1 } },
             { "G_Lady_Dark", "", 150, { "", "", -1 } },
 			      { "G_Diving", "", 500, { "", "", -1 } },
+			      { "G_AirPurifyingRespirator_02_black_F", "Gasmaske", 500, "call life_coplevel >= 22" },
 			      { "G_Balaclava_TI_blk_F", "SEK MASKE", 500, "call life_coplevel >= 22" },
             { "G_Lady_Blue", "", 150, { "", "", -1 } }
         };
@@ -228,7 +229,7 @@ class Clothing {
             { "B_Bergen_Hex_F", "Unsichtbar", 800, { "", "", -1 } },
             { "B_UAV_01_backpack_F", "SEK DRONE", 350, "call life_coplevel >= 22" },
             { "B_ViperLightHarness_blk_F", "SEK VIPER", 350, "call life_coplevel >= 22" },
-            { "B_Static_Designator_01_weapon_F", "SEK VIPER", 350, "call life_coplevel >= 22" },
+            { "B_Static_Designator_01_weapon_F", "Remote Designator", 350, "call life_coplevel >= 22" },
             { "B_Bergen_sgg", "SEK RUCKSACK", 350, "call life_coplevel >= 22" }
         };
     };
@@ -577,6 +578,9 @@ class Clothing {
             { "V_PlateCarrierH_CTRG", "", 12500, "" },
             { "V_PlateCarrier2_wdl", "", 12500, "" },
             { "V_PlateCarrier2_rgr_noflag_F", "", 12500, "" },
+            { "V_PlateCarrier2_tna_F", "", 12500, "" },
+            { "V_PlateCarrierSpec_tna_F", "", 500000, "" },
+            { "V_PlateCarrierGL_tna_F", "", 500000, "" },
             { "V_PlateCarrier2_tna_F", "", 12500, "" },
             { "V_HarnessOGL_gry", "SELBSTMORDWESTE", 750000000, "" },
             { "V_TacChestrig_grn_F", "", 17500, "" } //Apex DLC
