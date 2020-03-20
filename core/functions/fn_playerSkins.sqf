@@ -73,6 +73,10 @@ switch (playerSide) do {
 				player setObjectTextureGlobal [0, "textures\polizei\Polizei_Pullover.paa"];
 			};
 
+      if ((uniform player) isEqualTo "U_C_Uniform_Scientist_01_F" && FETCH_CONST(life_coplevel) >= 1 ) then {
+  				player setObjectTextureGlobal [0, "textures\hemd.paa"];
+  				player setObjectTextureGlobal [1, "textures\id.paa"];          
+  			};
 
 
       //Einsatz SEK
@@ -109,6 +113,9 @@ switch (playerSide) do {
 
 		if (backpack player isEqualTo "B_ViperLightHarness_blk_F") then {
 			(backpackContainer player) setObjectTextureGlobal[0,"textures\sek\ViperRucksack.jpg"];
+		};
+    if (backpack player isEqualTo "B_SCBA_01_F") then {
+			(backpackContainer player) setObjectTextureGlobal[0,"textures\Pressluftatmer.paa"];
 		};
 		if (backpack player isEqualTo "B_Bergen_mcamo") then {
 			(backpackContainer player) setObjectTextureGlobal[0,"textures\polizei\polizeibag.paa"];

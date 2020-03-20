@@ -36,6 +36,7 @@ class Clothing {
             { "U_C_WorkerCoveralls", "", 2500, "" },
             { "U_NikosBody", "", 3000, "" },
             { "U_NikosAgedBody", $STR_C_Civ_Niko, 5000, "" },
+            { "U_C_Uniform_Scientist_01_F", "", 5000, "" },
             { "U_C_Man_casual_1_F", "", 5000, "" }, //Apex DLC
             { "U_C_Man_casual_2_F", "", 5000, "" }, //Apex DLC
             { "U_C_Man_casual_3_F", "", 5000, "" }, //Apex DLC
@@ -172,7 +173,9 @@ class Clothing {
             { "U_Rangemaster", "Polizei-Kleidung", 25, { "", "", -1 } },
             { "U_B_CombatUniform_mcam", "Polizei-Kleidung", 25, { "", "", -1 } },
             { "U_B_GEN_Commander_F", "Polizei-Pullover", 25, { "", "", -1 } },
+            { "U_C_Uniform_Scientist_01_F", "", 25, { "", "", -1 } },
             { "U_I_CombatUniform", "Taktische Uniform", 350, "call life_coplevel >= 2" },
+            { "U_C_CBRN_Suit_01_Blue_F", "CSA", 350, "call life_coplevel >= 15" },
             { "U_O_R_Gorka_01_black_F", "Sneaky Peaky Uniform", 350, "call life_coplevel >= 15" },
             { "U_B_CombatUniform_mcam_vest", "Uniform", 350, "" },
 	          { "U_B_Wetsuit", "", 2000, { "", "", -1 } },
@@ -206,6 +209,7 @@ class Clothing {
             { "G_Lady_Mirror", "", 150, { "", "", -1 } },
             { "G_Lady_Dark", "", 150, { "", "", -1 } },
 			      { "G_Diving", "", 500, { "", "", -1 } },
+			      { "G_RegulatorMask_F", "Atemschutzmaske", 500, "call life_coplevel >= 15" },
 			      { "G_AirPurifyingRespirator_02_black_F", "Gasmaske", 500, "call life_coplevel >= 22" },
 			      { "G_Balaclava_TI_blk_F", "SEK MASKE", 500, "call life_coplevel >= 22" },
             { "G_Lady_Blue", "", 150, { "", "", -1 } }
@@ -227,6 +231,7 @@ class Clothing {
             { "NONE", "Kein Rucksack", 0, { "", "", -1 } },
             { "B_Bergen_mcamo", "", 800, { "", "", -1 } },
             { "B_Bergen_Hex_F", "Unsichtbar", 800, { "", "", -1 } },
+            { "B_SCBA_01_F", "Pressluftatmer", 500, "call life_coplevel >= 15" },
             { "B_UAV_01_backpack_F", "SEK DRONE", 350, "call life_coplevel >= 22" },
             { "B_ViperLightHarness_blk_F", "SEK VIPER", 350, "call life_coplevel >= 22" },
             { "B_Static_Designator_01_weapon_F", "Remote Designator", 350, "call life_coplevel >= 22" },
