@@ -277,7 +277,7 @@ class VirtualItems {
         variable = "schmerzmittel";
         displayName = "STR_Item_Schmerzmittel";
         weight = 2;
-        buyPrice = 9000000;
+        buyPrice = 2000000;
         sellPrice = 0;
         illegal = false;
         edible = -1;
@@ -642,8 +642,8 @@ class VirtualItems {
         variable = "heroinProcessed";
         displayName = "STR_Item_HeroinP";
         weight = 4;
-        buyPrice = 3500;
-        sellPrice = 2560;
+        buyPrice = 1500000;
+        sellPrice = 1000000;
         illegal = true;
         edible = -1;
         icon = "icons\ico_heroinProcessed.paa";
@@ -665,8 +665,8 @@ class VirtualItems {
         variable = "marijuana";
         displayName = "STR_Item_Marijuana";
         weight = 3;
-        buyPrice = 2800;
-        sellPrice = 2350;
+        buyPrice = 1250000;
+        sellPrice = 900000;
         illegal = true;
         edible = -1;
         icon = "icons\ico_marijuana.paa";
@@ -687,9 +687,9 @@ class VirtualItems {
     class cocaine_processed {
         variable = "cocaineProcessed";
         displayName = "STR_Item_CocaineP";
-        weight = 4;
+        weight = 5;
         buyPrice = -1;
-        sellPrice = 5000;
+        sellPrice = 3500000;
         illegal = true;
         edible = -1;
         icon = "icons\ico_cocaineProcessed.paa";
@@ -1054,7 +1054,7 @@ class VirtualItems {
     class blei_unverarbeitet {
         variable = "blei_unverarbeitet";
         displayName = "STR_Item_BleiUnverarbeitet";
-        weight = 2;
+        weight = 3;
         buyPrice = 600000;
         sellPrice = 550000;
         illegal = false;
@@ -1064,7 +1064,7 @@ class VirtualItems {
     class blei_verarbeitet {
         variable = "blei_verarbeitet";
         displayName = "STR_Item_BleiVerarbeitet";
-        weight = 3;
+        weight = 2;
         buyPrice = 1200000;
         sellPrice = 1000000;
         illegal = false;
@@ -1075,7 +1075,7 @@ class VirtualItems {
     class feuerstein_unverarbeitet {
         variable = "feuerstein_unverarbeitet";
         displayName = "STR_Item_FeuersteinUnverarbeitet";
-        weight = 2;
+        weight = 3;
         buyPrice = 1000000;
         sellPrice = 900000;
         illegal = false;
@@ -1085,7 +1085,7 @@ class VirtualItems {
     class feuerstein_verarbeitet {
         variable = "feuerstein_verarbeitet";
         displayName = "STR_Item_FeuersteinVerarbeitet";
-        weight = 3;
+        weight = 2;
         buyPrice = 1600000;
         sellPrice = 1500000;
         illegal = false;
@@ -1096,7 +1096,7 @@ class VirtualItems {
     class kaktus_unverarbeitet {
         variable = "kaktus_unverarbeitet";
         displayName = "STR_Item_KaktusUnverarbeitet";
-        weight = 1;
+        weight = 2;
         buyPrice = 800000;
         sellPrice = 700000;
         illegal = false;
@@ -1106,7 +1106,7 @@ class VirtualItems {
     class kaktus_verarbeitet {
         variable = "kaktus_verarbeitet";
         displayName = "STR_Item_KaktusVerarbeitet";
-        weight = 2;
+        weight = 1;
         buyPrice = 1300000;
         sellPrice = 1200000;
         illegal = false;
@@ -1117,7 +1117,7 @@ class VirtualItems {
     class katzengold_unverarbeitet {
         variable = "katzengold_unverarbeitet";
         displayName = "STR_Item_KatzengoldUnverarbeitet";
-        weight = 2;
+        weight = 4;
         buyPrice = 1500000;
         sellPrice = 1400000;
         illegal = false;
@@ -1127,7 +1127,7 @@ class VirtualItems {
     class katzengold_verarbeitet {
         variable = "katzengold_verarbeitet";
         displayName = "STR_Item_KatzengoldVerarbeitet";
-        weight = 4;
+        weight = 2;
         buyPrice = 3000000;
         sellPrice = 2800000;
         illegal = false;
@@ -1138,7 +1138,7 @@ class VirtualItems {
     class lavagestein_unverarbeitet {
         variable = "lavagestein_unverarbeitet";
         displayName = "STR_Item_LavagesteinUnverarbeitet";
-        weight = 3;
+        weight = 4
         buyPrice = 1200000;
         sellPrice = 1000000;
         illegal = false;
@@ -1148,7 +1148,7 @@ class VirtualItems {
     class lavagestein_verarbeitet {
         variable = "lavagestein_verarbeitet";
         displayName = "STR_Item_LavagesteinVerarbeitet";
-        weight = 4;
+        weight = 3;
         buyPrice = 1700000;
         sellPrice = 1600000;
         illegal = false;
@@ -1159,7 +1159,7 @@ class VirtualItems {
     class titanium_unverarbeitet {
         variable = "titanium_unverarbeitet";
         displayName = "STR_Item_TitaniumUnverarbeitet";
-        weight = 6;
+        weight = 7;
         buyPrice = 1300000;
         sellPrice = 1100000;
         illegal = false;
@@ -1169,7 +1169,7 @@ class VirtualItems {
     class titanium_verarbeitet {
         variable = "titanium_verarbeitet";
         displayName = "STR_Item_TitaniumVerarbeitet";
-        weight = 7;
+        weight = 5;
         buyPrice = 1800000;
         sellPrice = 1700000;
         illegal = false;
@@ -1180,7 +1180,7 @@ class VirtualItems {
     class uran_unverarbeitet {
         variable = "uran_unverarbeitet";
         displayName = "STR_Item_UranUnverarbeitet";
-        weight = 12;
+        weight = 14;
         buyPrice = 1300000;
         sellPrice = 1200000;
         illegal = true;
@@ -1190,7 +1190,7 @@ class VirtualItems {
     class uran_verarbeitet {
         variable = "uran_verarbeitet";
         displayName = "STR_Item_UranVerarbeitet";
-        weight = 14;
+        weight = 12;
         buyPrice = 3800000;
         sellPrice = 3400000;
         illegal = true;

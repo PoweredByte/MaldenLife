@@ -491,7 +491,7 @@ class LifeCfgVehicles {
     class O_T_LSV_02_unarmed_F {
         vItemSpace = 100;
         conditions = "";
-        price = 60000000;
+        price = 10000000;
         textures[] = {
             { "Arid", "civ", {
                 "\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_01_arid_CO.paa",
@@ -761,7 +761,7 @@ class LifeCfgVehicles {
     class O_MRAP_02_F {
         vItemSpace = 60;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
-        price = 750000000;
+        price = 500000000;
         textures[] = {
             { "Black", "civ", {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
@@ -1141,7 +1141,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class B_MRAP_01_F {
         vItemSpace = 100;
         licenses[] = { {""}, {""}, {""}, {""} };
-        price = 750000000;
+        price = 500000000;
         textures[] = {
         	{ "Polizei", "cop", {
                 "textures\polizei\hunter0.jpg",
@@ -1157,6 +1157,20 @@ will modify the virtual space and the price of the vehicle, but other informatio
         };
     };
 
+class I_Heli_Transport_02_F {
+   vItemSpace = 450;
+   conditions = "";
+   price = 200000000;
+   textures[] = {
+       { "Black", "civ", {
+           "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+       }, "" },
+       { "Black", "reb", {
+           "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+       }, "" }
+     };
+};
+
      class B_Heli_Light_01_stripped_F {
         vItemSpace = 90;
         conditions = "";
@@ -1171,7 +1185,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class B_Heli_Light_01_F {
         vItemSpace = 90;
         conditions = "license_civ_pilot || {license_cop_cAir} || {license_med_mAir} || {license_adac_Air} ";
-        price = 105000000;
+        price = 50000000;
         textures[] = {
         	{ "Polizei", "cop", {
                 "textures\polizei\cop_hum.jpg"
@@ -1235,7 +1249,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
 
     class C_Heli_Light_01_civil_F : B_Heli_Light_01_F {
         vItemSpace = 75;
-        price = 12500000;
+        price = 50000000;
     };
 
     class O_Heli_Light_02_unarmed_F {

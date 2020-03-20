@@ -615,7 +615,7 @@ class maverick_weaponshop_cfg {
 			 { "optic_KHS_blk", 1, "true", ""},
 			 { "optic_LRPS", 1, "true", ""},
 			 { "optic_DMS", 1, "true", ""},
-			 { "optic_Hamr", 1, "true", ""},
+			 { "optic_Hamr", 2, "true", ""},
 			 { "optic_MRD", 1, "true", ""},
 			 { "ACC_flashlight", 1, "true", ""}
 			};
