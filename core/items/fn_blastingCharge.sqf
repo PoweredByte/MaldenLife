@@ -31,8 +31,7 @@ any=
 [
   [
   ["Ein Bankraub wurde gestartet!","<t align='center'>%1</t></br>"],
-  ["Wenn sie Verhandeln wollen Kontaktieren sie die Polizei!","<t align='center'>%1</t></br>"],
-  ["Alle Unbeteiligten dürfen dass Gebiet in ein einem Radius von 2km nicht Betreten!","<t align='center'>%1</t></br>"]
+  ["Wenn sie Verhandeln wollen Kontaktieren sie die Polizei!","<t align='center'>%1</t></br>"]
   ]
 ] spawn BIS_fnc_typeText;
 
