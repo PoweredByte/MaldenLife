@@ -281,33 +281,35 @@ case 57: {
 				player playActionNow "gestureHi";
 			};
 		} else {
-        if (playerSide in [west,independent] && {vehicle player != player} && {!life_siren1_active} && {((driver vehicle player) == player)}) then {
-            0 spawn {
-                life_siren1_active = true;
-                sleep 1;
-                life_siren1_active = false;
-            };
+      if(!_shift) then {
+          if (playerSide in [west,independent] && {vehicle player != player} && {!life_siren1_active} && {((driver vehicle player) == player)}) then {
+                0 spawn {
+                    life_siren1_active = true;
+                    sleep 1;
+                    life_siren1_active = false;
+                };
 
-            _veh = vehicle player;
-            if (isNil {_veh getVariable "siren1"}) then {_veh setVariable ["siren1",false,true];};
-            if ((_veh getVariable "siren1")) then {
-		["Warnung 1 ausgeschaltet","ZionHost-System","red",true] call MSG_fnc_handle;
-                _veh setVariable ["siren1",false,true];
-                if !(isNil {(_veh getVariable "sirenJIP")}) then {
-                    private _jip = _veh getVariable "sirenJIP";
-                    _veh setVariable ["sirenJIP",nil,true];
-                    remoteExec ["",_jip]; //remove from JIP queue
-                };
-            } else {
-		["Warnung 1 eingeschaltet","ZionHost-System","red",true] call MSG_fnc_handle;
-                _veh setVariable ["siren1",true,true];
-                private "_jip";
-                if (playerSide isEqualTo west) then {
-                    _jip = [_veh] remoteExec ["life_fnc_copSiren1",RCLIENT,true];
+                _veh = vehicle player;
+                if (isNil {_veh getVariable "siren1"}) then {_veh setVariable ["siren1",false,true];};
+                if ((_veh getVariable "siren1")) then {
+    		            ["Warnung 1 ausgeschaltet","ZionHost-System","red",true] call MSG_fnc_handle;
+                    _veh setVariable ["siren1",false,true];
+                    if !(isNil {(_veh getVariable "sirenJIP")}) then {
+                        private _jip = _veh getVariable "sirenJIP";
+                        _veh setVariable ["sirenJIP",nil,true];
+                        remoteExec ["",_jip]; //remove from JIP queue
+                    };
                 } else {
-                    _jip = [_veh] remoteExec ["life_fnc_copSiren1",RCLIENT,true];
+    		            ["Warnung 1 eingeschaltet","ZionHost-System","red",true] call MSG_fnc_handle;
+                    _veh setVariable ["siren1",true,true];
+                    private "_jip";
+                    if (playerSide isEqualTo west) then {
+                        _jip = [_veh] remoteExec ["life_fnc_copSiren1",RCLIENT,true];
+                    } else {
+                        _jip = [_veh] remoteExec ["life_fnc_copSiren1",RCLIENT,true];
+                    };
+                    _veh setVariable ["sirenJIP",_jip,true];
                 };
-                _veh setVariable ["sirenJIP",_jip,true];
             };
         };
     };
@@ -322,34 +324,36 @@ case 57: {
 				player playActionNow "gestureHiC";
 			};
 		} else {
-        if (playerSide in [west,independent] && {vehicle player != player} && {!life_siren2_active} && {((driver vehicle player) == player)}) then {
-            0 spawn {
-                life_siren2_active = true;
-                sleep 1;
-                life_siren2_active = false;
-            };
+      if(!_shift) then {
+          if (playerSide in [west,independent] && {vehicle player != player} && {!life_siren2_active} && {((driver vehicle player) == player)}) then {
+              0 spawn {
+                  life_siren2_active = true;
+                  sleep 1;
+                  life_siren2_active = false;
+              };
 
-            _veh = vehicle player;
-            if (isNil {_veh getVariable "siren2"}) then {_veh setVariable ["siren2",false,true];};
-            if ((_veh getVariable "siren2")) then {
-		["Warnung 2 ausgeschaltet","ZionHost-System","red",true] call MSG_fnc_handle;
-                _veh setVariable ["siren2",false,true];
-                if !(isNil {(_veh getVariable "sirenJIP")}) then {
-                    private _jip = _veh getVariable "sirenJIP";
-                    _veh setVariable ["sirenJIP",nil,true];
-                    remoteExec ["",_jip]; //remove from JIP queue
-                };
-            } else {
-		["Warnung 2 eingeschaltet","ZionHost-System","red",true] call MSG_fnc_handle;
-                _veh setVariable ["siren2",true,true];
-                private "_jip";
-                if (playerSide isEqualTo west) then {
-                    _jip = [_veh] remoteExec ["life_fnc_copSiren2",RCLIENT,true];
-                } else {
-                    _jip = [_veh] remoteExec ["life_fnc_copSiren2",RCLIENT,true];
-                };
-                _veh setVariable ["sirenJIP",_jip,true];
-            };
+              _veh = vehicle player;
+              if (isNil {_veh getVariable "siren2"}) then {_veh setVariable ["siren2",false,true];};
+              if ((_veh getVariable "siren2")) then {
+  		["Warnung 2 ausgeschaltet","ZionHost-System","red",true] call MSG_fnc_handle;
+                  _veh setVariable ["siren2",false,true];
+                  if !(isNil {(_veh getVariable "sirenJIP")}) then {
+                      private _jip = _veh getVariable "sirenJIP";
+                      _veh setVariable ["sirenJIP",nil,true];
+                      remoteExec ["",_jip]; //remove from JIP queue
+                  };
+              } else {
+  		["Warnung 2 eingeschaltet","ZionHost-System","red",true] call MSG_fnc_handle;
+                  _veh setVariable ["siren2",true,true];
+                  private "_jip";
+                  if (playerSide isEqualTo west) then {
+                      _jip = [_veh] remoteExec ["life_fnc_copSiren2",RCLIENT,true];
+                  } else {
+                      _jip = [_veh] remoteExec ["life_fnc_copSiren2",RCLIENT,true];
+                  };
+                  _veh setVariable ["sirenJIP",_jip,true];
+              };
+          };
         };
     };
 };
@@ -363,6 +367,7 @@ case 57: {
 				player playActionNow "gestureHiB";
 			};
 		} else {
+      if(!_shift) then {
         if (playerSide in [west,independent] && {vehicle player != player} && {!life_siren3_active} && {((driver vehicle player) == player)}) then {
             0 spawn {
                 life_siren3_active = true;
@@ -392,6 +397,7 @@ case 57: {
                 _veh setVariable ["sirenJIP",_jip,true];
             };
         };
+      };
     };
 };
     //4
@@ -404,6 +410,7 @@ case 57: {
 				player playActionNow "gesturenod";
 			};
 		} else {
+      if(!_shift) then {
         if (playerSide in [west] && {vehicle player != player} && {!life_siren4_active} && {((driver vehicle player) == player)}) then {
             0 spawn {
                 life_siren4_active = true;
@@ -433,10 +440,12 @@ case 57: {
                 _veh setVariable ["sirenJIP",_jip,true];
             };
         };
+      };
     };
 };
     //5
     case 6: {
+      if(!_shift) then {
         if (playerSide in [west] && {vehicle player != player} && {!life_siren5_active} && {((driver vehicle player) == player)}) then {
             0 spawn {
                 life_siren5_active = true;
@@ -466,6 +475,7 @@ case 57: {
                 _veh setVariable ["sirenJIP",_jip,true];
             };
         };
+      };
     };
 
 /*							//////////////////////////////////////////////////////////////////////////////////////////////////////			*/

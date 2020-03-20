@@ -205,9 +205,8 @@ class Clothing {
             { "G_Aviator", "", 100, { "", "", -1 } },
             { "G_Lady_Mirror", "", 150, { "", "", -1 } },
             { "G_Lady_Dark", "", 150, { "", "", -1 } },
-			{ "G_Diving", "", 500, { "", "", -1 } },
-			{ "NVGogglesB_blk_F", "SEK", 500, "call life_coplevel >= 22" },
-			{ "G_Balaclava_TI_blk_F", "SEK MASKE", 500, "call life_coplevel >= 22" },
+			      { "G_Diving", "", 500, { "", "", -1 } },
+			      { "G_Balaclava_TI_blk_F", "SEK MASKE", 500, "call life_coplevel >= 22" },
             { "G_Lady_Blue", "", 150, { "", "", -1 } }
         };
         vests[] = {
@@ -229,6 +228,7 @@ class Clothing {
             { "B_Bergen_Hex_F", "Unsichtbar", 800, { "", "", -1 } },
             { "B_UAV_01_backpack_F", "SEK DRONE", 350, "call life_coplevel >= 22" },
             { "B_ViperLightHarness_blk_F", "SEK VIPER", 350, "call life_coplevel >= 22" },
+            { "B_Static_Designator_01_weapon_F", "SEK VIPER", 350, "call life_coplevel >= 22" },
             { "B_Bergen_sgg", "SEK RUCKSACK", 350, "call life_coplevel >= 22" }
         };
     };

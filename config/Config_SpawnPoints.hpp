@@ -12,8 +12,8 @@ class CfgSpawnPoints {
 
     class Malden {
         class Civilian {
-            class Le_Port {
-                displayName = "Le Port";
+            class Arudy {
+                displayName = "Arudy";
                 spawnMarker = "civ_spawn_1";
                 icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
                 conditions = "";

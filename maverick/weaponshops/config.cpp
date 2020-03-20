@@ -16,24 +16,24 @@ class maverick_weaponshop_cfg {
 
 	class localization {
 		//--- localization for hints etc.
-		msgParamEmpty =						"Shop Parameter is empty!";
-		msgInVehicle =						"You cannot be in a Vehicle!";
-		msgShopExists =						"Shop doesn't Exist!";
-		msgCondition =						"Not permitted to access this Shop!";
-		msgCashOnHand =						"Cash on Hand - %1%2";
-		msgCartTotal =						"Your Cart - %1%2";
-		msgInfoTooltip =					"--> HOLD YOUR LEFT MOUSE BUTTON DOWN WHILE MOVING MOUSE TO ROTATE WEAPON.\n--> DOUBLE CLICK ON AN ITEM IN THE CART TO REMOVE IT.\n--> USE THE 'OVERRIDE GEAR' CHECKBOX TO REPLACE WEAPONS ON HAND WITH PURCHASED WEAPONS.";
-		msgInfoTooltip2 = 					"--> DOUBLE CLICK ON AN ITEM IN THE CART TO REMOVE IT.\n--> USE THE 'OVERRIDE GEAR' CHECKBOX TO REPLACE WEAPONS ON HAND WITH PURCHASED WEAPONS.";
-		msgEmptyShop = 						"Nothing Found...";
-		msgInfoText	=						"<t color='#FFFFFF'>Price:</t> <t color='%1'>%3%2</t>";
-		msgCartFull	=						"Cart is Full"
-		msgCartEmpty =						"Cart is Empty";
-		msgNotEnoughCash =					"Not enough Cash for this Transaction";
-		msgOverrideAlert =					"Use the override feature to override gear!";
-		msgTransactionComplete =			"Purchase completed for %1%2";
-		msgNotEnoughSpace =				 	"You didn't have enough space for all the items. You however only paid for those you had space for!";
-		msgClear =							"Clear";
-		msgSearch =							"Search";
+		msgParamEmpty =                        "Shop Parameter ist leer!";
+    msgInVehicle =                        "Du kannst nicht auf den Shop zugreifen während du in einem Fahrzeug sitzt!";
+    msgShopExists =                        "Dieser Shop existiert nicht!";
+    msgCondition =                        "Keine Zugriffsrechte auf diesen Shop!";
+    msgCashOnHand =                        "Geld auf der Hand  - %1%2";
+    msgCartTotal =                        "Dein Konto - %1%2";
+    msgInfoTooltip =                    "--> Halte die Linkemaustaste während du deine Mausbewegst um die deine Waffe zu bewegen.\n--> Doppelklick auf ein Item im Warenkorb um es zu entfernen.\n--> Benutze die 'Speichern' Taste um die Waffe in der Hand mit der gekauften zu ersetzen.";
+    msgInfoTooltip2 =                     "--> Doppelklick auf ein Item im Warenkorb um es zu entfernen.\n--> Benutze die 'Speichern' Taste um die Waffe in der Hand mit der gekauften zu ersetzen..";
+    msgEmptyShop =                         "Nichts gefunden...";
+    msgInfoText    =                        "<t color='#FFFFFF'>Price:</t> <t color='%1'>%3%2</t>";
+    msgCartFull    =                        "Warenkorb voll";
+    msgCartEmpty =                        "Warenkorb leer";
+    msgNotEnoughCash =                    "Nicht genug Geld für diesen Kauf";
+    msgOverrideAlert =                    "Speichere um dein Gear zu behalten!";
+    msgTransactionComplete =            "Einkauf abgeschlossen für %1%2";
+    msgNotEnoughSpace =                     "Du hast keinen Platz für alle Items. Du hast nur für die bezahlt für die Platz hast!";
+    msgClear =                            "Sauber";
+    msgSearch =                            "Suchen";
 
 		//--- localization for dialogs
 		#define dialogTabWeapon				"Weapon"
@@ -114,10 +114,9 @@ class maverick_weaponshop_cfg {
 
 		class schwarzmarkt {
 			title = "Mohameds Schwarzmarkt"; //--- Title of Shop
-			condition = "schwarzmarkt"; 	//--- Condition to meet to access shop
+			condition = "license_civ_schwarzmarkt"; 	//--- Condition to meet to access shop
 			simple = 0; 			//--- Type of GUI 0-Weapon View 1-No Weapon View
 			maxCart = 20; 			//--- Max Amount of Items in Shopping Cart
-
 			weapons[] = {
 				{ "arifle_TRG20_F",25000,"true", "" },
 				{ "arifle_Katiba_F",30000,"true", "" },
@@ -172,7 +171,7 @@ class maverick_weaponshop_cfg {
 				{ "30Rnd_65x39_caseless_mag_Tracer", 20, "true", ""},
 				{ "100Rnd_65x39_caseless_mag", 20, "true", ""},
 				{ "100Rnd_65x39_caseless_mag_Tracer", 20, "true", ""},
-				{ "RPG7_F"250000000, "true", ""},
+				{ "RPG7_F",250000000, "true", ""},
 				{ "RPG32_F",250000000, "true", "" },
 				{ "30Rnd_45ACP_Mag_SMG_01_tracer_green", 20, "true", ""}
 			};
@@ -370,15 +369,9 @@ class maverick_weaponshop_cfg {
 			simple = 0; 			//--- Type of GUI 0-Weapon View 1-No Weapon View
 			maxCart = 20; 			//--- Max Amount of Items in Shopping Cart
 
-			weapons[] = {
-				{"NONE", 0, "true", "Nichts"}
-			};
-			magazines[] = {
-				{"NONE", 0, "true", "Nichts"}
-			};
-			attachments[] = {
-				{"NONE", 0, "true", "Nichts"}
-			};
+			weapons[] = {};
+			magazines[] = {};
+			attachments[] = {};
 			items[] = {
 				{ "Binocular", 50, "true", ""},
 				{ "ItemGPS", 50, "true", ""},
@@ -400,15 +393,9 @@ class maverick_weaponshop_cfg {
 			simple = 0; 			//--- Type of GUI 0-Weapon View 1-No Weapon View
 			maxCart = 20; 			//--- Max Amount of Items in Shopping Cart
 
-			weapons[] = {
-				{"NONE", 0, "true", "Nichts"}
-			};
-			magazines[] = {
-				{"NONE", 0, "true", "Nichts"}
-			};
-			attachments[] = {
-				{"NONE", 0, "true", "Nichts"}
-			};
+			weapons[] = {};
+			magazines[] = {};
+			attachments[] = {};
 			items[] = {
 				{ "Binocular", 50, "true", ""},
 				{ "ItemGPS", 50, "true", ""},
@@ -433,7 +420,7 @@ class maverick_weaponshop_cfg {
 			weapons[] = {
 				{ "hgun_P07_snds_F",1, "call life_coplevel >= 1", "Taser" },
 				//Rekrut
-				{ "arifle_SDAR_F"1, "call life_coplevel >= 2", "Tasergewehr" },
+				{ "arifle_SDAR_F",1, "call life_coplevel >= 2", "Tasergewehr" },
 				{ "SMG_02_F",1, "call life_coplevel >= 2", "" },
 				{ "SMG_05_F",1, "call life_coplevel >= 2", "" },
 				//Polizist
@@ -473,35 +460,35 @@ class maverick_weaponshop_cfg {
 				{ "6Rnd_12Gauge_Slug",1, "call life_coplevel >= 10", "" }
 			};
 			magazines[] = {
-				{ "16Rnd_9x21_Mag", "", 125, 60, "" },
-				{ "30Rnd_9x21_Mag", "", 125, 60, "" },
-				{ "30Rnd_9x21_Mag_SMG_02", "", 125, 60, "" },
-				{ "50Rnd_570x28_SMG_03", "", 125, 60, "" },
-				{ "30Rnd_9x21_Mag_SMG_02_Tracer_Yellow", "", 125, 60, "" },
-				{ "30Rnd_65x39_caseless_black_mag_Tracer", "", 125, 60, "" },
-				{ "30Rnd_556x45_Stanag", "", 125, 60, "" },
-				{ "30Rnd_556x45_Stanag_green", "", 125, 60, "" },
-				{ "100Rnd_65x39_caseless_black_mag", "", 125, 60, "" },
-				{ "100Rnd_65x39_caseless_mag_Tracer", "", 125, 60, "" },
-				{ "20Rnd_762x51_Mag", "", 125, 60, "" },
-				{ "10Rnd_338_Mag", "", 125, 60, "" },
-				{ "30Rnd_65x39_caseless_green", "", 125, 60, "" },
-				{ "30Rnd_65x39_caseless_black_mag", "", 125, 60, "" },
-				{ "20Rnd_556x45_UW_mag", "TaserMagazin", 125, 60, "" },
-				{ "11Rnd_45ACP_Mag", "", 130, 65, "" },
-				{ "75rnd_762x39_AK12_Mag_F", "", 130, 65, "" },
-				{ "30Rnd_65x39_caseless_msbs_mag", "", 130, 65, "" },
-				{ "6Rnd_12Gauge_Pellets", "", 130, 65, "" },
-				{ "200Rnd_65x39_cased_Box", "", 130, 65, "" },
-				{ "10Rnd_93x64_DMR_05_Mag", "", 130, 65, "" },
-				{ "7Rnd_408_Mag", "", 130, 65, "" },
-				{ "10Rnd_50BWMag", "", 130, 65, "" },
-				{ "6Rnd_12Gauge_Pellets", "", 130, 65, "" },
-				{ "6Rnd_12Gauge_Slug", "", 130, 65, "" },
-				{ "150Rnd_556x45_Drum_Mag_F", "", 200, 100, "" },
-				{ "20Rnd_650x39_Cased_Mag_F", "", 200, 100, "" },
-				{ "ADR-97-Mag", "", 200, 100, "" },
-				{ "20Rnd_650x39_Cased_Mag_F", "", 200, 100, "" }
+				{ "16Rnd_9x21_Mag", 50, "true", ""},
+				{ "30Rnd_9x21_Mag", 50, "true", ""},
+				{ "30Rnd_9x21_Mag_SMG_02", 50, "true", ""},
+				{ "50Rnd_570x28_SMG_03", 50, "true", ""},
+				{ "30Rnd_9x21_Mag_SMG_02_Tracer_Yellow", 50, "true", ""},
+				{ "30Rnd_65x39_caseless_black_mag_Tracer", 50, "true", ""},
+				{ "30Rnd_556x45_Stanag", 50, "true", ""},
+				{ "30Rnd_556x45_Stanag_green", 50, "true", ""},
+				{ "100Rnd_65x39_caseless_black_mag", 50, "true", ""},
+				{ "100Rnd_65x39_caseless_mag_Tracer", 50, "true", ""},
+				{ "20Rnd_762x51_Mag", 50, "true", ""},
+				{ "10Rnd_338_Mag", 50, "true", ""},
+				{ "30Rnd_65x39_caseless_green", 50, "true", ""},
+				{ "30Rnd_65x39_caseless_black_mag", 50, "true", ""},
+				{ "20Rnd_556x45_UW_mag", 50, "true", "Tasermagazin"},
+				{ "11Rnd_45ACP_Mag", 50, "true", ""},
+				{ "75rnd_762x39_AK12_Mag_F", 50, "true", ""},
+				{ "30Rnd_65x39_caseless_msbs_mag", 50, "true", ""},
+				{ "6Rnd_12Gauge_Pellets", 50, "true", ""},
+				{ "200Rnd_65x39_cased_Box", 50, "true", ""},
+				{ "10Rnd_93x64_DMR_05_Mag", 50, "true", ""},
+				{ "7Rnd_408_Mag", 50, "true", ""},
+				{ "10Rnd_50BWMag", 50, "true", ""},
+				{ "6Rnd_12Gauge_Pellets", 50, "true", ""},
+				{ "6Rnd_12Gauge_Slug", 50, "true", ""},
+				{ "150Rnd_556x45_Drum_Mag_F", 50, "true", ""},
+				{ "20Rnd_650x39_Cased_Mag_F", 50, "true", ""},
+				{ "ADR-97-Mag", 50, "true", ""},
+				{ "20Rnd_650x39_Cased_Mag_F", 50, "true", ""}
 
 			};
 			attachments[] = {
@@ -656,21 +643,15 @@ class maverick_weaponshop_cfg {
 
 		class med_shop {
 			title = "Medizinscher Austatter"; //--- Title of Shop
-			condition = "call life_medlevel >= 1"; 	//--- Condition to meet to access shop
+			condition = "call life_mediclevel >= 1"; 	//--- Condition to meet to access shop
 			simple = 0; 			//--- Type of GUI 0-Weapon View 1-No Weapon View
 			maxCart = 20; 			//--- Max Amount of Items in Shopping Cart
 
-			weapons[] = {
-				{"NONE", 0, "true", "Nichts"}
-			};
+			weapons[] = {};
 
-			magazines[] = {
-				{"NONE", 0, "true", "Nichts"}
-			};
+			magazines[] = {};
 
-			attachments[] = {
-				{"NONE", 0, "true", "Nichts"}
-			};
+			attachments[] = {};
 
 			items[] = {
 				{ "Binocular", 50, "true", ""},
