@@ -75,7 +75,7 @@ switch (playerSide) do {
 
       if ((uniform player) isEqualTo "U_C_Uniform_Scientist_01_F" && FETCH_CONST(life_coplevel) >= 1 ) then {
   				player setObjectTextureGlobal [0, "textures\hemd.paa"];
-  				player setObjectTextureGlobal [1, "textures\id.paa"];          
+  				player setObjectTextureGlobal [1, "textures\id.paa"];
   			};
 
 
@@ -116,6 +116,7 @@ switch (playerSide) do {
 		};
     if (backpack player isEqualTo "B_SCBA_01_F") then {
 			(backpackContainer player) setObjectTextureGlobal[0,"textures\Pressluftatmer.paa"];
+      [player] call BIN_fnc_CBRNHoseInit
 		};
 		if (backpack player isEqualTo "B_Bergen_mcamo") then {
 			(backpackContainer player) setObjectTextureGlobal[0,"textures\polizei\polizeibag.paa"];
