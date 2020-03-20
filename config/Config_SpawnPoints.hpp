@@ -94,6 +94,12 @@ class CfgSpawnPoints {
                 icon = "\a3\ui_f\data\map\MapControl\bunker_CA.paa";
                 conditions = "call life_coplevel >= 22";
             };
+            class FlughafenHQ {
+                displayName = "Flughafen HQ";
+                spawnMarker = "cop_spawn_6";
+                icon = "\a3\ui_f\data\map\MapControl\bunker_CA.paa";
+                conditions = "call life_coplevel >= 22";
+            };
 /*
             class Athira {
                 displayName = "Athira HQ";
