@@ -65,7 +65,7 @@ _masks = LIFE_SETTINGS(getArray,"clothing_masks");
  default {"Praktikant"};
  },_x getVariable ["realname",name _x]]};
 
- case (!isNil {(_x getVariable "medrank")} && side _x == independent): {format["<t size='1.2' color='#FF0000'>%1</t><t size='1.2' color='#FF0000'>%3<br/></t>%2",switch ((_x getVariable "medrank")) do {
+ case (!isNil {(_x getVariable "medrank")} && side _x == guer): {format["<t size='1.2' color='#FF0000'>%1</t><t size='1.2' color='#FF0000'>%3<br/></t>%2",switch ((_x getVariable "medrank")) do {
    case 1: {"Praktikant"};
    case 2: {"Feuerwehrmannanwärter"};
    case 3: {"Feuerwehrmann"};
