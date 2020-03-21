@@ -348,7 +348,6 @@ class Clothing {
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },
-
             { "H_PASGT_basic_white_F", "", 10, "" },
             { "H_PASGT_basic_black_F", "", 10, "" },
             { "H_Beret_02", "", 10, "" },
@@ -365,17 +364,14 @@ class Clothing {
             { "G_Respirator_yellow_F", "", 150, { "", "", -1 } },
             { "G_Respirator_blue_F", "", 150, { "", "", -1 } },
 			      { "G_RegulatorMask_F", "Atemschutzmaske", 500, "" },
-
             { "G_Aviator", "", 10, "" },
             { "G_Spectacles_Tinted", "", 10, "" },
             { "G_Tactical_Clear", "", 10, "" },
             { "G_B_Diving", "", 10, "" },
-
             { "G_Shades_Blue", "", 10, { "", "", -1 } }
         };
         vests[] = {
             { "NONE", $STR_C_Remove_vests, 0, "" }
-
             { "V_DeckCrew_violet_F", "", 10, "" },
             { "V_DeckCrew_brown_F", "", 10, "" },
             { "V_DeckCrew_white_F", "", 10, "" },
@@ -389,8 +385,6 @@ class Clothing {
             { "V_LegStrapBag_black_F", "", 10, "" },
             { "V_RebreatherB", "", 10, "" },
             { "V_Rangemaster_belt", "", 10, "" }
-
-
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },
