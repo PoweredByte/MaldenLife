@@ -11073,17 +11073,6 @@
             <Portuguese>Grande Roubo</Portuguese>
             <German>Auto Diebstahl</German>
         </Key>
-        <Key ID="STR_Crime_488">
-            <Original>Petty Theft</Original>
-            <Czech>Petty Theft</Czech>
-            <French>Petit vol</French>
-            <Spanish>Robo Menor</Spanish>
-            <Italian>piccoli furti</Italian>
-            <Polish>Drobnych kradzieży</Polish>
-            <Russian></Russian>
-            <Portuguese>Pequeno Roubo</Portuguese>
-            <German>Kleiner Diebstahl</German>
-        </Key>
         <Key ID="STR_Crime_480">
             <Original>Hit and run</Original>
             <Czech>Zavinit nehodu a ujet</Czech>
@@ -11139,17 +11128,6 @@
             <Portuguese>Arrombamento</Portuguese>
             <German>Einbruch</German>
         </Key>
-        <Key ID="STR_Crime_666">
-            <Original>Tax Evasion</Original>
-            <Czech>Daňový únik</Czech>
-            <French>Évasion fiscale</French>
-            <Spanish>Evadir Impuestos</Spanish>
-            <Russian></Russian>
-            <Portuguese>Evasão Fiscal</Portuguese>
-            <German>Steuerhinterziehung</German>
-            <Italian>Evasione delle tasse</Italian>
-            <Polish>Unikanie podatków</Polish>
-        </Key>
         <Key ID="STR_Crime_667">
             <Original>Terrorism</Original>
             <Czech>Terorismus</Czech>
@@ -11160,17 +11138,6 @@
             <German>Terrorismus</German>
             <Italian>Terrorismo</Italian>
             <Polish>Terroryzm</Polish>
-        </Key>
-        <Key ID="STR_Crime_668">
-            <Original>Unlicensed Hunting</Original>
-            <Czech>Volně prodejné Hunting</Czech>
-            <French>Chasse sans licence</French>
-            <Spanish>Caza sin Licencia</Spanish>
-            <Russian></Russian>
-            <Portuguese>Caça sem Licença</Portuguese>
-            <German>Jagen ohne Jagdschein</German>
-            <Italian>Caccia senza licenza</Italian>
-            <Polish>Polowanie nielicencjonowane</Polish>
         </Key>
         <Key ID="STR_Crime_919">
             <Original>Organ Theft</Original>
@@ -11249,17 +11216,6 @@
             <Italian>Luci spente durante la notte</Italian>
             <Polish>Brak świateł w nocy</Polish>
         </Key>
-        <Key ID="STR_Crime_6">
-            <Original>Driving kart without helmet</Original>
-            <Czech>Hnací motokáru bez helmy</Czech>
-            <Spanish>Manejar un Kart sin casco</Spanish>
-            <Russian></Russian>
-            <French>Non-port du casque en Kart</French>
-            <Portuguese>Dirigindo Kart Sem Capacete</Portuguese>
-            <German>Fahren ohne Helm</German>
-            <Italian>Guida di Kart senza casco</Italian>
-            <Polish>Jazda bez kasku gokarta</Polish>
-        </Key>
         <Key ID="STR_Crime_7">
             <Original>Badly parked vehicle</Original>
             <Czech>Špatně zaparkované vozidlo</Czech>
@@ -11315,17 +11271,6 @@
             <German>Panzerfahrzeug</German>
             <Italian>Veicolo D'assalto</Italian>
             <Polish>Opancerzony pojazd</Polish>
-        </Key>
-        <Key ID="STR_Crime_12">
-            <Original>Flying over the city without authorization</Original>
-            <Czech>Létání nad městem bez povolení</Czech>
-            <Spanish>Volar sobre la ciudad sin autorización</Spanish>
-            <Russian></Russian>
-            <French>Survol de ville sans autorisation</French>
-            <Portuguese>Sobrevoando sobre a cidade sem autorização</Portuguese>
-            <German>Fliegen über die Stadt ohne Genehmigung</German>
-            <Italian>Guida di velivolo su città abitata senza autorizzazione</Italian>
-            <Polish>Latające nad miastem bez zezwolenia</Polish>
         </Key>
         <Key ID="STR_Crime_13">
             <Original>Closing the street without authorization</Original>
