@@ -14,8 +14,8 @@ _curState = _cell getVariable["locked",true];
 
 
 
-if((_mode == "lock") && (_curState)) exitWith {hint "Diese Zelle wurde schon geschlossen!";};
-if((_mode == "unlock") && (!_curState)) exitWith {hint "Diese Zelle wurde schon geöffnet!";};
+if((_mode == "lock") && (_curState)) exitWith {hint "Diese Tür wurde schon geschlossen!";};
+if((_mode == "unlock") && (!_curState)) exitWith {hint "Diese Tür wurde schon geöffnet!";};
 
 
 
