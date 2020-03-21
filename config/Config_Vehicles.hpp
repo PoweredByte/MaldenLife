@@ -157,7 +157,14 @@ class CarShops {
         vehicles[] = {
             { "C_Offroad_01_F", "" },
             { "C_SUV_01_F", "" },
+            { "B_GEN_Van_02_transport_F", "" },
+            { "C_Hatchback_01_sport_F", "" },
             { "O_Truck_03_covered_F", "" },
+            { "O_Truck_03_repair_F", "" },
+            { "C_Van_01_box_F", "" },
+            { "O_T_Truck_02_Box_F", "" },
+            { "B_MRAP_01_F", "" },
+            { "O_MRAP_02_F", "" },
             { "C_Van_01_box_F", "" }
         };
     };
@@ -167,6 +174,7 @@ class CarShops {
         conditions = "";
         vehicles[] = {
             { "B_Heli_Light_01_F", "" },
+            { "I_Heli_Transport_02_F", "" },
             { "O_Heli_Light_02_unarmed_F", "" }
         };
     };
@@ -346,6 +354,9 @@ class LifeCfgVehicles {
         textures[] = {
         	{ "Polizei", "cop", {
                 "textures\polizei\Prowler1.jpg"
+            } },
+          { "MZF", "med", {
+                "textures\medic\Rettungsprowler1.jpg","textures\medic\Rettungsprowler2.jpg","textures\medic\Rettungsprowler3.jpg","textures\medic\Rettungsprowler4.jpg"
             } }
         };
     };
@@ -764,6 +775,9 @@ class LifeCfgVehicles {
         textures[] = {
             { "Black", "civ", {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+            }, "" },
+            { "Feuerwehr", "med", {
+                "textures\fire\fw_ifrit_1.jpg","textures\fire\fw_ifrit_2.jpg"
             }, "" }
 		};
     };
@@ -825,9 +839,12 @@ class LifeCfgVehicles {
         	{ "ADAC", "adac", {
                 "textures\adac\adac_offroad.jpg"
             } },
-        	{ "Sanitäter", "med", {
-                "textures\medic\medOFFROAD.jpg"
-            } }
+        	{ "MZF", "med", {
+                "textures\medic\Rettungsoffroader.jpg"
+            } },
+            { "MZF", "med", {
+                  "textures\fire\fw_offroader.jpg"
+              } }
         };
     };
 
@@ -878,7 +895,10 @@ will modify the virtual space and the price of the vehicle, but other informatio
 			      }, "call life_coplevel >= 22" },
             { "Polizei", "cop", {
                 "textures\polizei\AutobahnSportLimo.jpg"
-			} },
+	           } },
+             { "KdoW", "med", {
+                 "textures\fire\fw_hatchback.jpg"
+ 	           } },
 			{ "Undercover", "cop", {
                 "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport01_co.paa"
 			} }
@@ -1039,12 +1059,40 @@ will modify the virtual space and the price of the vehicle, but other informatio
         	{ "ADAC", "adac", {
                 "textures\adac\ADACSUV.jpg"
             } },
-        	{ "ADAC", "med", {
-                "textures\medic\medSUV.jpg"
+        	{ "Notarzt", "med", {
+                "textures\medic\Notarztsuv.jpg"
+            } },
+            { "KdoW", "med", {
+                  "textures\fire\fw_suv.jpg"
+              } },
+          { "KdoW", "med", {
+                "textures\medic\Rettungssuv.jpg"
             } }
         };
     };
-
+    class O_T_Truck_02_Box_F {
+        vItemSpace = 65;
+        licenses[] = { {""}, {""}, {""}, {""} };
+        price = 1;
+        textures[] = {
+			{ "LF", "cop", {
+          "textures\fire\fw_zamak_1.jpg",
+          "textures\fire\fw_zamak_2.jpg"
+			} }
+        };
+    };
+    class O_Truck_03_repair_F {
+        vItemSpace = 65;
+        licenses[] = { {""}, {""}, {""}, {""} };
+        price = 1;
+        textures[] = {
+			{ "LF", "cop", {
+          "textures\fire\fw_tempest_1.jpg",
+          "textures\fire\fw_tempest_2.jpg",
+          "textures\fire\fw_tempest_3.jpg"
+			} }
+        };
+    };
 
     class I_MRAP_03_F {
         vItemSpace = 65;
@@ -1129,6 +1177,9 @@ will modify the virtual space and the price of the vehicle, but other informatio
               "textures\polizei\Cop_Van_02.paa",
               "textures\polizei\Cop_Van_03_GKW.paa"
             }, "" },
+            { "ELW-1", "med", {
+              "textures\fire\fw_transporter.jpg"
+            }, "" },
             { "MTW", "cop", {
                 "textures\polizei\Cop_Van_01.jpg",
                 "textures\polizei\Cop_Van_02.paa",
@@ -1146,6 +1197,16 @@ will modify the virtual space and the price of the vehicle, but other informatio
                 "textures\polizei\hunter0.jpg",
                 "textures\polizei\hunter1.jpg"
 			} },
+
+      { "MZF", "med", {
+            "textures\medic\Rettungshunter_Vorne.jpg",
+            "textures\medic\Rettungshunter_Hinten.jpg"
+      } },
+        { "MZF", "med", {
+              "textures\fire\fw_hunter_1.jpg",
+              "textures\fire\fw_hunter_2.jpg"
+      } },
+
       { "SEK", "cop", {
           "textures\sek\Hunter0.jpg",
           "textures\sek\Hunter1.jpg"
@@ -1163,6 +1224,9 @@ class I_Heli_Transport_02_F {
    textures[] = {
        { "Black", "civ", {
            "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+       }, "" },
+       { "FW", "med", {
+           "textures\fire\fw_mohawk.jpg","textures\fire\fw_mohawk_2.jpg","textures\fire\fw_mohawk_3.jpg"
        }, "" },
        { "Black", "reb", {
            "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
@@ -1189,6 +1253,9 @@ class I_Heli_Transport_02_F {
         	{ "Polizei", "cop", {
                 "textures\polizei\cop_hum.jpg"
             } },
+            { "Feuerwehr", "med", {
+                  "textures\fire\fw_hummingbird.jpg"
+              } },
             { "Sheriff", "civ", {
                 "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_sheriff_co.paa"
             }, "" },
@@ -1268,8 +1335,14 @@ class I_Heli_Transport_02_F {
             { "Desert Digi", "reb", {
                 "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_opfor_co.paa"
             }, "" },
+            { "Feuerwehr", "med", {
+                "textures\fire\fw_orca.jpg"
+            }, "" },
             { "Sanitäter", "med", {
                 "textures\medic\MedicOrca.jpg"
+            }, "" },
+            { "Sanitäter", "med", {
+                "textures\medic\Rettungsorca.jpg"
             }, "" }
         };
     };
