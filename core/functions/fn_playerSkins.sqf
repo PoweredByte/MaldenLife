@@ -133,15 +133,13 @@ switch (playerSide) do {
         if (uniform player isEqualTo "U_BG_Guerilla2_1") then {
             player setObjectTextureGlobal [0, "textures\medic\Notarzt.jpg"];
         };
-        if (uniform player isEqualTo "U_O_OfficerUniform_ocamo") then {
-            player setObjectTextureGlobal [0, "textures\fire\feuerwehr_uniform.jpg"];
-        };
         if (uniform player isEqualTo "U_I_CombatUniform") then {
             player setObjectTextureGlobal [0, "textures\medic\Notarzt.jpg"];
         };
         if (uniform player isEqualTo "U_I_CombatUniform_shortsleeve") then {
             player setObjectTextureGlobal [0, "textures\medic\Sanitaeter.jpg"];
         };
+
         if (backpack player isEqualTo "B_SCBA_01_F") then {
     			(backpackContainer player) setObjectTextureGlobal[0,"textures\Pressluftatmer.paa"];
           [player] call BIN_fnc_CBRNHoseInit

@@ -341,9 +341,8 @@ class Clothing {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
             { "U_I_CombatUniform", "Einsatzuniform", 50, "" },
             { "U_I_CombatUniform_shortsleeve", "Einsatzuniform", 50, "" },
-            { "U_BG_Guerilla2_1", $STR_C_EMS_uniforms, 50, "" },
-            { "U_C_CBRN_Suit_01_Blue_F", "CSA", 350, "" },
-            { "U_O_OfficerUniform_ocamo", "Einsatzuniform", 50, "" }
+            //{ "U_BG_Guerilla2_1", $STR_C_EMS_uniforms, 50, "" },
+            { "U_C_CBRN_Suit_01_Blue_F", "CSA", 350, "" }
 
         };
         headgear[] = {
@@ -389,7 +388,7 @@ class Clothing {
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },
             { "B_SCBA_01_F", "Pressluftatmer", 500, "" },
-            { "B_Bergen_hex_F ", "Unsichtbar", 500, "" },
+            { "B_Bergen_Hex_F", "Unsichtbar", 800, { "", "", -1 } },
             { "B_RadioBag_01_black_F ", "", 500, "" },
             { "B_TacticalPack_blk", $STR_C_EMS_backpacks, 3000, "" }
         };
