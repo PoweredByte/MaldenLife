@@ -959,7 +959,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
               "textures\polizei\Truck1.jpg","textures\polizei\Truck2.jpg","textures\polizei\Truck3.jpg","textures\polizei\Truck4.jpg"
           }, "" },
           { "Bund", "cop", {
-              "textures\sek\wd_ext01.paa","textures\sek\wd_ext02.paa","textures\sek\wd_cargo.paa","textures\sek\wd_cover.paa"
+              "textures\sek\wd_ext01.jpg","textures\sek\wd_ext02.jpg","textures\sek\wd_cargo.jpg","textures\sek\wd_cover.jpg"
           }, "call life_coplevel >= 22" },
           { "Kat Schutz", "med", {
               "textures\medic\Truck0.jpg","textures\medic\Truck1.jpg","textures\medic\Truck2.jpg","textures\medic\Truck3.jpg"
@@ -973,7 +973,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
         price = 0;
         textures[] = {
           { "Bund", "cop", {
-              "textures\sek\wd_ext01.paa","textures\sek\wd_ext02.paa","textures\sek\wd_cargo.paa","\A3\Structures_F\Data\Metal\Containers\Containers_02_set_CO.paa"
+              "textures\sek\wd_ext01.jpg","textures\sek\wd_ext02.jpg","textures\sek\wd_cargo.jpg","\A3\Structures_F\Data\Metal\Containers\Containers_02_set_CO.paa"
           }, "call life_coplevel >= 22" }
         };
     };
@@ -1031,7 +1031,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
 				"textures\sek\sekESUV.jpg"
             }, "call life_coplevel >= 22" },
             { "SEK", "cop", {
-				"textures\sek\SEK_CAR.paa"
+				"textures\sek\SEK_CAR.jpg"
       }, "call life_coplevel >= 22" },
 			{ "Undercover", "cop", {
 				"\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_03_co.paa"

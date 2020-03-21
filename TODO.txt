@@ -9,3 +9,43 @@
 
 
 // Shrooms einfügen!!
+
+//Pullover / Einsatzuniform paa zu jpg ändern
+// SEK_CAR zu jpg, SEK Uniform zu JPG, Bund fahrzeuge sind jpg
+
+//FÜR Die Medics
+H_PASGT_basic_white_F
+H_PASGT_basic_black_F
+H_Beret_02
+H_Beret_Colonel
+H_Watchcap_blk
+H_PilotHelmetHeli_B
+H_MilCap_gry
+H_HeadBandage_clean_F
+//BRILLE
+G_Aviator
+G_Spectacles_Tinted
+G_Tactical_Clear
+G_B_Diving
+//VEST
+V_DeckCrew_violet_F
+V_DeckCrew_brown_F
+V_DeckCrew_white_F
+V_DeckCrew_red_F
+V_DeckCrew_green_F
+V_DeckCrew_blue_F
+V_DeckCrew_yellow_F
+V_Safety_orange_F
+V_Safety_yellow_F
+V_EOD_blue_F
+V_LegStrapBag_black_F
+V_RebreatherB
+V_Rangemaster_belt
+//RUCKSÄCKE
+B_Bergen_hex_F (Unsichtbar)
+B_RadioBag_01_black_F
+//NVG
+NVGoggles_OPFOR (Schwarz anstatt Braun)
+//ITEMS
+Rangefinder
+Medikit

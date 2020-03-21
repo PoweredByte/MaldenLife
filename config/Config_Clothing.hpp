@@ -339,7 +339,12 @@ class Clothing {
         side = "med";
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
-            { "U_BG_Guerilla2_1", $STR_C_EMS_uniforms, 50, "" }
+            { "U_I_CombatUniform", "Einsatzuniform", 50, "" },
+            { "U_I_CombatUniform_shortsleeve", "Einsatzuniform", 50, "" },
+            { "U_BG_Guerilla2_1", $STR_C_EMS_uniforms, 50, "" },
+            { "U_C_CBRN_Suit_01_Blue_F", "CSA", 350, "" },
+            { "U_O_OfficerUniform_ocamo", "Einsatzuniform", 50, "" }
+
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },
@@ -350,6 +355,7 @@ class Clothing {
             { "G_Respirator_white_F", "", 150, { "", "", -1 } },
             { "G_Respirator_yellow_F", "", 150, { "", "", -1 } },
             { "G_Respirator_blue_F", "", 150, { "", "", -1 } },
+			      { "G_RegulatorMask_F", "Atemschutzmaske", 500, "" },
             { "G_Shades_Blue", "", 10, { "", "", -1 } }
         };
         vests[] = {
@@ -357,6 +363,7 @@ class Clothing {
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },
+            { "B_SCBA_01_F", "Pressluftatmer", 500, "call life_coplevel >= 15" },            
             { "B_TacticalPack_blk", $STR_C_EMS_backpacks, 3000, "" }
         };
     };
