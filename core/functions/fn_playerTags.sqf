@@ -65,9 +65,8 @@ _masks = LIFE_SETTINGS(getArray,"clothing_masks");
  default {"Praktikant"};
  },_x getVariable ["realname",name _x]]};
 
- case (side _x == independent): {format["<t color='#FF0000'> <t size='1.2' color='#FF0000'>%2<br/></t>%1",
- _x getVariable ["realname",name _x],
- switch ((_x getVariable "medrank")) do {
+ case (side _x == independent): {format["<t size='1.2' color='#FF0000'>%2<br/></t>%1",_x getVariable ["realname",name _x],switch ((_x getVariable "medrank")) do {
+   case 1: {"Praktikant"};
    case 2: {"Feuerwehrmannanwärter"};
    case 3: {"Feuerwehrmann"};
    case 4: {"Oberfeuerwehrmann"};
@@ -80,11 +79,7 @@ _masks = LIFE_SETTINGS(getArray,"clothing_masks");
    case 11: {"Branddirektor"};
    case 12: {"Leitender Branddirektor"};
    default {"Praktikant"};
-
-
- }
- ]
- };
+ }]};
  case (side _x == east): {format["<t color='#FFF700'><img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1'></img> <t size='1.2' color='#FFF700'>%2<br/></t>%1",
  _x getVariable ["realname",name _x],
  switch ((_x getVariable "adacrank")) do {
