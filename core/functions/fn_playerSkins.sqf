@@ -147,6 +147,11 @@ switch (playerSide) do {
           [player] call BIN_fnc_CBRNHoseInit
     		};
 
+        if ((backpack player) == "B_Bergen_Hex_F") then {
+    			    (unitbackpack player) setObjectTextureGlobal [0,""];
+    			};
+
+
   		if (backpack player isEqualTo "B_TacticalPack_blk") then {
   			(backpackContainer player) setObjectTextureGlobal[0,"textures\medic\medBACKPACK.jpg"];
   		};

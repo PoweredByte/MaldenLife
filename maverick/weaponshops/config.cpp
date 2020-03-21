@@ -654,13 +654,13 @@ class maverick_weaponshop_cfg {
 			attachments[] = {};
 
 			items[] = {
-				{ "Binocular", 50, "true", ""},
+				{ "Rangefinder", 50, "true", ""},
 				{ "ItemGPS", 50, "true", ""},
 				{ "ItemMap", 50, "true", ""},
 				{ "ItemCompass", 50, "true", ""},
 				{ "ItemWatch", 50, "true", ""},
-				{ "FirstAidKit", 50, "true", ""},
-				{ "NVGoggles", 50, "true", ""},
+				{ "Medikit", 50, "true", ""},
+				{ "NVGoggles_OPFOR", 50, "true", ""},
 				{ "Chemlight_red", 50, "true", ""},
 				{ "Chemlight_yellow", 50, "true", ""},
 				{ "Chemlight_green", 50, "true", ""},

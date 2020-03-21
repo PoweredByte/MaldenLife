@@ -348,6 +348,15 @@ class Clothing {
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },
+
+            { "H_PASGT_basic_white_F", "", 10, "" },
+            { "H_PASGT_basic_black_F", "", 10, "" },
+            { "H_Beret_02", "", 10, "" },
+            { "H_Beret_Colonel", "", 10, "" },
+            { "H_Watchcap_blk", "", 10, "" },
+            { "H_PilotHelmetHeli_B", "", 10, "" },
+            { "H_MilCap_gry", "", 10, "" },
+            { "H_HeadBandage_clean_F", "", 10, "" },
             { "H_Cap_blu", "", 10, "" }
         };
         goggles[] = {
@@ -356,14 +365,38 @@ class Clothing {
             { "G_Respirator_yellow_F", "", 150, { "", "", -1 } },
             { "G_Respirator_blue_F", "", 150, { "", "", -1 } },
 			      { "G_RegulatorMask_F", "Atemschutzmaske", 500, "" },
+
+            { "G_Aviator", "", 10, "" },
+            { "G_Spectacles_Tinted", "", 10, "" },
+            { "G_Tactical_Clear", "", 10, "" },
+            { "G_B_Diving", "", 10, "" },
+
             { "G_Shades_Blue", "", 10, { "", "", -1 } }
         };
         vests[] = {
             { "NONE", $STR_C_Remove_vests, 0, "" }
+
+            { "V_DeckCrew_violet_F", "", 10, "" },
+            { "V_DeckCrew_brown_F", "", 10, "" },
+            { "V_DeckCrew_white_F", "", 10, "" },
+            { "V_DeckCrew_red_F", "", 10, "" },
+            { "V_DeckCrew_green_F", "", 10, "" },
+            { "V_DeckCrew_blue_F", "", 10, "" },
+            { "V_DeckCrew_yellow_F", "", 10, "" },
+            { "V_Safety_orange_F", "", 10, "" },
+            { "V_Safety_yellow_F", "", 10, "" },
+            { "V_EOD_blue_F", "", 10, "" },
+            { "V_LegStrapBag_black_F", "", 10, "" },
+            { "V_RebreatherB", "", 10, "" },
+            { "V_Rangemaster_belt", "", 10, "" }
+
+
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },
-            { "B_SCBA_01_F", "Pressluftatmer", 500, "call life_coplevel >= 15" },            
+            { "B_SCBA_01_F", "Pressluftatmer", 500, "" },
+            { "B_Bergen_hex_F ", "Unsichtbar", 500, "" },
+            { "B_RadioBag_01_black_F ", "", 500, "" },
             { "B_TacticalPack_blk", $STR_C_EMS_backpacks, 3000, "" }
         };
     };
