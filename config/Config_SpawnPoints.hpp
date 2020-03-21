@@ -88,7 +88,6 @@ class CfgSpawnPoints {
                 icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
                 conditions = "";
             };
-
             class Cop {
                 class NordHQ {
                     displayName = "Nord-HQ";
@@ -96,6 +95,7 @@ class CfgSpawnPoints {
                     icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
                     conditions = "";
                 };
+            class SEKKaserne {
                 displayName = "Sek Kaserne";
                 spawnMarker = "cop_spawn_2";
                 icon = "\a3\ui_f\data\map\MapControl\bunker_CA.paa";
