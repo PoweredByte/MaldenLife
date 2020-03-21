@@ -144,6 +144,12 @@ class CfgSpawnPoints {
                 icon = "\a3\ui_f\data\map\MapControl\hospital_ca.paa";
                 conditions = "";
             };
+            class Fire_La_trinite {
+                displayName = "Feuerwehr La Trinité";
+                spawnMarker = "fire_spawn_1";
+                icon = "\a3\ui_f\data\map\MapControl\hospital_ca.paa";
+                conditions = "";
+            };
 /*
             class Athira {
                 displayName = $STR_SP_EMS_Ath;
