@@ -164,8 +164,7 @@ class CarShops {
             { "C_Van_01_box_F", "" },
             { "O_T_Truck_02_Box_F", "" },
             { "B_MRAP_01_F", "" },
-            { "O_MRAP_02_F", "" },
-            { "C_Van_01_box_F", "" }
+            { "O_MRAP_02_F", "" }
         };
     };
 
@@ -981,7 +980,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
           { "Bund", "cop", {
               "textures\sek\wd_ext01.jpg","textures\sek\wd_ext02.jpg","textures\sek\wd_cargo.jpg","textures\sek\wd_cover.jpg"
           }, "call life_coplevel >= 22" },
-          { "Kat Schutz", "med", {
+          { "GW-L", "med", {
               "textures\medic\Truck0.jpg","textures\medic\Truck1.jpg","textures\medic\Truck2.jpg","textures\medic\Truck3.jpg"
           }, "" }
         };
@@ -1086,7 +1085,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
         licenses[] = { {""}, {""}, {""}, {""} };
         price = 1;
         textures[] = {
-			{ "LF", "cop", {
+			{ "RW", "med", {
           "textures\fire\fw_tempest_1.jpg",
           "textures\fire\fw_tempest_2.jpg",
           "textures\fire\fw_tempest_3.jpg"
