@@ -33,7 +33,6 @@ addons[]=
 	"A3_Structures_F_Exp_Commercial_FuelStation_02",
 	"A3_Structures_F_Exp_Infrastructure_Pavements",
 	"A3_Structures_F_Mil_Cargo",
-	"101_editor",
 	"A3_Ui_F",
 	"A3_Structures_F_Naval_Piers",
 	"A3_Structures_F_Exp_Walls_Concrete",
