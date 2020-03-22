@@ -250,6 +250,8 @@ class CarShops {
         conditions = "call life_coplevel >= 22";
         vehicles[] = {
             { "B_T_VTOL_01_vehicle_F", { "life_coplevel", "SCALAR", 23 } },
+            { "B_UAV_02_dynamicLoadout_F", { "life_coplevel", "SCALAR", 23 } },
+            { "B_UAV_05_F", { "life_coplevel", "SCALAR", 23 } },
             { "B_Plane_Fighter_01_F", { "life_coplevel", "SCALAR", 23 } }
         };
     };
