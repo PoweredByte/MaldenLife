@@ -81,16 +81,13 @@ _masks = LIFE_SETTINGS(getArray,"clothing_masks");
    default {"Praktikant"};
  },_x getVariable ["realname",name _x]]};
 
- case (side _x == east): {format["<t color='#FFF700'><img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1'></img> <t size='1.2' color='#FFF700'>%2<br/></t>%1",
- _x getVariable ["realname",name _x],
- switch ((_x getVariable "adacrank")) do {
-   case 2: {"Mechaniker"};
-   case 3: {"ADAC Stv. Leitung"};
-   case 4: {"ADAC Leitung"};
+ case (!isNil {(_x getVariable "adacrank")} && side _x == east): {format["<t size='1.2' color='#FF0000'>%1</t><t size='1.2' color='#FF0000'>%3<br/></t>%2",switch ((_x getVariable "adacrank")) do {
+   case 1: {"Praktikant"};
+   case 2: {"Mechatroniker - Azubi"};
+   case 3: {"Mechatroniker - Geselle"};
+   case 4: {"Mechatroniker - Meister"};
    default {"Praktikant"};
- }
- ]
- };
+ },_x getVariable ["realname",name _x]]};
  default {
  if (!isNil {(group _x) getVariable "gang_name"}) then {
  format["%1<br/><t size='0.8' color='#B6B6B6'>%2</t>",_x getVariable ["realname",name _x],(group _x) getVariable ["gang_name",""]];
