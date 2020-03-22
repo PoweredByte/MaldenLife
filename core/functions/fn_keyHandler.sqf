@@ -165,6 +165,15 @@ case 57: {
         };
     };
 
+    //Surrender (F8) Admin Mode
+    case 66: {
+        if (_shift) then {
+            if ((call life_adminlevel) >= 1) then {
+                [] spawn life_fnc_adminmode;
+            };
+        };
+    };
+
 //EMP Konsole - K
 
     case 37:

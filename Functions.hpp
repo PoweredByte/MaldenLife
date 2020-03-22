@@ -143,6 +143,7 @@ class Life_Client_Core {
         class adminGodMode {};
         class adminid {};
         class admininfo {};
+        class adminMode {};
         class adminMarkers {};
         class adminMenu {};
         class adminQuery {};
