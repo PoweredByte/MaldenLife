@@ -235,6 +235,7 @@ class Clothing {
             { "B_UAV_01_backpack_F", "SEK DRONE", 350, "call life_coplevel >= 22" },
             { "B_ViperLightHarness_blk_F", "SEK VIPER", 350, "call life_coplevel >= 22" },
             { "B_Static_Designator_01_weapon_F", "Remote Designator", 350, "call life_coplevel >= 22" },
+            { "B_Parachute", "Fallschirm", 350, "call life_coplevel >= 22" },
             { "B_Bergen_sgg", "SEK RUCKSACK", 350, "call life_coplevel >= 22" }
         };
     };
@@ -653,6 +654,7 @@ class Clothing {
             { "B_Carryall_mcamo", "", 7500, "" },
             { "B_Carryall_oli", "", 7500, "" },
             { "B_Carryall_khk", "", 7500, "" },
+            { "B_Parachute", "", 1000000, "" },
             { "B_Carryall_cbr", "", 7500, "" }
         };
     };

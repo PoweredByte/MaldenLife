@@ -129,6 +129,10 @@ class CarShops {
 			{ "O_T_LSV_02_unarmed_F", { "", "", -1 } },
 			{ "O_G_Van_02_Transport_F", { "", "", -1 } },
 			{ "B_MRAP_01_hmg_F", { "", "", -1 } },
+      { "I_C_Offroad_02_LMG_F", { "", "", -1 } },
+      { "O_LSV_02_armed_F", { "", "", -1 } },
+      { "LC_Offroad_02_AT_F", { "", "", -1 } },
+      { "O_G_Offroad_01_AT_F", { "", "", -1 } },
 			{ "B_T_VTOL_01_infantry_F", { "", "", -1 } }
         };
     };
@@ -779,6 +783,50 @@ class LifeCfgVehicles {
                 "textures\fire\fw_ifrit_1.jpg","textures\fire\fw_ifrit_2.jpg"
             }, "" }
 		};
+    };
+
+    class I_C_Offroad_02_LMG_F {
+        vItemSpace = 60;
+        conditions = "";
+        price = 500000000;
+        textures[] = {
+            { "Black", "civ", {
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+            }, "" }
+		};
+    };
+
+    class O_LSV_02_armed_F {
+        vItemSpace = 60;
+        conditions = "";
+        price = 900000000;
+        textures[] = {
+            { "Black", "civ", {
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+            }, "" }
+		};
+    };
+
+    class LC_Offroad_02_AT_F {
+        vItemSpace = 25;
+        conditions = "";
+        price = 15000000000;
+        textures[] = {
+            { "Black", "civ", {
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+            }, "" }
+    };
+    };
+
+    class O_G_Offroad_01_AT_F {
+        vItemSpace = 25;
+        conditions = "";
+        price = 25000000000;
+        textures[] = {
+            { "Black", "civ", {
+                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+            }, "" }
+    };
     };
 
     class B_T_VTOL_01_vehicle_F {
