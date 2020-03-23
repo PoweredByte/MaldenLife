@@ -23,4 +23,5 @@ player setVariable ["rank",(FETCH_CONST(life_coplevel)),true];
 waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
 waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
 [] spawn life_fnc_placeablesInit;
+player setUnitTrait["UAVHacker",true];
 0 call life_fnc_copcallmanagement;
