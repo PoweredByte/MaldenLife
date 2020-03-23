@@ -559,7 +559,6 @@ class maverick_weaponshop_cfg {
 				{ "srifle_EBR_F", 1, "true", ""},
 				{ "LMG_03_F", 1, "true", ""},
 				{ "MMG_02_black_F", 1, "true", ""},
-				{ "launch_NLAW_F",, 1, "true", ""}, //AB DIESER
 				{ "arifle_ARX_blk_F", 1, "true", ""},
 				{ "srifle_DMR_05_blk_F", 1, "true", ""},
 				{ "srifle_GM6_F", 1, "true", ""},
@@ -637,6 +636,7 @@ class maverick_weaponshop_cfg {
 				{ "Laserdesignator_02", 50, "true", ""},
 				{ "SmokeShellgreen", 50, "true", ""},
 				{ "B_UavTerminal", 50, "true", ""},
+				{ "launch_NLAW_F", 1, "true", ""},
       	{ "HandGrenade_Stone",100000, "call life_coplevel >= 6", "Blendgranate"}
 			};
 		};
