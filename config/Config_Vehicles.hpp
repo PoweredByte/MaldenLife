@@ -1182,7 +1182,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
         price = 1;
         textures[] = {
             { "SEK", "civ", {
-                "textures\sek\Marid0.jpg","textures\sek\Marid1.jpg","A3\Air_F_Jets\UAV_05\Data\UAV05_engine_fire_ca.paa"
+                "textures\sek\uav1.jpg","textures\sek\uav2.jpg","A3\Air_F_Jets\UAV_05\Data\UAV05_engine_fire_ca.paa"
             }, "" }
         };
     };
