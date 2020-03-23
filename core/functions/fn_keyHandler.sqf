@@ -165,8 +165,8 @@ case 57: {
         };
     };
 
-    //Surrender (F8) Admin Mode
-    case 66: {
+    //Surrender (F6) Admin Mode
+    case 64: {
         if (_shift) then {
             if ((call life_adminlevel) >= 1) then {
                 [] spawn life_fnc_adminmode;
