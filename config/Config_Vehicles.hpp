@@ -1176,6 +1176,16 @@ will modify the virtual space and the price of the vehicle, but other informatio
             }, "" }
         };
     };
+    class B_UAV_05_F {
+        vItemSpace = 100;
+        conditions = "";
+        price = 1;
+        textures[] = {
+            { "SEK", "civ", {
+                "textures\sek\Marid0.jpg","textures\sek\Marid1.jpg","A3\Air_F_Jets\UAV_05\Data\UAV05_engine_fire_ca.paa"
+            }, "" }
+        };
+    };
     //Unarmed
     class O_APC_Wheeled_02_rcws_v2_F {
         vItemSpace = 100;
