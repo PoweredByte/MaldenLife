@@ -179,7 +179,7 @@ class Clothing {
             { "U_O_R_Gorka_01_black_F", "Sneaky Peaky Uniform", 350, "call life_coplevel >= 15" },
             { "U_B_CombatUniform_mcam_vest", "Uniform", 350, "" },
 	          { "U_B_Wetsuit", "", 2000, { "", "", -1 } },
-            { "U_O_T_FullGhillie_tna_F", "Sand-Ghillie", 350, "call life_coplevel >= 22" },
+            { "U_B_FullGhillie_ard", "Sand-Ghillie", 350, "call life_coplevel >= 22" },
             { "U_B_survival_uniform", "Taucher-Uniform", 350, "call life_coplevel >= 22" },
             { "U_O_T_FullGhillie_tna_F", "SEK-Ghillie", 350, "call life_coplevel >= 22" }
         };
