@@ -1186,6 +1186,17 @@ will modify the virtual space and the price of the vehicle, but other informatio
             }, "" }
         };
     };
+
+    class B_UAV_02_dynamicLoadout_F {
+        vItemSpace = 100;
+        conditions = "";
+        price = 1;
+        textures[] = {
+            { "SEK", "civ", {
+                "textures\sek\guav.jpg"
+            }, "" }
+        };
+    };
     //Unarmed
     class O_APC_Wheeled_02_rcws_v2_F {
         vItemSpace = 100;
