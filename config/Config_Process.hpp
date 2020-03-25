@@ -17,8 +17,8 @@
 */
 
 class ProcessAction {
-	
-	
+
+
 //CUSTOM VERARBEITUNG //ANFANG
 	class blei {
         MaterialsReq[] = {{"blei_unverarbeitet",1}};
@@ -71,7 +71,7 @@ class ProcessAction {
     };
 //CUSTOM VERARBEITUNG //ENDE
 
-	
+
     class oil {
         MaterialsReq[] = {{"oil_unprocessed",1}};
         MaterialsGive[] = {{"oil_processed",1}};
