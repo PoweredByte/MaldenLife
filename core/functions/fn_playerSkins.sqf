@@ -110,9 +110,9 @@ switch (playerSide) do {
     if (uniform player isEqualTo "U_I_CombatUniform") then {
                 player setObjectTextureGlobal [0, "textures\polizei\bfe.jpg"];
         };
-        if ((uniform player) isEqualTo "U_B_survival_uniform" && FETCH_CONST(life_coplevel) isEqualTo 22) then {
-    				player setObjectTextureGlobal [0, "textures\sek\SEK.jpg"];
-    			};
+    if ((uniform player) isEqualTo "U_B_survival_uniform" && FETCH_CONST(life_coplevel) isEqualTo 22) then {
+				player setObjectTextureGlobal [0, "textures\sek\SEK.jpg"];
+			};
 
 		if (backpack player isEqualTo "B_ViperLightHarness_blk_F") then {
 			(backpackContainer player) setObjectTextureGlobal[0,"textures\sek\ViperRucksack.jpg"];
