@@ -71,7 +71,8 @@ switch (true) do {
         };
     };
 
-    case (_item == "cocainep"):
+
+    case (_item == "cocaineProcessed"):
     {
         if(([false,_item,1] call life_fnc_handleInv)) then
         {
@@ -79,7 +80,7 @@ switch (true) do {
         };
     };
 
-    case (_item == "heroinp"):
+    case (_item == "heroinProcessed"):
     {
         if(([false,_item,1] call life_fnc_handleInv)) then
         {
