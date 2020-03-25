@@ -170,7 +170,8 @@ class maverick_weaponshop_cfg {
 				{ "30Rnd_65x39_caseless_mag", 20, "true", ""},
 				{ "30Rnd_65x39_caseless_mag_Tracer", 20, "true", ""},
 				{ "100Rnd_65x39_caseless_mag", 20, "true", ""},
-				{ "100Rnd_65x39_caseless_mag_Tracer", 20, "true", ""},
+				{ "100Rnd_65x39_caseless_mag", 20, "true", ""},
+				{ "30Rnd_762x39_AK12_Mag_F", 20, "true", ""},
 				{ "RPG7_F",250000000, "true", ""},
 				{ "RPG32_F",250000000, "true", "" },
 				{ "30Rnd_45ACP_Mag_SMG_01_tracer_green", 20, "true", ""}
