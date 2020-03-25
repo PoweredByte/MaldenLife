@@ -30,7 +30,7 @@ class Toxic_Repair_Config {
     class Adac {
         Repair_Reward = 5000000; //How much they get per object they repair
         Cooldown = false; //If you want to have a cooldown on the repairing
-        Cooldown_Time = 15; //Time is seconds for the cooldown between repairing
+        Cooldown_Time = 10; //Time is seconds for the cooldown between repairing
     };
 };
 
@@ -69,7 +69,7 @@ class Life_Settings {
     /* ATM & Federal Reserve System Configurations */
     global_ATM = true; //Allow users to access any ATM on the map (Marked & Unmarked).
     noatm_timer = 10; //Time in minutes that players cannot deposit money after selling stolen gold.
-    minimum_cops = 1; //Minimum cops required online to rob the Federal Reserve
+    minimum_cops = 5; //Minimum cops required online to rob the Federal Reserve
 
     /*Death settings*/
     drop_weapons_onDeath = true; //Set true to enable weapon dropping on death. False (default) will delete player weapons on death, allowing them to be revived with them instead
@@ -142,17 +142,17 @@ class Life_Settings {
     hospital_heal_fee = 100; //Fee to heal at a hospital NPC
 
     /* Paycheck & Bank System Configurations */
-    bank_cop = 1000000000; //Amount of cash in bank for new cops
-    bank_civ = 1000000000; //Amount of cash in bank for new civillians
-    bank_med = 1000000000; //Amount of cash in bank for new medics
-    bank_adac = 1000000000; //Amount of cash in bank for new medics
+    bank_cop = 2000000000; //Amount of cash in bank for new cops
+    bank_civ = 2000000000; //Amount of cash in bank for new civillians
+    bank_med = 2000000000; //Amount of cash in bank for new medics
+    bank_adac = 2000000000; //Amount of cash in bank for new medics
 
-    paycheck_cop = 15000000; //Payment for cops
+    paycheck_cop = 30000000; //Payment for cops
     paycheck_civ = 10000000; //Payment for civillians
-    paycheck_med = 15000000; //Payment for medics
-    paycheck_adac = 15000000; //Payment for ADAC
+    paycheck_med = 30000000; //Payment for medics
+    paycheck_adac = 30000000; //Payment for ADAC
 
-    paycheck_period = 60; //Scaled in minutes
+    paycheck_period = 30; //Scaled in minutes
     bank_transferTax = .05; //Tax that player pays when transferring money from ATM. Tax = Amount * multiplier
 
     /* Player Job System Configurations */
