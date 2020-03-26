@@ -58,7 +58,7 @@ waitUntil {life_session_completed};
 0 cutFadeOut 9999999;
 
 //PHONE
-call life_fnc_phone;
+//call life_fnc_phone;
 
 //PERSO
 [player,playerside,getPlayerUID player] remoteExec ["DB_fnc_PersoAbfrage",2];
