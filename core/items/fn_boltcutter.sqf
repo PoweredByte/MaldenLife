@@ -12,7 +12,7 @@ _building = param [0,objNull,[objNull]];
 private _vaultHouse = [[["Malden", "Land_Cargo_House_V1_F"], ["Malden", "Land_Cargo_House_V1_F"]]] call TON_fnc_terrainSort;
 private _altisArray = [9720.165,5916.738,2.082];
 private _tanoaArray = [89.842,32.714,103.338];
-private _pos = [[["Malden", _altisArray], ["Malden", _tanoaArray]]] call TON_fnc_terrainSort;
+private _pos = [[["Malden", _altisArray], ["Tanoa", _tanoaArray]]] call TON_fnc_terrainSort;
 
 if (isNull _building) exitWith {};
 if (!(_building isKindOf "House_F")) exitWith {hint localize "STR_ISTR_Bolt_NotNear";};

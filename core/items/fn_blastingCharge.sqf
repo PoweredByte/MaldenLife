@@ -27,16 +27,6 @@ if (!([false,"blastingcharge",1] call life_fnc_handleInv)) exitWith {}; //Error?
 
 _vault setVariable ["chargeplaced",true,true];
 
-any=
-[
-  [
-  ["Ein Bankraub wurde gestartet!","<t align='center'>%1</t></br>"],
-  ["Wenn sie Verhandeln wollen Kontaktieren sie die Polizei!","<t align='center'>%1</t></br>"]
-  ]
-] spawn BIS_fnc_typeText;
-
-
-
 [0,"STR_ISTR_Blast_Placed",true,[]] remoteExecCall ["life_fnc_broadcast",west];
 hint localize "STR_ISTR_Blast_KeepOff";
 

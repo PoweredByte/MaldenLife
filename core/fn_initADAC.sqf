@@ -20,7 +20,7 @@ if ((FETCH_CONST(life_adacLevel)) < 1 && (FETCH_CONST(life_adminlevel) isEqualTo
  sleep 35;
 };
 
-
+player setVariable["adacrank",(FETCH_CONST(life_adacLevel)),true];
 
 
 [] call life_fnc_spawnMenu;
