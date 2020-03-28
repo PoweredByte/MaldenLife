@@ -776,7 +776,7 @@ class LifeCfgVehicles {
     class O_MRAP_02_F {
         vItemSpace = 60;
         conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
-        price = 500000000;
+        price = 150000000;
         textures[] = {
             { "Black", "civ", {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
@@ -1261,7 +1261,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
     class B_MRAP_01_F {
         vItemSpace = 100;
         licenses[] = { {""}, {""}, {""}, {""} };
-        price = 500000000;
+        price = 150000000;
         textures[] = {
         	{ "Polizei", "cop", {
                 "textures\polizei\hunter0.jpg",
