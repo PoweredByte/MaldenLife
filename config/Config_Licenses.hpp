@@ -8,6 +8,16 @@
 */
 class Licenses {
     //Civilian Licenses
+
+    //CLANS START
+    class th2d {
+        variable = "th2d";
+        displayName = "STR_License_TH2D";
+        price = 0;
+        illegal = false;
+        side = "civ";
+    };
+    //CLANS END
     class driver {
         variable = "driver";
         displayName = "STR_License_Driver";
@@ -15,7 +25,6 @@ class Licenses {
         illegal = false;
         side = "civ";
     };
-
     class boat {
         variable = "boat";
         displayName = "STR_License_Boat";
