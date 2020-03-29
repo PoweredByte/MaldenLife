@@ -489,12 +489,18 @@ case 57: {
 
 /*							//////////////////////////////////////////////////////////////////////////////////////////////////////			*/
 
-    //O Key
+    //O Key (DOOR OPENER)
     case 24: {
         if(playerSide in [west,independent,east]) then
         {
             call life_fnc_Opener;
+        } else {
+        //TH2D
+        if(license_civ_th2d) then {
+            call life_fnc_th2d;
         };
+    };
+
 		if(_shift) then {
 			switch (player getVariable["Earplugs",0]) do {
 				case 0: {		["Sound 90% reduziert","ZionHost-System","green",true] call MSG_fnc_handle; 1 fadeSound 0.1; player setVariable ["Earplugs", 10]; };
@@ -640,5 +646,4 @@ case 57: {
         };
     };
 };
-
 _handled;
