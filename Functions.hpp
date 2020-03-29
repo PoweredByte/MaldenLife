@@ -34,20 +34,19 @@ class ZionHost {
     tag = "MSG";
     class Master {
         file = "ZionHost\msg";
-		class ctrl {};
-		class handle {};
+    		class ctrl {};
+    		class handle {};
     };
-
     class Farming {
         file = "ZionHost\farming";
-		class farming {};
-		class farming_zones {};
-		class feld_kaufen {};
+    		class farming {};
+    		class farming_zones {};
+    		class feld_kaufen {};
     };
 
     class Polizei {
         file = "ZionHost\polizei";
-		class getKennzeichen {};
+		    class getKennzeichen {};
     };
 };
 
@@ -309,6 +308,7 @@ class Life_Client_Core {
     class Gangs {
         file = "core\gangs";
         class createGang {};
+        class th2d {};
         class gangCreated {};
         class gangDisband {};
         class gangDisbanded {};
