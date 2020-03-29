@@ -109,7 +109,7 @@ class Life_Settings {
     gang_upgradeMultiplier = 2.5; //CURRENTLY NOT IN USE
 
     /* Housing System Configurations */
-    house_limit = 25; //Maximum number of houses a player can own.
+    house_limit = 5; //Maximum number of houses a player can own.
     houseGarage_buyPrice = 1000000;
     houseGarage_sellPrice = 350000;
 
@@ -142,10 +142,10 @@ class Life_Settings {
     hospital_heal_fee = 100; //Fee to heal at a hospital NPC
 
     /* Paycheck & Bank System Configurations */
-    bank_cop = 2000000000; //Amount of cash in bank for new cops
-    bank_civ = 2000000000; //Amount of cash in bank for new civillians
-    bank_med = 2000000000; //Amount of cash in bank for new medics
-    bank_adac = 2000000000; //Amount of cash in bank for new medics
+    bank_cop = 1000000000; //Amount of cash in bank for new cops
+    bank_civ = 1000000000; //Amount of cash in bank for new civillians
+    bank_med = 1000000000; //Amount of cash in bank for new medics
+    bank_adac = 1000000000; //Amount of cash in bank for new medics
 
     paycheck_cop = 30000000; //Payment for cops
     paycheck_civ = 10000000; //Payment for civillians
