@@ -663,21 +663,21 @@ class LifeCfgVehicles {
     class O_Truck_03_transport_F {
         vItemSpace = 285;
         conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
-        price = 200000;
+        price = 100000000;
         textures[] = { };
     };
 
     class O_Truck_03_device_F {
         vItemSpace = 350;
         conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
-        price = 450000;
+        price = 2500000000;
         textures[] = { };
     };
 
 	class I_Heli_light_03_F {
         vItemSpace = 100;
         licenses[] = { {""}, {""}, {""}, {""} };
-        price = 750000;
+        price = 1500000000;
         textures[] = {
         	{ "Polizei", "cop", {
                 "textures\polizei\polizei_hellcat.jpg"
@@ -756,16 +756,16 @@ class LifeCfgVehicles {
     };
 
     class B_Truck_01_box_F {
-        vItemSpace = 450;
+        vItemSpace = 900;
         conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
-        price = 350000;
+        price = 1500000000;
         textures[] = { };
     };
 
     class B_Truck_01_transport_F {
         vItemSpace = 325;
         conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)} || {license_adac_Air}";
-        price = 275000;
+        price = 100000000;
         textures[] = {
         	{ "ADAC", "adac", {
                 "textures\adac\adac_hemtt.jpg"
@@ -1445,7 +1445,7 @@ class I_Heli_Transport_02_F {
         vItemSpace = 40;
         vFuelSpace = 42000;
         conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
-        price = 200000;
+        price = 250000000;
         textures[] = {
             { "White", "civ", {
                 "\A3\Soft_F_Beta\Truck_02\data\truck_02_kab_co.paa",
@@ -1471,7 +1471,7 @@ class I_Heli_Transport_02_F {
         vItemSpace = 50;
         vFuelSpace = 50000;
         conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)}";
-        price = 250000;
+        price = 250000000;
         textures[] = {};
     };
 };
