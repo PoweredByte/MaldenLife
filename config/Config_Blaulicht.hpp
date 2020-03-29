@@ -390,5 +390,4 @@ class emergencyLightsConfig {
 			};
 		};
 	};
-
 };

@@ -165,6 +165,16 @@ class Housing {
             garageBlacklists[] = {};
             lightPos[] = {1,3,2.90};
         };
+        class Land_Barracks_01_camo_F {
+            price = 200000000;
+            numberCrates = 20;
+            restrictedPos[] = {};
+            canGarage = false;
+            garageSpawnPos[] = {};
+            garageSpawnDir = 0;
+            garageBlacklists[] = {};
+            lightPos[] = {1,3,2.90};
+        };
 
         class Land_House_Big_02_F {
             price = 450000;

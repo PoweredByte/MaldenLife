@@ -152,7 +152,6 @@ class schwarzmarkt {
             { "muzzle_snds_m_khk_F", "", 7500, 3750, "" },
             { "muzzle_snds_m_snd_F", "", 7500, 3750, "" },
             { "muzzle_snds_58_blk_F", "", 7500, 3750, "" },
-            { "optic_AMS", "", 7500, 3750, "" },
             { "muzzle_snds_58_wdm_F", "", 7500, 3750, "" },
             { "muzzle_snds_58_ghex_F", "", 7500, 3750, "" },
             { "muzzle_snds_58_hex_F ", "", 7500, 3750, "" },

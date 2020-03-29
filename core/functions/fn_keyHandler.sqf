@@ -496,10 +496,10 @@ case 57: {
             call life_fnc_Opener;
         } else {
         //TH2D
-        if(license_civ_th2d) then {
-            call life_fnc_th2d;
+          if(license_civ_th2d) then {
+              call life_fnc_th2d;
+          };
         };
-    };
 
 		if(_shift) then {
 			switch (player getVariable["Earplugs",0]) do {
@@ -521,7 +521,7 @@ case 57: {
             };
 
             if (_veh isKindOf "House_F" && {playerSide isEqualTo civilian}) then {
-                if (_veh in life_vehicles && {player distance _veh < 20}) then {
+                if (_veh in life_vehicles && {player distance _veh < 25}) then {
                     _door = [_veh] call life_fnc_nearestDoor;
                     if (_door isEqualTo 0) exitWith {hint localize "STR_House_Door_NotNear"};
                     _locked = _veh getVariable [format ["bis_disabled_Door_%1",_door],0];
