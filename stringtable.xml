@@ -7071,6 +7071,9 @@
         <Key ID="STR_License_Schwarzmarkt">
             <Original>Schwarzmarkt Lizenz</Original>
         </Key>
+        <Key ID="STR_License_TH2D">
+            <Original>Clan - TH2D</Original>
+        </Key>
         <Key ID="STR_License_Pilot">
             <Original>Pilot License</Original>
             <Czech>pilotní licence</Czech>
