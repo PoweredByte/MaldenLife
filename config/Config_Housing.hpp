@@ -72,7 +72,6 @@ class Housing {
             garageBlacklists[] = {};
             lightPos[] = {2,0,2.4};
         };
-
         class Land_i_House_Small_02_V2_F : Land_i_House_Small_02_V1_F{};
         class Land_i_House_Small_02_V3_F : Land_i_House_Small_02_V1_F{};
 
@@ -155,6 +154,18 @@ class Housing {
             garageBlacklists[] = {{10998,9698.24,-0.219376}};
             lightPos[] = {0,0,2};
         };
+
+        class Land_i_Shed_Ind_F {
+            price = 1000000000;
+            numberCrates = 16;
+            restrictedPos[] = {};
+            canGarage = true;
+            garageSpawnPos[] = {-13,3.75,0.4};
+            garageSpawnDir = 0;
+            garageBlacklists[] = {};
+            lightPos[] = {1,3,2.90};
+        };
+
         class Land_House_Big_02_F {
             price = 450000;
             numberCrates = 2;
