@@ -80,7 +80,6 @@ class RscTitles {
 	#include "felixvonstudsinske\Personalausweis\Dialoge\UserInterface_Serverteamausweis.hpp"
 	#include "dialog\mobilePhone.hpp"
 	#include "maverick\maverick_titles_master.cpp"
-	#include "maverick\tuning\dialogs\titles.hpp"
 };
 
 class CfgFunctions {
