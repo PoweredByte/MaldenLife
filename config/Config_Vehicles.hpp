@@ -98,7 +98,6 @@ class CarShops {
             { "B_Quadbike_01_F", { "", "", -1 } },
             { "B_G_Offroad_01_F", { "", "", -1 } },
             { "O_MRAP_02_F", { "", "", -1 } },
-            { "B_G_Offroad_01_armed_F", { "", "", -1 } },
 			{ "O_T_LSV_02_unarmed_F", { "", "", -1 } },
             { "B_MRAP_01_F", { "", "", -1 } }
         };
@@ -719,7 +718,7 @@ class LifeCfgVehicles {
     class B_G_Offroad_01_armed_F {
         vItemSpace = 65;
         conditions = "license_civ_rebel || {!(playerSide isEqualTo civilian)}";
-        price = 40000000;
+        price = 800000000;
         textures[] = { };
     };
 
