@@ -98,7 +98,7 @@ class CarShops {
             { "B_Quadbike_01_F", { "", "", -1 } },
             { "B_G_Offroad_01_F", { "", "", -1 } },
             { "O_MRAP_02_F", { "", "", -1 } },
-			      { "O_T_LSV_02_unarmed_F", { "", "", -1 } },
+			{ "O_T_LSV_02_unarmed_F", { "", "", -1 } },
             { "B_MRAP_01_F", { "", "", -1 } }
         };
     };
@@ -765,7 +765,11 @@ class LifeCfgVehicles {
         vItemSpace = 325;
         conditions = "license_civ_trucking || {!(playerSide isEqualTo civilian)} || {license_adac_Air}";
         price = 100000000;
-        textures[] = {};
+        textures[] = {
+        	{ "ADAC", "adac", {
+                "textures\adac\adac_hemtt.jpg"
+            } }
+         };
     };
 
     class O_MRAP_02_F {
@@ -778,6 +782,12 @@ class LifeCfgVehicles {
             }, "" },
             { "Feuerwehr", "med", {
                 "textures\fire\fw_ifrit_1.jpg","textures\fire\fw_ifrit_2.jpg"
+            }, "" },
+            { "Red Camo", "reb", {
+                "textures\reb\ifrit\red_00.jpg","textures\reb\ifrit\red_01.jpg"
+            }, "" },
+            { "White Camo", "reb", {
+                "textures\reb\ifrit\weiss_00.jpg","textures\reb\ifrit\weiss_01.jpg"
             }, "" }
 		};
     };
@@ -1258,26 +1268,31 @@ will modify the virtual space and the price of the vehicle, but other informatio
         licenses[] = { {""}, {""}, {""}, {""} };
         price = 150000000;
         textures[] = {
-              	{ "Polizei", "cop", {
-                      "textures\polizei\hunter0.jpg",
-                      "textures\polizei\hunter1.jpg"
-      			} },
+        	{ "Polizei", "cop", {
+                "textures\polizei\hunter0.jpg",
+                "textures\polizei\hunter1.jpg"
+			} },
 
-            { "MZF", "med", {
-                  "textures\medic\Rettungshunter_Vorne.jpg",
-                  "textures\medic\Rettungshunter_Hinten.jpg"
-            } },
-              { "MZF", "med", {
-                    "textures\fire\fw_hunter_1.jpg",
-                    "textures\fire\fw_hunter_2.jpg"
-            } },
+      { "MZF", "med", {
+            "textures\medic\Rettungshunter_Vorne.jpg",
+            "textures\medic\Rettungshunter_Hinten.jpg"
+      } },
+        { "MZF", "med", {
+              "textures\fire\fw_hunter_1.jpg",
+              "textures\fire\fw_hunter_2.jpg"
+      } },
 
-            { "SEK", "cop", {
-                "textures\sek\Hunter0.jpg",
-                "textures\sek\Hunter1.jpg"
-            }, "call life_coplevel >= 22"  },
-            { "Black", "reb", {
-                "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
+      { "SEK", "cop", {
+          "textures\sek\Hunter0.jpg",
+          "textures\sek\Hunter1.jpg"
+      }, "call life_coplevel >= 22"  },
+            { "Red Camo", "reb", {
+              "textures\reb\hunter\red_00.jpg",
+              "textures\reb\hunter\red_01.jpg"
+            } },
+            { "White Camo", "reb", {
+              "textures\reb\hunter\weiss_00.jpg",
+              "textures\reb\hunter\weiss_01.jpg"
             } }
         };
     };
