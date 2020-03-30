@@ -111,7 +111,7 @@ class Life_Client_Core {
 		class lockCellAction {};
     };
 
-	/*class Phone {
+	class Phone {
 		file = "core\phone";
 		class phoneInit {};
 		class phoneAdd {};
@@ -130,7 +130,7 @@ class Life_Client_Core {
 		class phoneBlock {};
 		class phoneChannel {};
 		class phonePlayerSearch {};
-	};*/
+	};
 
 
     class Admin {
