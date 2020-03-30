@@ -718,7 +718,7 @@ class LifeCfgVehicles {
     class B_G_Offroad_01_armed_F {
         vItemSpace = 65;
         conditions = "license_civ_rebel || {!(playerSide isEqualTo civilian)}";
-        price = 800000000;
+        price = 80000000000;
         textures[] = { };
     };
 
