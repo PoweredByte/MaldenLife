@@ -165,7 +165,7 @@ class Housing {
             garageBlacklists[] = {};
             lightPos[] = {1,3,2.90};
         };
-        class Land_Barracks_01_camo_F {
+        class Land_i_Barracks_V1_F {
             price = 200000000;
             numberCrates = 20;
             restrictedPos[] = {};

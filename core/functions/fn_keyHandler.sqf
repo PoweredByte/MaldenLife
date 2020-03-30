@@ -32,7 +32,7 @@ if (life_action_inUse) exitWith {
 //Hotfix for Interaction key not being able to be bound on some operation systems.
 if (!(count (actionKeys "User10") isEqualTo 0) && {(inputAction "User10" > 0)}) exitWith {
     //Interaction key (default is Left Windows, can be mapped via Controls -> Custom -> User Action 10)
-    if (!life_action_inUse) then {
+    if (!life_action_inUse && player getVariable ["restrained",false]) then {
         0 spawn {
             private "_handle";
             _handle = 0 spawn life_fnc_actionKeyHandler;

@@ -160,6 +160,7 @@ class Life_Client_Core {
         class jail {};
         class jailMe {};
         class knockedOut {};
+        class safezone {};
         class knockoutAction {};
         class removeLicenses {};
         class robPerson {};

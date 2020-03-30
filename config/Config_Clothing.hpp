@@ -175,13 +175,9 @@ class Clothing {
             { "U_B_GEN_Commander_F", "Polizei-Pullover", 25, { "", "", -1 } },
             { "U_C_Uniform_Scientist_01_F", "", 25, { "", "", -1 } },
             { "U_I_CombatUniform", "Taktische Uniform", 350, "call life_coplevel >= 2" },
-            { "U_C_CBRN_Suit_01_Blue_F", "CSA", 350, "call life_coplevel >= 15" },
             { "U_O_R_Gorka_01_black_F", "Sneaky Peaky Uniform", 350, "call life_coplevel >= 15" },
             { "U_B_CombatUniform_mcam_vest", "Uniform", 350, "" },
-	          { "U_B_Wetsuit", "", 2000, { "", "", -1 } },
-            { "U_B_FullGhillie_ard", "Sand-Ghillie", 350, "call life_coplevel >= 22" },
-            { "U_B_survival_uniform", "Taucher-Uniform", 350, "call life_coplevel >= 22" },
-            { "U_O_T_FullGhillie_tna_F", "SEK-Ghillie", 350, "call life_coplevel >= 22" }
+	          { "U_B_Wetsuit", "", 2000, { "", "", -1 } }
         };
         headgear[] = {
             { "NONE", "Remove Hat", 0, { "", "", -1 } },
@@ -189,10 +185,67 @@ class Clothing {
             { "H_Beret_02", "", 25, { "", "", -1 } },
             { "H_HelmetSpecB_blk", "", 25, { "", "", -1 } },
             { "H_Beret_Colonel", "", 25, "call life_coplevel >= 14" },
+            { "H_Beret_blk_POLICE", "", 50, "call life_coplevel >= 2" }
+        };
+        goggles[] = {
+            { "NONE", "Remove Glasses", 0, { "", "", -1 } },
+            { "G_Squares", "", 10, { "", "", -1 } },
+            { "G_Shades_Blue", "", 20, { "", "", -1 } },
+            { "G_Sport_Blackred", "", 20, { "", "", -1 } },
+            { "G_Sport_Checkered", "", 20, { "", "", -1 } },
+            { "G_Sport_Blackyellow", "", 20, { "", "", -1 } },
+            { "G_Sport_BlackWhite", "", 20, { "", "", -1 } },
+            { "G_Shades_Black", "", 25, { "", "", -1 } },
+            { "G_Lowprofile", "", 30, { "", "", -1 } },
+            { "G_Combat", "", 55, { "", "", -1 } },
+            { "G_Aviator", "", 100, { "", "", -1 } },
+            { "G_Lady_Mirror", "", 150, { "", "", -1 } },
+            { "G_Lady_Dark", "", 150, { "", "", -1 } },
+			      { "G_Diving", "", 500, { "", "", -1 } },
+            { "G_Lady_Blue", "", 150, { "", "", -1 } }
+        };
+        vests[] = {
+            { "NONE", "keine West", 0, { "", "", -1 } },
+            { "V_Rangemaster_belt", "", 800, { "", "", 1 } },
+            { "V_PlateCarrier2_rgr", "", 1500, "call life_coplevel >= 15" },
+            { "V_PlateCarrier2_blk", "", 1500, { "life_coplevel", "SCALAR", 3 } },
+            { "V_TacVest_gen_F", "", 1000, { "life_coplevel", "SCALAR", 1 } },
+            { "V_TacVest_blk_POLICE", "", 1000, { "life_coplevel", "SCALAR", 1 } },
+			      { "V_RebreatherB", "", 5000, { "", "", -1 } }
+        };
+        backpacks[] = {
+            { "NONE", "Kein Rucksack", 0, { "", "", -1 } },
+            { "B_Bergen_Hex_F", "Unsichtbar", 800, { "", "", -1 } }
+        };
+    };
+
+    class sek {
+        title = "STR_Shops_C_SEK";
+        license = "call life_coplevel >= 22";
+        side = "cop";
+        uniforms[] = {
+            { "NONE", "Kleidung entfernen", 0, { "", "", -1 } },
+            { "U_C_Uniform_Scientist_01_F", "", 25, { "", "", -1 } },
+            { "U_B_GEN_Commander_F", "Polizei-Pullover", 25, { "", "", -1 } },
+            { "U_I_CombatUniform", "Taktische Uniform", 350, "call life_coplevel >= 2" },
+            { "U_B_CombatUniform_mcam", "Polizei-Kleidung", 25, { "", "", -1 } },
+            { "U_B_CombatUniform_mcam_vest", "Uniform", 350, "" },
+            { "U_B_survival_uniform", "Taucher-Uniform", 350, "call life_coplevel >= 22" },
+            { "U_O_R_Gorka_01_black_F", "Sneaky Peaky Uniform", 350, "call life_coplevel >= 15" },
+	          { "U_B_Wetsuit", "", 2000, { "", "", -1 } },
+            { "U_B_FullGhillie_ard", "Sand-Ghillie", 350, "call life_coplevel >= 22" },
+            { "U_O_T_FullGhillie_tna_F", "SEK-Ghillie", 350, "call life_coplevel >= 22" },
+            { "U_C_CBRN_Suit_01_Blue_F", "", 350, "call life_coplevel >= 15" }
+        };
+        headgear[] = {
+            { "NONE", "Remove Hat", 0, { "", "", -1 } },
+            { "H_Beret_02", "", 25, { "", "", -1 } },
+            { "H_Beret_Colonel", "", 25, "call life_coplevel >= 14" },
             { "H_Beret_blk_POLICE", "", 50, "call life_coplevel >= 2" },
+            { "H_MilCap_mcamo", "", 100, "call life_coplevel >= 22" },
+            { "H_MilCap_mcamo", "", 100, "call life_coplevel >= 22" },
+            { "H_HelmetSpecB_blk", "", 25, { "", "", -1 } },
             { "H_HelmetB_plain_mcamo", "", 75, "call life_coplevel >= 22" },
-            { "H_MilCap_mcamo", "", 100, "call life_coplevel >= 22" },
-            { "H_MilCap_mcamo", "", 100, "call life_coplevel >= 22" },
             { "H_HelmetCrew_I", "SEK HELM", 100, "call life_coplevel >= 22" },
 			      { "H_CrewHelmetHeli_B", "GASMASKE", 2500, "call life_coplevel >= 22" }
         };
@@ -211,34 +264,34 @@ class Clothing {
             { "G_Lady_Mirror", "", 150, { "", "", -1 } },
             { "G_Lady_Dark", "", 150, { "", "", -1 } },
 			      { "G_Diving", "", 500, { "", "", -1 } },
-			      { "G_RegulatorMask_F", "Atemschutzmaske", 500, "call life_coplevel >= 15" },
-			      { "G_AirPurifyingRespirator_02_black_F", "Gasmaske", 500, "call life_coplevel >= 22" },
+            { "G_Lady_Blue", "", 150, { "", "", -1 } },
+            { "G_AirPurifyingRespirator_02_black_F", "Gasmaske", 500, "call life_coplevel >= 22" },
 			      { "G_Balaclava_TI_blk_F", "SEK MASKE", 500, "call life_coplevel >= 22" },
-            { "G_Lady_Blue", "", 150, { "", "", -1 } }
+			      { "G_RegulatorMask_F", "Atemschutzmaske", 500, "call life_coplevel >= 15" }
         };
         vests[] = {
             { "NONE", "keine West", 0, { "", "", -1 } },
             { "V_Rangemaster_belt", "", 800, { "", "", 1 } },
-            { "V_PlateCarrier2_rgr", "", 1500, "call life_coplevel >= 20" },
-            { "V_PlateCarrier2_blk", "", 1500, { "life_coplevel", "SCALAR", 3 } },
+		      	{ "V_RebreatherB", "", 5000, { "", "", -1 } },
             { "V_TacVest_gen_F", "", 1000, { "life_coplevel", "SCALAR", 1 } },
             { "V_TacVest_blk_POLICE", "", 1000, { "life_coplevel", "SCALAR", 1 } },
+            { "V_PlateCarrier2_rgr", "", 1500, "call life_coplevel >= 20" },
+            { "V_PlateCarrier2_blk", "", 1500, { "life_coplevel", "SCALAR", 3 } },
             { "V_PlateCarrierGL_blk", "", 120, "call life_coplevel >= 22" },
             { "V_PlateCarrierSpec_blk", "", 120, "call life_coplevel >= 22" },
             { "V_PlateCarrierH_CTRG", "", 120, "call life_coplevel >= 22" },
-			{ "V_RebreatherB", "", 5000, { "", "", -1 } },
-            { "V_PlateCarrier2_blk", "SEK WESTE", 1500, "call life_coplevel >= 22" }
+            { "V_PlateCarrier2_blk", "", 1500, "call life_coplevel >= 22" }
         };
         backpacks[] = {
             { "NONE", "Kein Rucksack", 0, { "", "", -1 } },
             { "B_Bergen_mcamo", "", 800, { "", "", -1 } },
             { "B_Bergen_Hex_F", "Unsichtbar", 800, { "", "", -1 } },
-            { "B_SCBA_01_F", "Pressluftatmer", 500, "call life_coplevel >= 15" },
-            { "B_UAV_01_backpack_F", "SEK DRONE", 350, "call life_coplevel >= 22" },
             { "B_ViperLightHarness_blk_F", "SEK VIPER", 350, "call life_coplevel >= 22" },
-            { "B_Static_Designator_01_weapon_F", "Remote Designator", 350, "call life_coplevel >= 22" },
             { "B_Parachute", "Fallschirm", 350, "call life_coplevel >= 22" },
-            { "B_Bergen_sgg", "SEK RUCKSACK", 350, "call life_coplevel >= 22" }
+            { "B_Bergen_sgg", "SEK RUCKSACK", 350, "call life_coplevel >= 22" },
+            { "B_UAV_01_backpack_F", "SEK DRONE", 350, "call life_coplevel >= 22" },
+            { "B_Static_Designator_01_weapon_F", "Remote Designator", 350, "call life_coplevel >= 22" },
+            { "B_SCBA_01_F", "Pressluftatmer", 500, "call life_coplevel >= 15" }
         };
     };
 

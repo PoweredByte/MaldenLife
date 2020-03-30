@@ -59,15 +59,10 @@
             <German>Bruce's Outback Outfits</German>
         </Key>
         <Key ID="STR_Shops_C_Police">
-            <Original>Altis Police Department Shop</Original>
-            <Czech>Altis policejní oddělení Shop</Czech>
-            <French>Vêtements policiers</French>
-            <Spanish>Tienda del Departamento de Policía</Spanish>
-            <Russian></Russian>
-            <Portuguese>Loja de Roupas Policiais</Portuguese>
-            <Polish>Sklep Policyjny</Polish>
-            <Italian>Dipartimento della Polizia di Altis</Italian>
-            <German>Altis Polizei Department Geschäft</German>
+            <Original>Polizei Kleidungskammer</Original>
+        </Key>
+        <Key ID="STR_Shops_C_SEK">
+            <Original>SEK Kleidungskammer</Original>
         </Key>
         <Key ID="STR_Shops_C_Rebel">
             <Original>Mohammed's Jihadi Shop</Original>
@@ -12388,7 +12383,7 @@
     		<German>Verfügbare Notrufe</German>
     	</Key>
     	<Key ID="STR_DC_dispatchcenter">
-    		<Original>911 Call Management</Original>
+    		<Original>Notrufverwaltung</Original>
     		<German>Notrufverwaltung</German>
     	</Key>
     	<Key ID="STR_DC_message">
