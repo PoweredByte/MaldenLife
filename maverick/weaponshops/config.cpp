@@ -287,6 +287,7 @@ class maverick_weaponshop_cfg {
 				{ "30Rnd_580x42_Mag_Tracer_F", 20, "true", ""},
 				{ "30Rnd_762x39_Mag_Tracer_F", 20, "true", ""},
 				{ "10Rnd_338_Mag", 20, "true", ""},
+				{ "30Rnd_762x39_AK12_Mag_F", 20, "true", ""},
 				{ "30Rnd_45ACP_Mag_SMG_01", 20, "true", ""},
 				{ "30Rnd_45ACP_Mag_SMG_01_tracer_green", 20, "true", ""}
 			};
