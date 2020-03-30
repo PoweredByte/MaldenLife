@@ -389,7 +389,6 @@ class rebel {
             //Polizeiboerrat
             //{ "LMG_Mk200_black_F", "", 1, 0, "call life_coplevel >= 11" }, //Vlt.Raus MK200
             //L.Polizeidirektor
-            { "srifle_DMR_05_blk_F", "", 1, 0, "call life_coplevel >= 13" },
             { "arifle_RPK12_F", "", 1, 0, "call life_coplevel >= 13" },
             { "6Rnd_12Gauge_Pellets", "", 1, 0, "call life_coplevel >= 10" },
             { "muzzle_snds_58_blk_F", "", 1, 0, "call life_coplevel >= 10" },
