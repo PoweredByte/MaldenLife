@@ -83,13 +83,13 @@ class CfgSpawnPoints {
 
         class Cop {
             class HauptHQ {
-                displayName = "Haupt-HQ";
+                displayName = "Haupt HQ";
                 spawnMarker = "cop_spawn_1";
                 icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
                 conditions = "";
             };
             class NordHQ {
-                displayName = "Nord-HQ";
+                displayName = "Nord HQ";
                 spawnMarker = "cop_spawn_7";
                 icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
                 conditions = "";
@@ -139,7 +139,7 @@ class CfgSpawnPoints {
 
         class Medic {
             class Krankenhaus {
-                displayName = "Haupt-HQ";
+                displayName = "Haupt HQ";
                 spawnMarker = "medic_spawn_1";
                 icon = "\a3\ui_f\data\map\MapControl\hospital_ca.paa";
                 conditions = "";
@@ -169,7 +169,7 @@ class CfgSpawnPoints {
 
         class Adac {
             class Werkstatt {
-            displayName = "Werkstatt-HQ";
+            displayName = "Werkstatt HQ";
             spawnMarker = "adac_spawn_1";
             icon = "\a3\ui_f\data\map\MapControl\hospital_ca.paa";
             conditions = "";
