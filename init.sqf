@@ -21,4 +21,5 @@ forceWeatherChange;
 [] execVM "ZionHost\ObjektRespawn.sqf";
 [] execVM "ZionHost\Abschleppen.sqf";
 [] execVM "ZionHost\sperrzonensystem.sqf";
+[] execVM "ZionHost\FullNVG.sqf";
 StartProgress = true;
